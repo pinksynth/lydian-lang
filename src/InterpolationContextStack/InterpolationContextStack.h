@@ -1,15 +1,18 @@
-#include <vector>
+#include <stack>
 
 #pragma once
 class InterpolationContextStack {
 
 public:
-  std::vector<int> body;
+  std::stack<int> body;
 
   InterpolationContextStack();
-  int peek();
+  int top();
   void decrementContext();
   void incrementContext();
   void popContext();
   void pushContext();
+
+private:
+  void updateHead(int newValue);
 };

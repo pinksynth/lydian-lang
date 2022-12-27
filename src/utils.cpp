@@ -9,8 +9,11 @@
 #pragma once
 void inspect(InterpolationContextStack ics) {
   std::string icsValue = "[ ";
-  for (auto num : ics.body)
-    icsValue += std::to_string(num) + " ";
+  while (!ics.body.empty()) {
+    // We do pop() here because we have a copy of ICS, not a reference.
+    icsValue += std::to_string(ics.body.top()) + " ";
+    ics.body.pop();
+  }
   icsValue += "]";
 
   PRINT("InterpolationContextStack: " << icsValue);

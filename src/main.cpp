@@ -13,7 +13,6 @@ int main() {
   lexer.lex(testInput);
 
   InterpolationContextStack ics = InterpolationContextStack();
-  inspect(ics);
 
   return 0;
 };
