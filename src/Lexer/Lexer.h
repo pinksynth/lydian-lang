@@ -1,4 +1,6 @@
+#include <iostream>
+
 class Lexer {
 public:
-  void lex();
+  void lex(std::string input);
 };
