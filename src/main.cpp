@@ -1,5 +1,6 @@
+#include "../src/utils.cpp"
+#include "./InterpolationContextStack/InterpolationContextStack.cpp"
 #include "./Lexer/Lexer.cpp"
-#include "./utils.cpp"
 #include <iostream>
 
 std::string testInput = R"sammy(
@@ -10,6 +11,9 @@ int main() {
   PRINT("Compiling...");
   Lexer lexer = Lexer();
   lexer.lex(testInput);
+
+  InterpolationContextStack ics = InterpolationContextStack();
+  inspect(ics);
 
   return 0;
 };
