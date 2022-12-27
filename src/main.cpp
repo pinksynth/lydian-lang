@@ -4,7 +4,7 @@
 std::string testInput = "a = 1 + 2";
 
 int main() {
-  std::cout << "Hello world!" << std::endl;
+  std::cout << "Compiling..." << std::endl;
   Lexer lexer = Lexer();
   lexer.lex(testInput);
 
