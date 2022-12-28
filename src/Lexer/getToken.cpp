@@ -1,3 +1,4 @@
+#include "../CharacterType.cpp"
 #include "../Token.cpp"
 #include "../TokenType.cpp"
 #include "./shouldContinueConsumingToken.cpp"
@@ -13,100 +14,85 @@ Token *Lexer::getToken() {
   if (shouldContinueConsumingToken())
     return nullptr;
 
-  //   const value = charAccumulator.join("")
+  TokenType tokenType = tt_NONE;
 
-  //   let tokenType
+  if (charAccumulator == "null") {
+    tokenType = tt_null;
+  } else if (charAccumulator == "weak") {
+    tokenType = tt_weak;
+  } else if (charAccumulator == "if") {
+    tokenType = tt_if;
+  } else if (charAccumulator == "else") {
+    tokenType = tt_else;
+  } else if (charAccumulator == "try") {
+    tokenType = tt_try;
+  } else if (charAccumulator == "handle") {
+    tokenType = tt_handle;
+  } else if (charAccumulator == "end") {
+    tokenType = tt_end;
+  } else if (charAccumulator == "function") {
+    tokenType = tt_function;
+  } else if (charAccumulator == "struct") {
+    tokenType = tt_structDefinition;
+  } else if (charAccumulator == "enum") {
+    tokenType = tt_enumDefinition;
+  } else if (charAccumulator == "true" || charAccumulator == "false") {
+    tokenType = tt_boolean;
+  } else if (charAccumulator == "%[") {
+    tokenType = tt_mapOpen;
+  } else if (charAccumulator == "->") {
+    tokenType = tt_forwardPipe;
+  } else if (charAccumulator == "@") {
+    tokenType = tt_lambdaOpen;
+  } else if (charAccumulator.substr(0, 3) == "<<<") {
+    tokenType = tt_comment;
+  } else if (charAccumulator == "==" || charAccumulator == "!=" || charAccumulator == ">" ||
+             charAccumulator == "<" || charAccumulator == ">=" || charAccumulator == "<=") {
+    tokenType = tt_compare;
+  } else if (charTypeFrom(charAccumulator[0]) == ct_dollarSign) {
+    tokenType = tt_conciseLambdaArgument;
+  } else if (charTypeFrom(charAccumulator[0]) == ct_hash) {
+    tokenType = tt_comment;
+  } else if (latestCharacterType == ct_whitespace) {
+    tokenType = tt_whitespace;
+  } else if (latestCharacterType == ct_number) {
+    tokenType = tt_number;
+  } else if (charAccumulator == ".") {
+    tokenType = tt_dot;
+  } else if (charAccumulator == "=") {
+    tokenType = tt_assignment;
+  } else if (charAccumulator == ":") {
+    tokenType = tt_colon;
+  } else if (charAccumulator == ",") {
+    tokenType = tt_comma;
+  } else if (charAccumulator == "[") {
+    tokenType = tt_bracketOpen;
+  } else if (charAccumulator == "]") {
+    tokenType = tt_bracketClose;
+  } else if (charAccumulator == "(") {
+    tokenType = tt_parenOpen;
+  } else if (charAccumulator == ")") {
+    tokenType = tt_parenClose;
+  } else if (charAccumulator == "{") {
+    tokenType = tt_curlyOpen;
+  } else if (charAccumulator == "}") {
+    tokenType = tt_curlyClose;
+  } else if (charAccumulator == "!") {
+    tokenType = tt_bang;
+  } else if (charAccumulator == "+" || charAccumulator == "*" || charAccumulator == "/" ||
+             charAccumulator == "%" || charAccumulator == "^" || charAccumulator == "||" ||
+             charAccumulator == "&&" || charAccumulator == "..") {
+    tokenType = tt_operatorInfix;
+  } else if (charAccumulator == "-") {
+    tokenType = tt_hyphen;
+  } else if (latestCharacterType == ct_identifier) {
+    tokenType = tt_var;
+  } else {
+    // const stringTokenType = maybeGetStringTokenType(charAccumulator)
+    // if (stringTokenType) tokenType = stringTokenType
+  }
 
-  //   if (value === "null") {
-  //     tokenType = tt.NULL
-  //   } else if (value === "weak") {
-  //     tokenType = tt.WEAK
-  //   } else if (value === "if") {
-  //     tokenType = tt.IF
-  //   } else if (value === "else") {
-  //     tokenType = tt.ELSE
-  //   } else if (value === "try") {
-  //     tokenType = tt.TRY
-  //   } else if (value === "handle") {
-  //     tokenType = tt.HANDLE
-  //   } else if (value === "end") {
-  //     tokenType = tt.END
-  //   } else if (value === "function") {
-  //     tokenType = tt.FUNCTION
-  //   } else if (value === "struct") {
-  //     tokenType = tt.STRUCT_DEFINITION
-  //   } else if (value === "enum") {
-  //     tokenType = tt.ENUM_DEFINITION
-  //   } else if (value === "true" || value === "false") {
-  //     tokenType = tt.BOOLEAN
-  //   } else if (value === "%[") {
-  //     tokenType = tt.MAP_OPEN
-  //   } else if (value === "->") {
-  //     tokenType = tt.FORWARD_PIPE
-  //   } else if (value === "@") {
-  //     tokenType = tt.LAMBDA_OPEN
-  //   } else if (value.substring(0, 3) === "<<<") {
-  //     tokenType = tt.COMMENT
-  //   } else if (
-  //     value === "==" ||
-  //     value === "!=" ||
-  //     value === ">" ||
-  //     value === "<" ||
-  //     value === ">=" ||
-  //     value === "<="
-  //   ) {
-  //     tokenType = tt.COMPARE
-  //   } else if (charTypeFrom(value[0]) === ct.CT_DOLLAR_SIGN) {
-  //     tokenType = tt.CONCISE_LAMBDA_ARGUMENT
-  //   } else if (charTypeFrom(value[0]) === ct.CT_HASH) {
-  //     tokenType = tt.COMMENT
-  //   } else if (latestCharType === ct.CT_WHITESPACE) {
-  //     tokenType = tt.WHITESPACE
-  //   } else if (latestCharType === ct.CT_NUMBER) {
-  //     tokenType = tt.NUMBER
-  //   } else if (value === ".") {
-  //     tokenType = tt.DOT
-  //   } else if (value === "=") {
-  //     tokenType = tt.ASSIGNMENT
-  //   } else if (value === ":") {
-  //     tokenType = tt.COLON
-  //   } else if (value === ",") {
-  //     tokenType = tt.COMMA
-  //   } else if (value === "[") {
-  //     tokenType = tt.BRACKET_OPEN
-  //   } else if (value === "]") {
-  //     tokenType = tt.BRACKET_CLOSE
-  //   } else if (value === "(") {
-  //     tokenType = tt.PAREN_OPEN
-  //   } else if (value === ")") {
-  //     tokenType = tt.PAREN_CLOSE
-  //   } else if (value === "{") {
-  //     tokenType = tt.CURLY_OPEN
-  //   } else if (value === "}") {
-  //     tokenType = tt.CURLY_CLOSE
-  //   } else if (value === "!") {
-  //     tokenType = tt.BANG
-  //   } else if (
-  //     value === "+" ||
-  //     value === "*" ||
-  //     value === "/" ||
-  //     value === "%" ||
-  //     value === "^" ||
-  //     value === "||" ||
-  //     value === "&&" ||
-  //     value === ".."
-  //   ) {
-  //     tokenType = tt.OPERATOR_INFIX
-  //   } else if (value === "-") {
-  //     tokenType = tt.HYPHEN
-  //   } else if (latestCharType === ct.CT_IDENTIFIER) {
-  //     tokenType = tt.VAR
-  //   } else {
-  //     const stringTokenType = maybeGetStringTokenType(value)
-  //     if (stringTokenType) tokenType = stringTokenType
-  //   }
-
-  //   if (tokenType === undefined) {
+  //   if (tokenType == undefined) {
   //     let squiggles = ""
   //     for (let index = 0; index < tokenColumnNumberStart - 1; index++) {
   //       squiggles += " "
@@ -114,13 +100,13 @@ Token *Lexer::getToken() {
   //     squiggles += "^"
   //     // TODO: Implement test
   //     throw new Error(
-  //       `Unexpected token ${value} on line ${currentLineNumber}:\n${currentLineValue}\n${squiggles}`
+  //       `Unexpected token ${charAccumulator} on line ${currentLineNumber}:\n${currentLineValue}\n${squiggles}`
   //     )
   //   }
 
   //   return {
   //     tokenType,
-  //     value,
+  //     charAccumulator,
   //     lineNumberStart: tokenLineNumberStart,
   //     columnNumberStart: tokenColumnNumberStart,
   //     lineNumberEnd: currentLineNumber,
