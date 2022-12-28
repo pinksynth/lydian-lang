@@ -1,7 +1,9 @@
 #include "./Lexer.h"
 #include "../CharacterType.cpp"
 #include "../InterpolationContextStack/InterpolationContextStack.h"
+#include "../TokenType.cpp"
 #include "../charTypeFrom.cpp"
+#include "./getToken.cpp"
 #include "./handlers/handleIncrementLinesAndColumns.cpp"
 #include <format>
 #include <iostream>
@@ -37,6 +39,7 @@ void Lexer::lex(std::string input) {
     // Implementation for tokens and grammar goes here.
 
     handleIncrementLinesAndColumns();
+    Token *token = getToken();
 
     printCharInfo(character);
     inspect();

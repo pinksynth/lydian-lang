@@ -1,5 +1,6 @@
 #include "../CharacterType.cpp"
 #include "../InterpolationContextStack/InterpolationContextStack.h"
+#include "../Token.cpp"
 #include <iostream>
 #include <vector>
 
@@ -33,6 +34,8 @@ class Lexer {
 
   void defineLatestCharType();
   void resetState();
+  Token *getToken();
+  bool shouldContinueConsumingToken();
 
   // Handlers (in order)
   void handleCloseLambdaArgIdentifierMode();
