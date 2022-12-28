@@ -13,6 +13,9 @@ public:
   void popContext();
   void pushContext();
 
+  // Debugging
+  std::string inspectString();
+
 private:
   void updateHead(int newValue);
 };

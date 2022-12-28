@@ -1,20 +1,33 @@
-#define PRINT(string)                                                          \
-  if (getenv("DEBUG")) {                                                       \
-    std::cout << string << std::endl;                                          \
-  };
-
+#define PRINT_MEMBER(name) print_member_fn(#name, (name))
 #include "./InterpolationContextStack/InterpolationContextStack.h"
 #include <iostream>
 
-#pragma once
-void inspect(InterpolationContextStack ics) {
-  std::string icsValue = "[ ";
-  while (!ics.body.empty()) {
-    // We do pop() here because we have a copy of ICS, not a reference.
-    icsValue += std::to_string(ics.body.top()) + " ";
-    ics.body.pop();
-  }
-  icsValue += "]";
+int defaultPadding = 60;
 
-  PRINT("InterpolationContextStack: " << icsValue);
+void print(std::string string) {
+  if (getenv("DEBUG")) {
+    std::cout << string << std::endl;
+  }
+}
+
+std::string padded_label(int width, std::string name, std::string value) {
+  std::string nameWithColon = name + ":";
+  int padSize = width - nameWithColon.size() - value.size();
+  if (padSize < 1)
+    padSize = 1;
+  value.insert(value.begin(), padSize, ' ');
+  return nameWithColon + value;
+}
+
+std::string print_member_fn(std::string name, std::string value) {
+  return padded_label(defaultPadding, name, value);
+}
+
+std::string print_member_fn(std::string name, int value) {
+  return padded_label(defaultPadding, name, std::to_string(value));
+}
+
+std::string print_member_fn(std::string name, bool value) {
+  std::string stringValue(value ? "true" : "false");
+  return padded_label(defaultPadding, name, stringValue);
 }

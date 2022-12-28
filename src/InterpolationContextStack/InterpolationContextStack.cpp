@@ -48,8 +48,7 @@ int InterpolationContextStack::top() { return body.top(); };
 void InterpolationContextStack::decrementContext() {
   int previousValue = body.top();
   if (previousValue == 0) {
-    throw std::logic_error(
-        "Error in lexer. Could not decrement interpolation context.");
+    throw std::logic_error("Error in lexer. Could not decrement interpolation context.");
   }
   int newValue = previousValue - 1;
   updateHead(newValue);
@@ -60,8 +59,7 @@ void InterpolationContextStack::incrementContext() {
 };
 void InterpolationContextStack::popContext() {
   if (body.top() != 0) {
-    throw std::logic_error(
-        "Error in lexer. Could not pop interpolation context.");
+    throw std::logic_error("Error in lexer. Could not pop interpolation context.");
   }
   body.pop();
 };
@@ -70,3 +68,16 @@ void InterpolationContextStack::updateHead(int newValue) {
   body.pop();
   body.push(newValue);
 };
+
+// Debugging
+std::string InterpolationContextStack::inspectString() {
+  std::string icsValue = "[ ";
+  while (!body.empty()) {
+    // We do pop() here because we have a copy of ICS, not a reference.
+    icsValue += std::to_string(body.top()) + " ";
+    body.pop();
+  }
+  icsValue += "]";
+
+  return "InterpolationContextStack: " + icsValue;
+}
