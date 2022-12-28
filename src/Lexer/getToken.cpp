@@ -1,6 +1,7 @@
 #include "../CharacterType.cpp"
 #include "../Token.cpp"
 #include "../TokenType.cpp"
+#include "./getStringTokenType.cpp"
 #include "./shouldContinueConsumingToken.cpp"
 
 // Token *token = new Token();
@@ -88,29 +89,29 @@ Token *Lexer::getToken() {
   } else if (latestCharacterType == ct_identifier) {
     tokenType = tt_var;
   } else {
-    // const stringTokenType = maybeGetStringTokenType(charAccumulator)
-    // if (stringTokenType) tokenType = stringTokenType
+    TokenType stringTokenType = getStringTokenType();
+    if (stringTokenType != tt_NONE)
+      tokenType = stringTokenType;
   }
 
-  //   if (tokenType == undefined) {
-  //     let squiggles = ""
-  //     for (let index = 0; index < tokenColumnNumberStart - 1; index++) {
-  //       squiggles += " "
-  //     }
-  //     squiggles += "^"
-  //     // TODO: Implement test
-  //     throw new Error(
-  //       `Unexpected token ${charAccumulator} on line ${currentLineNumber}:\n${currentLineValue}\n${squiggles}`
-  //     )
-  //   }
+  if (tokenType == tt_NONE) {
+    std::string squiggles = "";
+    for (int index = 0; index < tokenColumnNumberStart - 1; index++) {
+      squiggles += " ";
+    }
+    squiggles += "^";
+    throw std::logic_error("Unexpected token " + charAccumulator + "on line " +
+                           std::to_string(currentLineNumber) + " :\n" + currentLineValue + "\n" +
+                           squiggles);
+  }
 
-  //   return {
-  //     tokenType,
-  //     charAccumulator,
-  //     lineNumberStart: tokenLineNumberStart,
-  //     columnNumberStart: tokenColumnNumberStart,
-  //     lineNumberEnd: currentLineNumber,
-  //     columnNumberEnd: currentColumnNumber,
-  //   }
-  // }
+  Token *token = new Token();
+  token->type = tokenType;
+  token->value = charAccumulator;
+  token->lineNumberStart = tokenLineNumberStart;
+  token->columnNumberStart = tokenColumnNumberStart;
+  token->lineNumberEnd = currentLineNumber;
+  token->columnNumberEnd = currentColumnNumber;
+
+  return token;
 };
