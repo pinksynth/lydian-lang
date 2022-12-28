@@ -1,6 +1,7 @@
 // TODO: Figure out how the heck to print enum cases by name during runtime.
 #pragma once
 enum CharacterType {
+  ct_NONE,
   ct_ampersand,
   ct_asterisk,
   ct_backslash,

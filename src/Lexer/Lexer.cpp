@@ -2,6 +2,7 @@
 #include "../CharacterType.cpp"
 #include "../InterpolationContextStack/InterpolationContextStack.h"
 #include "../charTypeFrom.cpp"
+#include "./handlers/handleIncrementLinesAndColumns.cpp"
 #include <format>
 #include <iostream>
 
@@ -16,23 +17,34 @@ void Lexer::lex(std::string input) {
   // TODO: We will not have UTF8 support until we change this. "input.length" is just bytes.
   int max = input.length();
   for (size_t index = 0; index < max; index++) {
-    char character = input[index];
-    char nextCharacter;
-    char thirdCharacter;
-    CharacterType charType = charTypeFrom(character);
-    CharacterType nextCharacterType;
-    CharacterType thirdCharacterType;
+    character = input[index];
+    charType = charTypeFrom(character);
     if (index < max - 1) {
       nextCharacter = input[index + 1];
       nextCharacterType = charTypeFrom(nextCharacter);
+    } else {
+      nextCharacterType = ct_NONE;
     }
     if (index < max - 2) {
       thirdCharacter = input[index + 2];
       thirdCharacterType = charTypeFrom(thirdCharacter);
+    } else {
+      thirdCharacterType = ct_NONE;
     }
 
+    defineLatestCharType();
+
+    // Implementation for tokens and grammar goes here.
+
+    handleIncrementLinesAndColumns();
+
     printCharInfo(character);
+    inspect();
   }
+
+  inspect();
+
+  defineLatestCharType();
 };
 
 void Lexer::printCharInfo(char character) {
@@ -64,13 +76,22 @@ void Lexer::resetState() {
   ics = InterpolationContextStack();
 };
 
+void Lexer::defineLatestCharType() {
+  if (charAccumulator.length() > 0) {
+    char character = charAccumulator[charAccumulator.length() - 1];
+    latestCharacterType = charTypeFrom(character);
+  }
+};
+
+// Debugging
+
 void Lexer::inspect() {
   std::string output = "Lexer state {\n";
 
-  PRINT_MEMBER(charAccumulator);
   output += "  " + PRINT_MEMBER(charAccumulator) + "\n";
   output += "  " + PRINT_MEMBER(currentLineValue) + "\n";
-  output += "  ICS: " + ics.inspectString() + "\n";
+  output += "  " + PRINT_MEMBER(latestCharacterType) + "\n";
+  output += "  " + padded_label(60, "ICS", ics.inspectString()) + "\n";
   output += "  Modes\n";
   output += "    " + PRINT_MEMBER(lambdaArgIdentifierMode) + "\n";
   output += "    " + PRINT_MEMBER(multilineCommentMode) + "\n";

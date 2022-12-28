@@ -9,8 +9,7 @@ CharacterType charTypeFrom(char character) {
     auto entry = characterRanges[typeIndex];
     auto charType = entry.first;
     auto characterRange = entry.second;
-    for (auto charRangeIndex = 0; charRangeIndex < characterRange.size();
-         charRangeIndex++) {
+    for (auto charRangeIndex = 0; charRangeIndex < characterRange.size(); charRangeIndex++) {
       char characterInRange = characterRange[charRangeIndex];
       if (character == characterInRange) {
         return charType;

@@ -79,5 +79,5 @@ std::string InterpolationContextStack::inspectString() {
   }
   icsValue += "]";
 
-  return "InterpolationContextStack: " + icsValue;
+  return icsValue;
 }
