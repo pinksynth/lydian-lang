@@ -1,5 +1,3 @@
-#include "../Lexer.h"
-
 void Lexer::handleIncrementLinesAndColumns() {
   if (character == '\n') {
     currentLineNumber++;
@@ -7,6 +5,6 @@ void Lexer::handleIncrementLinesAndColumns() {
     currentLineValue = "";
   } else {
     currentColumnNumber++;
-    // currentLineValue += character
+    currentLineValue += character;
   };
 };

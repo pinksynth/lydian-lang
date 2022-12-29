@@ -1,5 +1,6 @@
 #define PRINT_MEMBER(name) print_member_fn(#name, (name))
 #include "./InterpolationContextStack/InterpolationContextStack.h"
+#include "./Token.cpp"
 #include <iostream>
 
 int defaultPadding = 60;
@@ -30,4 +31,13 @@ std::string print_member_fn(std::string name, int value) {
 std::string print_member_fn(std::string name, bool value) {
   std::string stringValue(value ? "true" : "false");
   return padded_label(defaultPadding, name, stringValue);
+}
+
+std::string charString(char character) {
+  if (character == '\n') {
+    return "(newline)";
+  } else {
+    std::string str;
+    return str + character;
+  }
 }

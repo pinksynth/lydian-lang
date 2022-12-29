@@ -8,10 +8,13 @@
 #pragma once
 class Lexer {
   // These values change while in the loop to consume characters.
+  int index;
+  char previousCharacter;
   char character;
   char nextCharacter;
   char thirdCharacter;
-  CharacterType charType;
+  CharacterType previousCharacterType;
+  CharacterType characterType;
   CharacterType nextCharacterType;
   CharacterType thirdCharacterType;
 
@@ -30,12 +33,13 @@ class Lexer {
   bool stringLiteralMode = false;
   int tokenColumnNumberStart = 1;
   int tokenLineNumberStart = 1;
-  // tokens: [],
+  std::vector<Token> tokens = {};
   InterpolationContextStack ics;
 
   void defineLatestCharType();
   void resetState();
   Token *getToken();
+  void pushToken(Token token);
   bool shouldContinueConsumingToken();
   TokenType getStringTokenType();
 
@@ -56,6 +60,7 @@ class Lexer {
 
   // Debugging
   void printCharInfo(char character);
+  std::string inspectTokensString();
 
 public:
   void lex(std::string input);

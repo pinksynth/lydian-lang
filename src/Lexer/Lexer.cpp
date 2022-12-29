@@ -4,29 +4,52 @@
 #include "../TokenType.cpp"
 #include "../charTypeFrom.cpp"
 #include "./getToken.cpp"
+#include "./handlers/handleCloseLambdaArgIdentifierMode.cpp"
+#include "./handlers/handleCloseMultilineComment.cpp"
+#include "./handlers/handleCloseSingleLineComment.cpp"
+#include "./handlers/handleEndNumberMode.cpp"
 #include "./handlers/handleIncrementLinesAndColumns.cpp"
+#include "./handlers/handleOpenLambdaArgIdentifierMode.cpp"
+#include "./handlers/handleOpenMultilineComment.cpp"
+#include "./handlers/handleOpenSingleLineComment.cpp"
+#include "./handlers/handleOpenStringInterpolation.cpp"
+#include "./handlers/handlePeriodWhileInNumberMode.cpp"
+#include "./handlers/handleRangeOperator.cpp"
+#include "./handlers/handleStrings.cpp"
+#include "./handlers/handleTokenStartNumber.cpp"
 #include <format>
 #include <iostream>
 
 #pragma once
-void Lexer::lex(std::string input) {
-  print("Lexer received input:\n" + input);
+void Lexer::lex(std::string rawInput) {
+  print("Lexer received input:\n" + rawInput);
 
   resetState();
+  input = rawInput;
 
   inspect();
 
   // TODO: We will not have UTF8 support until we change this. "input.length" is just bytes.
   int max = input.length();
-  for (size_t index = 0; index < max; index++) {
+  for (size_t tokenIndex = 0; tokenIndex < max; tokenIndex++) {
+    index = tokenIndex;
     character = input[index];
-    charType = charTypeFrom(character);
+    characterType = charTypeFrom(character);
+
+    if (index > 0) {
+      previousCharacter = input[index - 1];
+      previousCharacterType = charTypeFrom(previousCharacter);
+    } else {
+      previousCharacterType = ct_NONE;
+    }
+
     if (index < max - 1) {
       nextCharacter = input[index + 1];
       nextCharacterType = charTypeFrom(nextCharacter);
     } else {
       nextCharacterType = ct_NONE;
     }
+
     if (index < max - 2) {
       thirdCharacter = input[index + 2];
       thirdCharacterType = charTypeFrom(thirdCharacter);
@@ -36,10 +59,30 @@ void Lexer::lex(std::string input) {
 
     defineLatestCharType();
 
-    // Implementation for tokens and grammar goes here.
-
-    handleIncrementLinesAndColumns();
     Token *token = getToken();
+    if (token != NULL) {
+      print(token->inspectString());
+      pushToken(*token);
+    } else {
+      print("Token is null. Continuing...");
+    }
+    delete token;
+
+    handleCloseLambdaArgIdentifierMode();
+    handleOpenLambdaArgIdentifierMode();
+    handleTokenStartNumber();
+    handleRangeOperator();
+    handlePeriodWhileInNumberMode();
+    handleEndNumberMode();
+    handleStrings();
+    handleOpenStringInterpolation();
+    handleOpenSingleLineComment();
+    handleCloseSingleLineComment();
+    handleOpenMultilineComment();
+    handleCloseMultilineComment();
+    handleIncrementLinesAndColumns();
+
+    charAccumulator += character;
 
     printCharInfo(character);
     inspect();
@@ -50,15 +93,11 @@ void Lexer::lex(std::string input) {
   defineLatestCharType();
 };
 
-void Lexer::printCharInfo(char character) {
-  print("======================");
-  std::string message = "Character: ";
-  if (character == '\n')
-    message += "(newline)";
-  else
-    message += character;
-
-  print(message);
+void Lexer::pushToken(Token token) {
+  tokens.push_back(token);
+  tokenLineNumberStart = currentLineNumber;
+  tokenColumnNumberStart = currentColumnNumber;
+  charAccumulator = {};
 };
 
 void Lexer::resetState() {
@@ -88,6 +127,11 @@ void Lexer::defineLatestCharType() {
 
 // Debugging
 
+void Lexer::printCharInfo(char character) {
+  print("======================");
+  print("Character: " + charString(character));
+};
+
 void Lexer::inspect() {
   std::string output = "Lexer state {\n";
 
@@ -107,9 +151,20 @@ void Lexer::inspect() {
   output += "    " + PRINT_MEMBER(tokenLineNumberStart) + "\n";
   output += "    " + PRINT_MEMBER(currentColumnNumber) + "\n";
   output += "    " + PRINT_MEMBER(currentLineNumber) + "\n";
+  output += "  Tokens\n";
+  output += inspectTokensString();
+  output += "\n";
   // input
   // tokens
 
   output += "}\n";
   print(output);
+};
+
+std::string Lexer::inspectTokensString() {
+  std::string output = "";
+  for (Token token : tokens) {
+    output += token.inspectString() + "; ";
+  };
+  return output;
 };
