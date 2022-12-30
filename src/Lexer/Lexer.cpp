@@ -101,7 +101,7 @@ void Lexer::pushToken(Token token) {
 };
 
 void Lexer::resetState() {
-  charAccumulator = "abc";
+  charAccumulator = "";
   currentColumnNumber = 1;
   currentLineNumber = 1;
   currentLineValue = "";
