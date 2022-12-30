@@ -41,8 +41,9 @@ Because we have not entered into any interpolation contexts.
 
 #include "./InterpolationContextStack.h"
 #include <iostream>
+#include <stack>
 
-InterpolationContextStack::InterpolationContextStack(){};
+InterpolationContextStack::InterpolationContextStack() { body.push(0); };
 
 int InterpolationContextStack::top() { return body.top(); };
 void InterpolationContextStack::decrementContext() {
@@ -72,10 +73,10 @@ void InterpolationContextStack::updateHead(int newValue) {
 // Debugging
 std::string InterpolationContextStack::inspectString() {
   std::string icsValue = "[ ";
-  while (!body.empty()) {
-    // We do pop() here because we have a copy of ICS, not a reference.
-    icsValue += std::to_string(body.top()) + " ";
-    body.pop();
+  std::stack<int> bodyClone = body;
+  while (!bodyClone.empty()) {
+    icsValue += std::to_string(bodyClone.top()) + " ";
+    bodyClone.pop();
   }
   icsValue += "]";
 
