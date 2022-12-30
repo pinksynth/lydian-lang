@@ -12,7 +12,5 @@ int main() {
   Lexer lexer = Lexer();
   lexer.lex(testInput);
 
-  InterpolationContextStack ics = InterpolationContextStack();
-
   return 0;
 };
