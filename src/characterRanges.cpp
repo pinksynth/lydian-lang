@@ -4,6 +4,7 @@
 std::vector<std::pair<CharacterType, std::vector<char>>> characterRanges = {
     {ct_ampersand, {'&'}},
     {ct_asterisk, {'*'}},
+    {ct_atSign, {'@'}},
     {ct_backslash, {'\\'}},
     {ct_bang, {'!'}},
     {ct_colon, {':'}},
