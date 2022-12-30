@@ -1,4 +1,8 @@
 void Lexer::handleStrings() {
+  if (multilineCommentMode || singleLineCommentMode) {
+    return;
+  }
+
   if (characterType == ct_doubleQuote) {
     if (stringLiteralMode) {
       if (previousCharacterType != ct_backslash) {
