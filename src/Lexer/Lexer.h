@@ -63,7 +63,7 @@ class Lexer {
   std::string inspectTokensString();
 
 public:
-  void lex(std::string input);
+  std::vector<Token> lex(std::string input);
 
   // Debugging (public)
   void inspect();

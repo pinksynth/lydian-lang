@@ -21,7 +21,7 @@
 #include <iostream>
 
 #pragma once
-void Lexer::lex(std::string rawInput) {
+std::vector<Token> Lexer::lex(std::string rawInput) {
   print("Lexer received input:\n" + rawInput);
 
   resetState();
@@ -91,6 +91,8 @@ void Lexer::lex(std::string rawInput) {
   inspect();
 
   defineLatestCharType();
+
+  return tokens;
 };
 
 void Lexer::pushToken(Token token) {
