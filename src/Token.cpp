@@ -1,5 +1,8 @@
 #include "./TokenType.cpp"
 #include <iostream>
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
 
 // NOTE: A struct might make more sense for this.
 #pragma once
@@ -44,6 +47,17 @@ public:
       message += ")";
     }
     return message;
+  };
+
+  json toJson() {
+    json tokenJson = {{"type", type},
+                      {"value", value},
+                      {"lineNumberStart", lineNumberStart},
+                      {"columnNumberStart", columnNumberStart},
+                      {"lineNumberEnd", lineNumberEnd},
+                      {"columnNumberEnd", columnNumberEnd}};
+
+    return tokenJson;
   };
 };
 

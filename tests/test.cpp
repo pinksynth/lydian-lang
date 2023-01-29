@@ -8,9 +8,13 @@
 #include "./testUtils.cpp"
 
 #include <catch2/catch_test_macros.hpp>
+#include <fstream>
 #include <iostream>
 #include <nlohmann/json.hpp>
 #include <vector>
+
+std::ifstream f("../tests/tmpTestFile.json");
+json data = json::parse(f);
 
 TEST_CASE("Placeholder for comparing tokens") {
   std::string testInput = R"sammy(

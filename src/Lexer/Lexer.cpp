@@ -19,6 +19,9 @@
 #include "./handlers/handleTokenStartNumber.cpp"
 #include <format>
 #include <iostream>
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
 
 #pragma once
 std::vector<Token> Lexer::lex(std::string rawInput) {
@@ -28,6 +31,8 @@ std::vector<Token> Lexer::lex(std::string rawInput) {
   input = rawInput;
 
   inspect();
+
+  json j;
 
   // TODO: We will not have UTF8 support until we change this. "input.length" is just bytes.
   int max = input.length();
@@ -62,6 +67,7 @@ std::vector<Token> Lexer::lex(std::string rawInput) {
     Token *token = getToken();
     if (token != NULL) {
       print(token->inspectString());
+      j.push_back(token->toJson());
       pushToken(*token);
     } else {
       print("Token is null. Continuing...");
@@ -92,8 +98,12 @@ std::vector<Token> Lexer::lex(std::string rawInput) {
 
   defineLatestCharType();
 
+  print(j.dump(2));
+
   return tokens;
 };
+
+void Lexer::toJson() {}
 
 void Lexer::pushToken(Token token) {
   tokens.push_back(token);
