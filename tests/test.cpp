@@ -14,18 +14,20 @@
 #include <sstream>
 #include <vector>
 
+#include "./cases/booleans-1/test.cpp"
+
 TEST_CASE("Lexer produces desired token output") {
-  std::ifstream file("../tests/tmpTestFile.json");
-  json data = json::parse(file);
-  std::vector<Token> expectedTokens = tokenArrayFromJson(data);
+  // std::ifstream file("../tests/tmpTestFile.json");
+  // json data = json::parse(file);
+  // std::vector<Token> expectedTokens = tokenArrayFromJson(data);
 
-  std::ifstream inputFileStream("../tests/tmpTestFile.sammy");
-  std::ostringstream inputFileStreamString;
-  inputFileStreamString << inputFileStream.rdbuf();
-  std::string inputString = inputFileStreamString.str();
+  // std::ifstream inputFileStream("../tests/tmpTestFile.sammy");
+  // std::ostringstream inputFileStreamString;
+  // inputFileStreamString << inputFileStream.rdbuf();
+  // std::string inputString = inputFileStreamString.str();
 
-  Lexer lexer = Lexer();
-  std::vector<Token> received = lexer.lex(inputString);
+  // Lexer lexer = Lexer();
+  // std::vector<Token> received = lexer.lex(inputString);
 
-  compareTokens(expectedTokens, received);
+  // compareTokens(expectedTokens, received);
 }
