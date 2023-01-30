@@ -28,12 +28,20 @@ public:
     lineNumberEnd = t_lineNumberEnd;
     columnNumberEnd = t_columnNumberEnd;
   };
+  Token(json tokenJson) {
+    value = tokenJson.at("value");
+    type = tokenJson.at("type");
+    lineNumberStart = tokenJson.at("lineNumberStart");
+    columnNumberStart = tokenJson.at("columnNumberStart");
+    lineNumberEnd = tokenJson.at("lineNumberEnd");
+    columnNumberEnd = tokenJson.at("columnNumberEnd");
+  };
 
   std::string inspectString(bool detailed = false) const {
     std::string message = "Token: ";
     message += value;
     if (detailed) {
-      message += "(";
+      message += " (";
       message += "type: ";
       message += std::to_string(type);
       message += "; lineNumberStart: ";
@@ -50,14 +58,12 @@ public:
   };
 
   json toJson() {
-    json tokenJson = {{"type", type},
-                      {"value", value},
-                      {"lineNumberStart", lineNumberStart},
-                      {"columnNumberStart", columnNumberStart},
-                      {"lineNumberEnd", lineNumberEnd},
-                      {"columnNumberEnd", columnNumberEnd}};
-
-    return tokenJson;
+    return {{"type", type},
+            {"value", value},
+            {"lineNumberStart", lineNumberStart},
+            {"columnNumberStart", columnNumberStart},
+            {"lineNumberEnd", lineNumberEnd},
+            {"columnNumberEnd", columnNumberEnd}};
   };
 };
 

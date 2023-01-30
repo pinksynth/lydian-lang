@@ -103,8 +103,6 @@ std::vector<Token> Lexer::lex(std::string rawInput) {
   return tokens;
 };
 
-void Lexer::toJson() {}
-
 void Lexer::pushToken(Token token) {
   tokens.push_back(token);
   tokenLineNumberStart = currentLineNumber;

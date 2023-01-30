@@ -11,24 +11,21 @@
 #include <fstream>
 #include <iostream>
 #include <nlohmann/json.hpp>
+#include <sstream>
 #include <vector>
 
-std::ifstream f("../tests/tmpTestFile.json");
-json data = json::parse(f);
+TEST_CASE("Lexer produces desired token output") {
+  std::ifstream file("../tests/tmpTestFile.json");
+  json data = json::parse(file);
+  std::vector<Token> expectedTokens = tokenArrayFromJson(data);
 
-TEST_CASE("Placeholder for comparing tokens") {
-  std::string testInput = R"sammy(
-a = 1 + 2
-)sammy";
+  std::ifstream inputFileStream("../tests/tmpTestFile.sammy");
+  std::ostringstream inputFileStreamString;
+  inputFileStreamString << inputFileStream.rdbuf();
+  std::string inputString = inputFileStreamString.str();
 
   Lexer lexer = Lexer();
-  std::vector<Token> expected = {
-      Token("\n", tt_whitespace, 1, 1, 2, 1), Token("a", tt_var, 2, 1, 2, 2),
-      Token(" ", tt_whitespace, 2, 2, 2, 3),  Token("=", tt_assignment, 2, 3, 2, 4),
-      Token(" ", tt_whitespace, 2, 4, 2, 5),  Token("1", tt_number, 2, 5, 2, 6),
-      Token(" ", tt_whitespace, 2, 6, 2, 7),  Token("+", tt_operatorInfix, 2, 7, 2, 8),
-      Token(" ", tt_whitespace, 2, 8, 2, 9),  Token("2", tt_number, 2, 9, 2, 10)};
-  std::vector<Token> received = lexer.lex(testInput);
+  std::vector<Token> received = lexer.lex(inputString);
 
-  compareTokens(expected, received);
+  compareTokens(expectedTokens, received);
 }

@@ -1,5 +1,19 @@
+#include "../src/TokenType.cpp"
+
 #include <catch2/catch_test_macros.hpp>
+#include <nlohmann/json.hpp>
 #include <vector>
+
+using json = nlohmann::json;
+
+std::vector<Token> tokenArrayFromJson(json jsonArray) {
+  std::vector<Token> tokens = {};
+
+  for (json::iterator item = jsonArray.begin(); item != jsonArray.end(); ++item)
+    tokens.push_back(Token(*item));
+
+  return tokens;
+};
 
 void compareTokens(std::vector<Token> expectedTokens, std::vector<Token> receivedTokens) {
   unsigned expectedTokensIndex = 0;
