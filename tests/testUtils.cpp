@@ -1,11 +1,3 @@
-#include "../src/TokenType.cpp"
-
-#include <catch2/catch_test_macros.hpp>
-#include <nlohmann/json.hpp>
-#include <vector>
-
-using json = nlohmann::json;
-
 std::vector<Token> tokenArrayFromJson(json jsonArray) {
   std::vector<Token> tokens = {};
 
@@ -39,4 +31,20 @@ void compareTokens(std::vector<Token> expectedTokens, std::vector<Token> receive
       throw std::logic_error("Lexer produced too few tokens.");
     }
   }
+}
+
+void doLexerAssertions(std::filesystem::path currentFile) {
+  std::ifstream expectedTokensFileStream(currentFile.parent_path() / "expectedTokens.json");
+  json expectedTokensJson = json::parse(expectedTokensFileStream);
+  std::vector<Token> expectedTokens = tokenArrayFromJson(expectedTokensJson);
+
+  std::ifstream inputFileStream(currentFile.parent_path() / "input.sammy");
+  std::ostringstream inputFileStreamString;
+  inputFileStreamString << inputFileStream.rdbuf();
+  std::string inputString = inputFileStreamString.str();
+
+  Lexer lexer = Lexer();
+  std::vector<Token> received = lexer.lex(inputString);
+
+  compareTokens(expectedTokens, received);
 }

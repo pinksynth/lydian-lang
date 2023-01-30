@@ -1,7 +1,8 @@
+#include <iostream>
+
 #include "../src/utils.cpp"
 #include "./InterpolationContextStack/InterpolationContextStack.cpp"
 #include "./Lexer/Lexer.cpp"
-#include <iostream>
 
 std::string testInput = R"sammy(
 a = 1 + 2
