@@ -16,4 +16,5 @@
 #include "./testUtils.cpp"
 
 #include "./cases/booleans-1/test.cpp"
+#include "./cases/comments-1/test.cpp"
 #include "./cases/small-file-1/test.cpp"

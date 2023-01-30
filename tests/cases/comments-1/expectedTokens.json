@@ -1,0 +1,18 @@
+[
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 3,
+    "lineNumberStart": 1,
+    "type": 8,
+    "value": "# Inline comment\n\n"
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 5,
+    "lineNumberStart": 3,
+    "type": 8,
+    "value": "<<<\n  Multiline comment\n>>>"
+  }
+]
