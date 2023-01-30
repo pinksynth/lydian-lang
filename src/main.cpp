@@ -8,7 +8,7 @@ a = 1 + 2
 )sammy";
 
 int main() {
-  print("Compiling...");
+  debug("Compiling...");
   Lexer lexer = Lexer();
   lexer.lex(testInput);
 

@@ -25,7 +25,7 @@ using json = nlohmann::json;
 
 #pragma once
 std::vector<Token> Lexer::lex(std::string rawInput) {
-  print("Lexer received input:\n" + rawInput);
+  debug("Lexer received input:\n" + rawInput);
 
   resetState();
   input = rawInput;
@@ -66,11 +66,11 @@ std::vector<Token> Lexer::lex(std::string rawInput) {
 
     Token *token = getToken();
     if (token != NULL) {
-      print(token->inspectString());
+      debug(token->inspectString());
       j.push_back(token->toJson());
       pushToken(*token);
     } else {
-      print("Token is null. Continuing...");
+      debug("Token is null. Continuing...");
     }
     delete token;
 
@@ -98,7 +98,7 @@ std::vector<Token> Lexer::lex(std::string rawInput) {
 
   defineLatestCharType();
 
-  print(j.dump(2));
+  debug(j.dump(2));
 
   return tokens;
 };
@@ -138,8 +138,8 @@ void Lexer::defineLatestCharType() {
 // Debugging
 
 void Lexer::printCharInfo(char character) {
-  print("======================");
-  print("Character: " + charString(character));
+  debug("======================");
+  debug("Character: " + charString(character));
 };
 
 void Lexer::inspect() {
@@ -168,7 +168,7 @@ void Lexer::inspect() {
   // tokens
 
   output += "}\n";
-  print(output);
+  debug(output);
 };
 
 std::string Lexer::inspectTokensString() {
