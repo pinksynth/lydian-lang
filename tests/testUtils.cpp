@@ -33,7 +33,7 @@ void compareTokens(std::vector<Token> expectedTokens, std::vector<Token> receive
   }
 }
 
-void doLexerAssertions(std::filesystem::path currentFile) {
+void doAssertions(std::filesystem::path currentFile) {
   std::ifstream expectedTokensFileStream(currentFile.parent_path() / "expectedTokens.json");
   json expectedTokensJson = json::parse(expectedTokensFileStream);
   std::vector<Token> expectedTokens = tokenArrayFromJson(expectedTokensJson);
