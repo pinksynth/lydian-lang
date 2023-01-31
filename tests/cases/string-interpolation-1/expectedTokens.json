@@ -1,0 +1,1066 @@
+[
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 35,
+    "value": "get_tax"
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 22,
+    "value": "@"
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 10,
+    "value": "$1"
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 26,
+    "value": "*"
+  },
+  {
+    "columnNumberEnd": 19,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 23,
+    "columnNumberStart": 19,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 25,
+    "value": "0.08"
+  },
+  {
+    "columnNumberEnd": 24,
+    "columnNumberStart": 23,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 25,
+    "columnNumberStart": 24,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 25,
+    "lineNumberEnd": 3,
+    "lineNumberStart": 1,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 3,
+    "lineNumberStart": 3,
+    "type": 18,
+    "value": "function"
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 3,
+    "lineNumberStart": 3,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 23,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 3,
+    "lineNumberStart": 3,
+    "type": 35,
+    "value": "print_receipt"
+  },
+  {
+    "columnNumberEnd": 24,
+    "columnNumberStart": 23,
+    "lineNumberEnd": 3,
+    "lineNumberStart": 3,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 32,
+    "columnNumberStart": 24,
+    "lineNumberEnd": 3,
+    "lineNumberStart": 3,
+    "type": 35,
+    "value": "subtotal"
+  },
+  {
+    "columnNumberEnd": 33,
+    "columnNumberStart": 32,
+    "lineNumberEnd": 3,
+    "lineNumberStart": 3,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 46,
+    "columnNumberStart": 33,
+    "lineNumberEnd": 3,
+    "lineNumberStart": 3,
+    "type": 35,
+    "value": "customer_name"
+  },
+  {
+    "columnNumberEnd": 47,
+    "columnNumberStart": 46,
+    "lineNumberEnd": 3,
+    "lineNumberStart": 3,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 48,
+    "columnNumberStart": 47,
+    "lineNumberEnd": 3,
+    "lineNumberStart": 3,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 49,
+    "columnNumberStart": 48,
+    "lineNumberEnd": 3,
+    "lineNumberStart": 3,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 2,
+    "columnNumberStart": 49,
+    "lineNumberEnd": 4,
+    "lineNumberStart": 3,
+    "type": 37,
+    "value": "\n\t"
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 2,
+    "lineNumberEnd": 6,
+    "lineNumberStart": 4,
+    "type": 30,
+    "value": "\"\n\t\tReceipt\n\t\tSubtotal: {"
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 6,
+    "lineNumberStart": 6,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 23,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 6,
+    "lineNumberStart": 6,
+    "type": 35,
+    "value": "subtotal"
+  },
+  {
+    "columnNumberEnd": 24,
+    "columnNumberStart": 23,
+    "lineNumberEnd": 6,
+    "lineNumberStart": 6,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 24,
+    "lineNumberEnd": 7,
+    "lineNumberStart": 6,
+    "type": 31,
+    "value": "}\n\t\tTax:      {"
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 7,
+    "lineNumberStart": 7,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 7,
+    "lineNumberStart": 7,
+    "type": 35,
+    "value": "get_tax"
+  },
+  {
+    "columnNumberEnd": 23,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 7,
+    "lineNumberStart": 7,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 31,
+    "columnNumberStart": 23,
+    "lineNumberEnd": 7,
+    "lineNumberStart": 7,
+    "type": 35,
+    "value": "subtotal"
+  },
+  {
+    "columnNumberEnd": 32,
+    "columnNumberStart": 31,
+    "lineNumberEnd": 7,
+    "lineNumberStart": 7,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 33,
+    "columnNumberStart": 32,
+    "lineNumberEnd": 7,
+    "lineNumberStart": 7,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 33,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 7,
+    "type": 31,
+    "value": "}\n\t\t--------------------\n\t\tTotal:    {"
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 9,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 9,
+    "type": 35,
+    "value": "get_tax"
+  },
+  {
+    "columnNumberEnd": 23,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 9,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 31,
+    "columnNumberStart": 23,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 9,
+    "type": 35,
+    "value": "subtotal"
+  },
+  {
+    "columnNumberEnd": 32,
+    "columnNumberStart": 31,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 9,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 33,
+    "columnNumberStart": 32,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 9,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 34,
+    "columnNumberStart": 33,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 9,
+    "type": 26,
+    "value": "+"
+  },
+  {
+    "columnNumberEnd": 35,
+    "columnNumberStart": 34,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 9,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 43,
+    "columnNumberStart": 35,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 9,
+    "type": 35,
+    "value": "subtotal"
+  },
+  {
+    "columnNumberEnd": 44,
+    "columnNumberStart": 43,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 9,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 44,
+    "lineNumberEnd": 11,
+    "lineNumberStart": 9,
+    "type": 31,
+    "value": "}\n\n\t\t{"
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 12,
+    "lineNumberStart": 11,
+    "type": 37,
+    "value": "\n\t\t\t"
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 12,
+    "lineNumberStart": 12,
+    "type": 21,
+    "value": "if"
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 12,
+    "lineNumberStart": 12,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 20,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 12,
+    "lineNumberStart": 12,
+    "type": 35,
+    "value": "customer_name"
+  },
+  {
+    "columnNumberEnd": 21,
+    "columnNumberStart": 20,
+    "lineNumberEnd": 12,
+    "lineNumberStart": 12,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 21,
+    "lineNumberEnd": 12,
+    "lineNumberStart": 12,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 12,
+    "type": 37,
+    "value": "\n\t\t\t\t"
+  },
+  {
+    "columnNumberEnd": 25,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 30,
+    "value": "\"Have a great day, {"
+  },
+  {
+    "columnNumberEnd": 26,
+    "columnNumberStart": 25,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 39,
+    "columnNumberStart": 26,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 35,
+    "value": "customer_name"
+  },
+  {
+    "columnNumberEnd": 40,
+    "columnNumberStart": 39,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 42,
+    "columnNumberStart": 40,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 29,
+    "value": "}\""
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 42,
+    "lineNumberEnd": 14,
+    "lineNumberStart": 13,
+    "type": 37,
+    "value": "\n\t\t\t"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 14,
+    "lineNumberStart": 14,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 14,
+    "lineNumberStart": 14,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 14,
+    "lineNumberStart": 14,
+    "type": 14,
+    "value": "else"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 14,
+    "lineNumberStart": 14,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 14,
+    "lineNumberStart": 14,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 14,
+    "type": 37,
+    "value": "\n\t\t\t\t"
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 30,
+    "value": "\"Have a {"
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 21,
+    "value": "if"
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 35,
+    "value": "Math"
+  },
+  {
+    "columnNumberEnd": 23,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 13,
+    "value": "."
+  },
+  {
+    "columnNumberEnd": 29,
+    "columnNumberStart": 23,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 35,
+    "value": "random"
+  },
+  {
+    "columnNumberEnd": 30,
+    "columnNumberStart": 29,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 31,
+    "columnNumberStart": 30,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 32,
+    "columnNumberStart": 31,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 33,
+    "columnNumberStart": 32,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 9,
+    "value": ">"
+  },
+  {
+    "columnNumberEnd": 34,
+    "columnNumberStart": 33,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 37,
+    "columnNumberStart": 34,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 25,
+    "value": "0.5"
+  },
+  {
+    "columnNumberEnd": 38,
+    "columnNumberStart": 37,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 39,
+    "columnNumberStart": 38,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 40,
+    "columnNumberStart": 39,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 47,
+    "columnNumberStart": 40,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 32,
+    "value": "\"great\""
+  },
+  {
+    "columnNumberEnd": 48,
+    "columnNumberStart": 47,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 49,
+    "columnNumberStart": 48,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 50,
+    "columnNumberStart": 49,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 54,
+    "columnNumberStart": 50,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 14,
+    "value": "else"
+  },
+  {
+    "columnNumberEnd": 55,
+    "columnNumberStart": 54,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 56,
+    "columnNumberStart": 55,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 57,
+    "columnNumberStart": 56,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 64,
+    "columnNumberStart": 57,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 32,
+    "value": "\"lousy\""
+  },
+  {
+    "columnNumberEnd": 65,
+    "columnNumberStart": 64,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 66,
+    "columnNumberStart": 65,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 67,
+    "columnNumberStart": 66,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 74,
+    "columnNumberStart": 67,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 15,
+    "type": 29,
+    "value": "} day!\""
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 74,
+    "lineNumberEnd": 16,
+    "lineNumberStart": 15,
+    "type": 37,
+    "value": "\n\t\t\t"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 16,
+    "lineNumberStart": 16,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 17,
+    "lineNumberStart": 16,
+    "type": 37,
+    "value": "\n\t\t"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 18,
+    "lineNumberStart": 17,
+    "type": 29,
+    "value": "}\n\t\""
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 19,
+    "lineNumberStart": 18,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 2,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 19,
+    "lineNumberStart": 19,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 2,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 19,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 21,
+    "type": 18,
+    "value": "function"
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 21,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 23,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 21,
+    "type": 35,
+    "value": "print_receipt"
+  },
+  {
+    "columnNumberEnd": 24,
+    "columnNumberStart": 23,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 21,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 32,
+    "columnNumberStart": 24,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 21,
+    "type": 35,
+    "value": "subtotal"
+  },
+  {
+    "columnNumberEnd": 33,
+    "columnNumberStart": 32,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 21,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 34,
+    "columnNumberStart": 33,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 21,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 35,
+    "columnNumberStart": 34,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 21,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 36,
+    "columnNumberStart": 35,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 21,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 49,
+    "columnNumberStart": 36,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 21,
+    "type": 35,
+    "value": "print_receipt"
+  },
+  {
+    "columnNumberEnd": 50,
+    "columnNumberStart": 49,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 21,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 58,
+    "columnNumberStart": 50,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 21,
+    "type": 35,
+    "value": "subtotal"
+  },
+  {
+    "columnNumberEnd": 59,
+    "columnNumberStart": 58,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 21,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 64,
+    "columnNumberStart": 59,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 21,
+    "type": 3,
+    "value": "false"
+  },
+  {
+    "columnNumberEnd": 65,
+    "columnNumberStart": 64,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 21,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 66,
+    "columnNumberStart": 65,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 21,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 67,
+    "columnNumberStart": 66,
+    "lineNumberEnd": 21,
+    "lineNumberStart": 21,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 67,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 21,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 35,
+    "value": "print_receipt"
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 25,
+    "value": "50"
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 25,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 32,
+    "value": "\"Jimbo\""
+  },
+  {
+    "columnNumberEnd": 26,
+    "columnNumberStart": 25,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 26,
+    "lineNumberEnd": 24,
+    "lineNumberStart": 23,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 24,
+    "lineNumberStart": 24,
+    "type": 35,
+    "value": "print_receipt"
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 24,
+    "lineNumberStart": 24,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 24,
+    "lineNumberStart": 24,
+    "type": 25,
+    "value": "75"
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 24,
+    "lineNumberStart": 24,
+    "type": 27,
+    "value": ")"
+  }
+]

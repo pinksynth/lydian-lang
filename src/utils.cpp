@@ -5,10 +5,11 @@
 
 int defaultPadding = 60;
 
-void print(std::string string) {
-  if (getenv("DEBUG")) {
-    std::cout << string << std::endl;
-  }
+void print(std::string string) { std::cout << string << std::endl; };
+
+void debug(std::string string) {
+  if (getenv("DEBUG"))
+    print(string);
 }
 
 std::string padded_label(int width, std::string name, std::string value) {

@@ -1,0 +1,26 @@
+[
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 3,
+    "value": "true"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 2,
+    "lineNumberStart": 1,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 2,
+    "lineNumberStart": 2,
+    "type": 3,
+    "value": "false"
+  }
+]

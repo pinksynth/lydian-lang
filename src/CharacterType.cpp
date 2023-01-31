@@ -7,6 +7,7 @@ enum CharacterType {
   ct_atSign,
   ct_backslash,
   ct_bang,
+  ct_caret,
   ct_colon,
   ct_comma,
   ct_dollarSign,

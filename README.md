@@ -10,6 +10,7 @@ This project uses CMake and Conan. To build, first make sure that `conan` and `c
    ```sh
    mkdir build; cd build
    ```
+   **NOTE: All steps below must be run in the `build` folder.**
 2. Install dependencies:
    ```sh
    conan install ..
@@ -22,20 +23,24 @@ This project uses CMake and Conan. To build, first make sure that `conan` and `c
    ```sh
    make
    ```
-5. You can now run the built executable:
+5. You can now run the built executables `sammy-lang` and `tests`:
+
    ```sh
+   bin/sammy-lang
+   bin/tests
+
+   # With debug output
    DEBUG=true bin/sammy-lang
+   DEBUG=true bin/tests
    ```
 
-To enable debugging, export the DEBUG variable in your shell before compiling:
+## Testing
 
-```sh
-export DEBUG=true; g++ src/main.cpp -std=c++11 -o sammy.out && ./sammy.out
-```
+Follow the same steps as above, but instead of running the `sammy-lang` executable, run the `tests` executable.
 
-### Note about compiler settings
+## Note about compiler settings
 
-I've only built this on my MacBook using a generic `apple-clang` Conan profile:
+CMake should enable this project to be built on various platforms, but I've only built it on my MacBook using a generic `apple-clang` Conan profile:
 
 ```
 # ~/.conan/profiles/default

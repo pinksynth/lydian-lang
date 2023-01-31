@@ -4,10 +4,6 @@
 #include "./getStringTokenType.cpp"
 #include "./shouldContinueConsumingToken.cpp"
 
-// Token *token = new Token();
-// return token;
-// return nullptr;
-
 Token *Lexer::getToken() {
   if (charAccumulator.length() == 0)
     return nullptr;
@@ -100,6 +96,7 @@ Token *Lexer::getToken() {
       squiggles += " ";
     }
     squiggles += "^";
+    std::cout << "charAccumulator is equal to \"^\": " << (charAccumulator == "^") << std::endl;
     throw std::logic_error("Unexpected token " + charAccumulator + "on line " +
                            std::to_string(currentLineNumber) + " :\n" + currentLineValue + "\n" +
                            squiggles);
