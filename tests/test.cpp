@@ -29,3 +29,4 @@
 #include "./cases/operator-precedence-1/test.cpp"
 #include "./cases/small-file-1/test.cpp"
 #include "./cases/string-interpolation-1/test.cpp"
+#include "./cases/variables-1/test.cpp"
