@@ -4,6 +4,7 @@
 #include "./CharacterType.cpp"
 #include "./characterRanges.cpp"
 
+// FIXME: This is insanely inefficient. This happens several times for every single input character.
 CharacterType charTypeFrom(char character) {
   for (auto typeIndex = 0; typeIndex < characterRanges.size(); typeIndex++) {
     auto entry = characterRanges[typeIndex];
