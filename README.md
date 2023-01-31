@@ -4,7 +4,9 @@ An attempt to implement the sammy-lang language in C++ using LLVM.
 
 ## Building
 
-This project uses CMake and Conan. To build, first make sure that `conan` and `cmake` are installed.
+This project uses CMake and Conan. To build, first make sure that `conan` and `cmake` are installed. Then run `scripts/initial-build.sh`.
+
+Alternatively, you can follow the steps below:
 
 1. Make the `build` folder if it does not exist, and enter it (this folder is ignored by git):
    ```sh
@@ -58,3 +60,7 @@ build_type=Release
 [build_requires]
 [env]
 ```
+
+## Debugging and building in VSCode
+
+To debug in VSCode, follow the build steps and install all the recommended Workspace extensions. The [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools) extensions allow you to use CMake's build tasks from VSCode (if you're into that), and the [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) extension is used to Then you should be able to use VSCode's debug tools "automagically".
