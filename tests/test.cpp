@@ -21,6 +21,7 @@
 		* `input.sammy` - The input SammyLang file.
 		* `expectedTokens.json` The expected lexer tokens for the given input.
 */
+#include "./cases/big-file-1/test.cpp"
 #include "./cases/booleans-1/test.cpp"
 #include "./cases/comments-1/test.cpp"
 #include "./cases/function-definitions-1/test.cpp"

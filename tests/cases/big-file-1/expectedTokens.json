@@ -1,0 +1,4474 @@
+[
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 2,
+    "lineNumberStart": 1,
+    "type": 8,
+    "value": "# Variables and primitives\n"
+  },
+  {
+    "columnNumberEnd": 2,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 2,
+    "lineNumberStart": 2,
+    "type": 35,
+    "value": "a"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 2,
+    "lineNumberEnd": 2,
+    "lineNumberStart": 2,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 2,
+    "lineNumberStart": 2,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 2,
+    "lineNumberStart": 2,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 2,
+    "lineNumberStart": 2,
+    "type": 25,
+    "value": "1"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 3,
+    "lineNumberStart": 2,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 3,
+    "lineNumberStart": 3,
+    "type": 3,
+    "value": "true"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 4,
+    "lineNumberStart": 3,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 4,
+    "lineNumberStart": 4,
+    "type": 32,
+    "value": "\"String\""
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 5,
+    "lineNumberStart": 4,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 5,
+    "lineNumberStart": 5,
+    "type": 25,
+    "value": "1_500_000.50"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 7,
+    "lineNumberStart": 5,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 8,
+    "lineNumberStart": 7,
+    "type": 8,
+    "value": "# Variables are treated as \"const\" by default. They cannot be rebound. But \"weak\" variables can be rebound.\n"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 8,
+    "lineNumberStart": 8,
+    "type": 36,
+    "value": "weak"
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 8,
+    "lineNumberStart": 8,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 8,
+    "lineNumberStart": 8,
+    "type": 35,
+    "value": "name"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 8,
+    "lineNumberStart": 8,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 8,
+    "lineNumberStart": 8,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 8,
+    "lineNumberStart": 8,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 20,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 8,
+    "lineNumberStart": 8,
+    "type": 32,
+    "value": "\"Sammy\""
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 20,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 8,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 9,
+    "type": 35,
+    "value": "name"
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 9,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 9,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 9,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 9,
+    "type": 32,
+    "value": "\"Jimbo\""
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 10,
+    "lineNumberStart": 9,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 10,
+    "lineNumberStart": 10,
+    "type": 35,
+    "value": "name"
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 10,
+    "lineNumberStart": 10,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 10,
+    "lineNumberStart": 10,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 10,
+    "lineNumberStart": 10,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 10,
+    "lineNumberStart": 10,
+    "type": 35,
+    "value": "name"
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 10,
+    "lineNumberStart": 10,
+    "type": 13,
+    "value": "."
+  },
+  {
+    "columnNumberEnd": 24,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 10,
+    "lineNumberStart": 10,
+    "type": 35,
+    "value": "toUpperCase"
+  },
+  {
+    "columnNumberEnd": 25,
+    "columnNumberStart": 24,
+    "lineNumberEnd": 10,
+    "lineNumberStart": 10,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 26,
+    "columnNumberStart": 25,
+    "lineNumberEnd": 10,
+    "lineNumberStart": 10,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 26,
+    "lineNumberEnd": 12,
+    "lineNumberStart": 10,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 12,
+    "type": 8,
+    "value": "# Arrays are space-separated\n"
+  },
+  {
+    "columnNumberEnd": 2,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 5,
+    "value": "["
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 2,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 25,
+    "value": "1"
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 25,
+    "value": "2"
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 25,
+    "value": "3"
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 26,
+    "value": "*"
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 25,
+    "value": "4"
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 25,
+    "value": "5"
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 13,
+    "lineNumberStart": 13,
+    "type": 4,
+    "value": "]"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 15,
+    "lineNumberStart": 13,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 16,
+    "lineNumberStart": 15,
+    "type": 8,
+    "value": "# Operator precedence works, so the folowing expression resolves to 26.\n"
+  },
+  {
+    "columnNumberEnd": 2,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 16,
+    "lineNumberStart": 16,
+    "type": 25,
+    "value": "2"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 2,
+    "lineNumberEnd": 16,
+    "lineNumberStart": 16,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 16,
+    "lineNumberStart": 16,
+    "type": 26,
+    "value": "*"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 16,
+    "lineNumberStart": 16,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 16,
+    "lineNumberStart": 16,
+    "type": 25,
+    "value": "3"
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 16,
+    "lineNumberStart": 16,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 16,
+    "lineNumberStart": 16,
+    "type": 26,
+    "value": "+"
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 16,
+    "lineNumberStart": 16,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 16,
+    "lineNumberStart": 16,
+    "type": 25,
+    "value": "4"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 16,
+    "lineNumberStart": 16,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 16,
+    "lineNumberStart": 16,
+    "type": 26,
+    "value": "*"
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 16,
+    "lineNumberStart": 16,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 16,
+    "lineNumberStart": 16,
+    "type": 25,
+    "value": "5"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 18,
+    "lineNumberStart": 16,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 19,
+    "lineNumberStart": 18,
+    "type": 8,
+    "value": "# The range operator (..) can be used to construct arrays from integers or characters. They may iterate forwards or backwards.\n"
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 19,
+    "lineNumberStart": 19,
+    "type": 35,
+    "value": "my_range"
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 19,
+    "lineNumberStart": 19,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 19,
+    "lineNumberStart": 19,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 19,
+    "lineNumberStart": 19,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 19,
+    "lineNumberStart": 19,
+    "type": 25,
+    "value": "1"
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 19,
+    "lineNumberStart": 19,
+    "type": 26,
+    "value": ".."
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 19,
+    "lineNumberStart": 19,
+    "type": 25,
+    "value": "10"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 20,
+    "lineNumberStart": 19,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 20,
+    "lineNumberStart": 20,
+    "type": 35,
+    "value": "reverse_alphabet"
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 20,
+    "lineNumberStart": 20,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 19,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 20,
+    "lineNumberStart": 20,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 20,
+    "columnNumberStart": 19,
+    "lineNumberEnd": 20,
+    "lineNumberStart": 20,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 23,
+    "columnNumberStart": 20,
+    "lineNumberEnd": 20,
+    "lineNumberStart": 20,
+    "type": 32,
+    "value": "\"z\""
+  },
+  {
+    "columnNumberEnd": 25,
+    "columnNumberStart": 23,
+    "lineNumberEnd": 20,
+    "lineNumberStart": 20,
+    "type": 26,
+    "value": ".."
+  },
+  {
+    "columnNumberEnd": 28,
+    "columnNumberStart": 25,
+    "lineNumberEnd": 20,
+    "lineNumberStart": 20,
+    "type": 32,
+    "value": "\"a\""
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 28,
+    "lineNumberEnd": 22,
+    "lineNumberStart": 20,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 22,
+    "type": 8,
+    "value": "# Maps use syntax %[]\n"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 23,
+    "value": "%["
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 35,
+    "value": "foo"
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 6,
+    "value": ":"
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 32,
+    "value": "\"bar\""
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 7,
+    "value": ","
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 35,
+    "value": "baz"
+  },
+  {
+    "columnNumberEnd": 19,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 6,
+    "value": ":"
+  },
+  {
+    "columnNumberEnd": 20,
+    "columnNumberStart": 19,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 21,
+    "columnNumberStart": 20,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 35,
+    "value": "a"
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 21,
+    "lineNumberEnd": 23,
+    "lineNumberStart": 23,
+    "type": 4,
+    "value": "]"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 25,
+    "lineNumberStart": 23,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 26,
+    "lineNumberStart": 25,
+    "type": 8,
+    "value": "# Functions are similar to JS, but with space-separated args.\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 27,
+    "lineNumberStart": 26,
+    "type": 8,
+    "value": "# Functions also have implicit return.\n"
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 27,
+    "lineNumberStart": 27,
+    "type": 18,
+    "value": "function"
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 27,
+    "lineNumberStart": 27,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 27,
+    "lineNumberStart": 27,
+    "type": 35,
+    "value": "multiply"
+  },
+  {
+    "columnNumberEnd": 19,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 27,
+    "lineNumberStart": 27,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 20,
+    "columnNumberStart": 19,
+    "lineNumberEnd": 27,
+    "lineNumberStart": 27,
+    "type": 35,
+    "value": "b"
+  },
+  {
+    "columnNumberEnd": 21,
+    "columnNumberStart": 20,
+    "lineNumberEnd": 27,
+    "lineNumberStart": 27,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 21,
+    "lineNumberEnd": 27,
+    "lineNumberStart": 27,
+    "type": 35,
+    "value": "c"
+  },
+  {
+    "columnNumberEnd": 23,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 27,
+    "lineNumberStart": 27,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 24,
+    "columnNumberStart": 23,
+    "lineNumberEnd": 27,
+    "lineNumberStart": 27,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 25,
+    "columnNumberStart": 24,
+    "lineNumberEnd": 27,
+    "lineNumberStart": 27,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 25,
+    "lineNumberEnd": 28,
+    "lineNumberStart": 27,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 28,
+    "lineNumberStart": 28,
+    "type": 35,
+    "value": "b"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 28,
+    "lineNumberStart": 28,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 28,
+    "lineNumberStart": 28,
+    "type": 26,
+    "value": "*"
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 28,
+    "lineNumberStart": 28,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 28,
+    "lineNumberStart": 28,
+    "type": 35,
+    "value": "c"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 29,
+    "lineNumberStart": 28,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 2,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 29,
+    "lineNumberStart": 29,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 2,
+    "lineNumberEnd": 31,
+    "lineNumberStart": 29,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 32,
+    "lineNumberStart": 31,
+    "type": 8,
+    "value": "# Expressions may be piped into function calls\n"
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 32,
+    "lineNumberStart": 32,
+    "type": 35,
+    "value": "square"
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 32,
+    "lineNumberStart": 32,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 32,
+    "lineNumberStart": 32,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 32,
+    "lineNumberStart": 32,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 32,
+    "lineNumberStart": 32,
+    "type": 22,
+    "value": "@"
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 32,
+    "lineNumberStart": 32,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 32,
+    "lineNumberStart": 32,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 32,
+    "lineNumberStart": 32,
+    "type": 10,
+    "value": "$1"
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 32,
+    "lineNumberStart": 32,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 32,
+    "lineNumberStart": 32,
+    "type": 26,
+    "value": "*"
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 32,
+    "lineNumberStart": 32,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 20,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 32,
+    "lineNumberStart": 32,
+    "type": 10,
+    "value": "$1"
+  },
+  {
+    "columnNumberEnd": 21,
+    "columnNumberStart": 20,
+    "lineNumberEnd": 32,
+    "lineNumberStart": 32,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 21,
+    "lineNumberEnd": 32,
+    "lineNumberStart": 32,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 33,
+    "lineNumberStart": 32,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 33,
+    "lineNumberStart": 33,
+    "type": 35,
+    "value": "subtract"
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 33,
+    "lineNumberStart": 33,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 33,
+    "lineNumberStart": 33,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 33,
+    "lineNumberStart": 33,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 33,
+    "lineNumberStart": 33,
+    "type": 22,
+    "value": "@"
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 33,
+    "lineNumberStart": 33,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 33,
+    "lineNumberStart": 33,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 33,
+    "lineNumberStart": 33,
+    "type": 10,
+    "value": "$1"
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 33,
+    "lineNumberStart": 33,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 19,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 33,
+    "lineNumberStart": 33,
+    "type": 20,
+    "value": "-"
+  },
+  {
+    "columnNumberEnd": 20,
+    "columnNumberStart": 19,
+    "lineNumberEnd": 33,
+    "lineNumberStart": 33,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 20,
+    "lineNumberEnd": 33,
+    "lineNumberStart": 33,
+    "type": 10,
+    "value": "$2"
+  },
+  {
+    "columnNumberEnd": 23,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 33,
+    "lineNumberStart": 33,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 24,
+    "columnNumberStart": 23,
+    "lineNumberEnd": 33,
+    "lineNumberStart": 33,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 24,
+    "lineNumberEnd": 35,
+    "lineNumberStart": 33,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 2,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 35,
+    "lineNumberStart": 35,
+    "type": 25,
+    "value": "2"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 2,
+    "lineNumberEnd": 36,
+    "lineNumberStart": 35,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 36,
+    "lineNumberStart": 36,
+    "type": 17,
+    "value": "->"
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 36,
+    "lineNumberStart": 36,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 36,
+    "lineNumberStart": 36,
+    "type": 35,
+    "value": "multiply"
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 36,
+    "lineNumberStart": 36,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 36,
+    "lineNumberStart": 36,
+    "type": 25,
+    "value": "3"
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 36,
+    "lineNumberStart": 36,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 37,
+    "lineNumberStart": 36,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 37,
+    "lineNumberStart": 37,
+    "type": 17,
+    "value": "->"
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 37,
+    "lineNumberStart": 37,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 37,
+    "lineNumberStart": 37,
+    "type": 35,
+    "value": "square"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 37,
+    "lineNumberStart": 37,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 37,
+    "lineNumberStart": 37,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 38,
+    "lineNumberStart": 37,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 38,
+    "lineNumberStart": 38,
+    "type": 17,
+    "value": "->"
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 38,
+    "lineNumberStart": 38,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 38,
+    "lineNumberStart": 38,
+    "type": 35,
+    "value": "subtract"
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 38,
+    "lineNumberStart": 38,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 38,
+    "lineNumberStart": 38,
+    "type": 25,
+    "value": "5"
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 38,
+    "lineNumberStart": 38,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 40,
+    "lineNumberStart": 38,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 43,
+    "lineNumberStart": 40,
+    "type": 8,
+    "value": "<<<\n  Functions support two concise syntaxes.\n  This one uses defined variables.\n>>>"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 43,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 35,
+    "value": "is_even"
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 22,
+    "value": "@"
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 35,
+    "value": "x"
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 35,
+    "value": "x"
+  },
+  {
+    "columnNumberEnd": 19,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 20,
+    "columnNumberStart": 19,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 26,
+    "value": "%"
+  },
+  {
+    "columnNumberEnd": 21,
+    "columnNumberStart": 20,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 21,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 25,
+    "value": "2"
+  },
+  {
+    "columnNumberEnd": 23,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 25,
+    "columnNumberStart": 23,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 9,
+    "value": "=="
+  },
+  {
+    "columnNumberEnd": 26,
+    "columnNumberStart": 25,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 27,
+    "columnNumberStart": 26,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 25,
+    "value": "0"
+  },
+  {
+    "columnNumberEnd": 28,
+    "columnNumberStart": 27,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 29,
+    "columnNumberStart": 28,
+    "lineNumberEnd": 44,
+    "lineNumberStart": 44,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 29,
+    "lineNumberEnd": 45,
+    "lineNumberStart": 44,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 45,
+    "lineNumberStart": 45,
+    "type": 35,
+    "value": "is_even"
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 45,
+    "lineNumberStart": 45,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 45,
+    "lineNumberStart": 45,
+    "type": 25,
+    "value": "3"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 45,
+    "lineNumberStart": 45,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 46,
+    "lineNumberStart": 45,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 46,
+    "lineNumberStart": 46,
+    "type": 35,
+    "value": "foo"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 46,
+    "lineNumberStart": 46,
+    "type": 13,
+    "value": "."
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 46,
+    "lineNumberStart": 46,
+    "type": 35,
+    "value": "bar"
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 46,
+    "lineNumberStart": 46,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 46,
+    "lineNumberStart": 46,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 46,
+    "lineNumberStart": 46,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 46,
+    "lineNumberStart": 46,
+    "type": 26,
+    "value": "*"
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 46,
+    "lineNumberStart": 46,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 46,
+    "lineNumberStart": 46,
+    "type": 35,
+    "value": "baz"
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 46,
+    "lineNumberStart": 46,
+    "type": 13,
+    "value": "."
+  },
+  {
+    "columnNumberEnd": 21,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 46,
+    "lineNumberStart": 46,
+    "type": 35,
+    "value": "quux"
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 21,
+    "lineNumberEnd": 46,
+    "lineNumberStart": 46,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 25,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 46,
+    "lineNumberStart": 46,
+    "type": 35,
+    "value": "foo"
+  },
+  {
+    "columnNumberEnd": 26,
+    "columnNumberStart": 25,
+    "lineNumberEnd": 46,
+    "lineNumberStart": 46,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 34,
+    "columnNumberStart": 26,
+    "lineNumberEnd": 46,
+    "lineNumberStart": 46,
+    "type": 35,
+    "value": "my_range"
+  },
+  {
+    "columnNumberEnd": 35,
+    "columnNumberStart": 34,
+    "lineNumberEnd": 46,
+    "lineNumberStart": 46,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 35,
+    "lineNumberEnd": 48,
+    "lineNumberStart": 46,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 49,
+    "lineNumberStart": 48,
+    "type": 8,
+    "value": "# This one uses implicit variables following the pattern $1, $2, $3...\n"
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 49,
+    "lineNumberStart": 49,
+    "type": 35,
+    "value": "divide"
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 49,
+    "lineNumberStart": 49,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 49,
+    "lineNumberStart": 49,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 49,
+    "lineNumberStart": 49,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 49,
+    "lineNumberStart": 49,
+    "type": 22,
+    "value": "@"
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 49,
+    "lineNumberStart": 49,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 49,
+    "lineNumberStart": 49,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 49,
+    "lineNumberStart": 49,
+    "type": 10,
+    "value": "$1"
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 49,
+    "lineNumberStart": 49,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 49,
+    "lineNumberStart": 49,
+    "type": 26,
+    "value": "/"
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 49,
+    "lineNumberStart": 49,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 20,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 49,
+    "lineNumberStart": 49,
+    "type": 10,
+    "value": "$2"
+  },
+  {
+    "columnNumberEnd": 21,
+    "columnNumberStart": 20,
+    "lineNumberEnd": 49,
+    "lineNumberStart": 49,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 21,
+    "lineNumberEnd": 49,
+    "lineNumberStart": 49,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 51,
+    "lineNumberStart": 49,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 51,
+    "type": 8,
+    "value": "# It is very useful in map callbacks and predicate functions\n"
+  },
+  {
+    "columnNumberEnd": 2,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 5,
+    "value": "["
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 2,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 25,
+    "value": "1"
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 25,
+    "value": "2"
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 25,
+    "value": "3"
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 25,
+    "value": "4"
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 25,
+    "value": "5"
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 25,
+    "value": "6"
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 25,
+    "value": "7"
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 25,
+    "value": "8"
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 19,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 25,
+    "value": "9"
+  },
+  {
+    "columnNumberEnd": 20,
+    "columnNumberStart": 19,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 20,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 25,
+    "value": "10"
+  },
+  {
+    "columnNumberEnd": 23,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 52,
+    "lineNumberStart": 52,
+    "type": 4,
+    "value": "]"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 23,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 52,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 13,
+    "value": "."
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 35,
+    "value": "filter"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 22,
+    "value": "@"
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 20,
+    "value": "-"
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 10,
+    "value": "$1"
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 19,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 26,
+    "value": "%"
+  },
+  {
+    "columnNumberEnd": 20,
+    "columnNumberStart": 19,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 21,
+    "columnNumberStart": 20,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 25,
+    "value": "2"
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 21,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 24,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 9,
+    "value": "!="
+  },
+  {
+    "columnNumberEnd": 25,
+    "columnNumberStart": 24,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 26,
+    "columnNumberStart": 25,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 25,
+    "value": "0"
+  },
+  {
+    "columnNumberEnd": 27,
+    "columnNumberStart": 26,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 28,
+    "columnNumberStart": 27,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 29,
+    "columnNumberStart": 28,
+    "lineNumberEnd": 53,
+    "lineNumberStart": 53,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 29,
+    "lineNumberEnd": 54,
+    "lineNumberStart": 53,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 54,
+    "lineNumberStart": 54,
+    "type": 13,
+    "value": "."
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 54,
+    "lineNumberStart": 54,
+    "type": 35,
+    "value": "map"
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 54,
+    "lineNumberStart": 54,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 54,
+    "lineNumberStart": 54,
+    "type": 22,
+    "value": "@"
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 54,
+    "lineNumberStart": 54,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 54,
+    "lineNumberStart": 54,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 54,
+    "lineNumberStart": 54,
+    "type": 10,
+    "value": "$1"
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 54,
+    "lineNumberStart": 54,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 54,
+    "lineNumberStart": 54,
+    "type": 26,
+    "value": "*"
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 54,
+    "lineNumberStart": 54,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 19,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 54,
+    "lineNumberStart": 54,
+    "type": 25,
+    "value": "100"
+  },
+  {
+    "columnNumberEnd": 20,
+    "columnNumberStart": 19,
+    "lineNumberEnd": 54,
+    "lineNumberStart": 54,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 21,
+    "columnNumberStart": 20,
+    "lineNumberEnd": 54,
+    "lineNumberStart": 54,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 21,
+    "lineNumberEnd": 54,
+    "lineNumberStart": 54,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 56,
+    "lineNumberStart": 54,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 56,
+    "type": 8,
+    "value": "# \"Ifs\" are expressions rather than statements. They return a value.\n"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 36,
+    "value": "weak"
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 35,
+    "value": "mood"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 21,
+    "value": "if"
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 20,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 35,
+    "value": "Math"
+  },
+  {
+    "columnNumberEnd": 21,
+    "columnNumberStart": 20,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 13,
+    "value": "."
+  },
+  {
+    "columnNumberEnd": 27,
+    "columnNumberStart": 21,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 35,
+    "value": "random"
+  },
+  {
+    "columnNumberEnd": 28,
+    "columnNumberStart": 27,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 29,
+    "columnNumberStart": 28,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 30,
+    "columnNumberStart": 29,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 31,
+    "columnNumberStart": 30,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 9,
+    "value": ">"
+  },
+  {
+    "columnNumberEnd": 32,
+    "columnNumberStart": 31,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 35,
+    "columnNumberStart": 32,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 25,
+    "value": "0.5"
+  },
+  {
+    "columnNumberEnd": 36,
+    "columnNumberStart": 35,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 37,
+    "columnNumberStart": 36,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 38,
+    "columnNumberStart": 37,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 44,
+    "columnNumberStart": 38,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 32,
+    "value": "\"good\""
+  },
+  {
+    "columnNumberEnd": 45,
+    "columnNumberStart": 44,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 46,
+    "columnNumberStart": 45,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 47,
+    "columnNumberStart": 46,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 51,
+    "columnNumberStart": 47,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 14,
+    "value": "else"
+  },
+  {
+    "columnNumberEnd": 52,
+    "columnNumberStart": 51,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 53,
+    "columnNumberStart": 52,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 54,
+    "columnNumberStart": 53,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 59,
+    "columnNumberStart": 54,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 32,
+    "value": "\"bad\""
+  },
+  {
+    "columnNumberEnd": 60,
+    "columnNumberStart": 59,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 61,
+    "columnNumberStart": 60,
+    "lineNumberEnd": 57,
+    "lineNumberStart": 57,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 61,
+    "lineNumberEnd": 59,
+    "lineNumberStart": 57,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 60,
+    "lineNumberStart": 59,
+    "type": 8,
+    "value": "# If expressions allows multiple conditions to be provided. Conditions are separated by white space and the body is only executed if all conditions are true.\n"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 60,
+    "lineNumberStart": 60,
+    "type": 35,
+    "value": "mood"
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 60,
+    "lineNumberStart": 60,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 60,
+    "lineNumberStart": 60,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 60,
+    "lineNumberStart": 60,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 60,
+    "lineNumberStart": 60,
+    "type": 21,
+    "value": "if"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 61,
+    "lineNumberStart": 60,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 61,
+    "lineNumberStart": 61,
+    "type": 35,
+    "value": "Math"
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 61,
+    "lineNumberStart": 61,
+    "type": 13,
+    "value": "."
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 61,
+    "lineNumberStart": 61,
+    "type": 35,
+    "value": "random"
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 61,
+    "lineNumberStart": 61,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 61,
+    "lineNumberStart": 61,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 61,
+    "lineNumberStart": 61,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 61,
+    "lineNumberStart": 61,
+    "type": 9,
+    "value": ">"
+  },
+  {
+    "columnNumberEnd": 19,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 61,
+    "lineNumberStart": 61,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 19,
+    "lineNumberEnd": 61,
+    "lineNumberStart": 61,
+    "type": 25,
+    "value": "0.9"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 62,
+    "lineNumberStart": 61,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 62,
+    "lineNumberStart": 62,
+    "type": 35,
+    "value": "Math"
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 62,
+    "lineNumberStart": 62,
+    "type": 13,
+    "value": "."
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 62,
+    "lineNumberStart": 62,
+    "type": 35,
+    "value": "random"
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 62,
+    "lineNumberStart": 62,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 62,
+    "lineNumberStart": 62,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 62,
+    "lineNumberStart": 62,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 62,
+    "lineNumberStart": 62,
+    "type": 9,
+    "value": "<"
+  },
+  {
+    "columnNumberEnd": 19,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 62,
+    "lineNumberStart": 62,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 19,
+    "lineNumberEnd": 62,
+    "lineNumberStart": 62,
+    "type": 25,
+    "value": "0.1"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 63,
+    "lineNumberStart": 62,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 63,
+    "lineNumberStart": 63,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 63,
+    "lineNumberStart": 63,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 63,
+    "lineNumberStart": 63,
+    "type": 32,
+    "value": "\"excellent\""
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 63,
+    "lineNumberStart": 63,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 63,
+    "lineNumberStart": 63,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 19,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 63,
+    "lineNumberStart": 63,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 23,
+    "columnNumberStart": 19,
+    "lineNumberEnd": 63,
+    "lineNumberStart": 63,
+    "type": 14,
+    "value": "else"
+  },
+  {
+    "columnNumberEnd": 24,
+    "columnNumberStart": 23,
+    "lineNumberEnd": 63,
+    "lineNumberStart": 63,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 25,
+    "columnNumberStart": 24,
+    "lineNumberEnd": 63,
+    "lineNumberStart": 63,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 26,
+    "columnNumberStart": 25,
+    "lineNumberEnd": 63,
+    "lineNumberStart": 63,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 30,
+    "columnNumberStart": 26,
+    "lineNumberEnd": 63,
+    "lineNumberStart": 63,
+    "type": 35,
+    "value": "mood"
+  },
+  {
+    "columnNumberEnd": 31,
+    "columnNumberStart": 30,
+    "lineNumberEnd": 63,
+    "lineNumberStart": 63,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 32,
+    "columnNumberStart": 31,
+    "lineNumberEnd": 63,
+    "lineNumberStart": 63,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 32,
+    "lineNumberEnd": 65,
+    "lineNumberStart": 63,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 65,
+    "type": 8,
+    "value": "# \"Try\" is supported as an expression\n"
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 35,
+    "value": "some_tried_var"
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 21,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 34,
+    "value": "try"
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 21,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 25,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 35,
+    "value": "foo"
+  },
+  {
+    "columnNumberEnd": 26,
+    "columnNumberStart": 25,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 13,
+    "value": "."
+  },
+  {
+    "columnNumberEnd": 29,
+    "columnNumberStart": 26,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 35,
+    "value": "bar"
+  },
+  {
+    "columnNumberEnd": 30,
+    "columnNumberStart": 29,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 31,
+    "columnNumberStart": 30,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 26,
+    "value": "*"
+  },
+  {
+    "columnNumberEnd": 32,
+    "columnNumberStart": 31,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 35,
+    "columnNumberStart": 32,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 35,
+    "value": "baz"
+  },
+  {
+    "columnNumberEnd": 36,
+    "columnNumberStart": 35,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 13,
+    "value": "."
+  },
+  {
+    "columnNumberEnd": 40,
+    "columnNumberStart": 36,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 35,
+    "value": "quux"
+  },
+  {
+    "columnNumberEnd": 41,
+    "columnNumberStart": 40,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 42,
+    "columnNumberStart": 41,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 43,
+    "columnNumberStart": 42,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 46,
+    "columnNumberStart": 43,
+    "lineNumberEnd": 66,
+    "lineNumberStart": 66,
+    "type": 15,
+    "value": "end"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 46,
+    "lineNumberEnd": 68,
+    "lineNumberStart": 66,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 69,
+    "lineNumberStart": 68,
+    "type": 8,
+    "value": "# \"Try\" expressions may use the \"handle\" keyword to handle specific kinds of errors\n"
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 69,
+    "lineNumberStart": 69,
+    "type": 35,
+    "value": "some_handled_var"
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 69,
+    "lineNumberStart": 69,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 19,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 69,
+    "lineNumberStart": 69,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 20,
+    "columnNumberStart": 19,
+    "lineNumberEnd": 69,
+    "lineNumberStart": 69,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 23,
+    "columnNumberStart": 20,
+    "lineNumberEnd": 69,
+    "lineNumberStart": 69,
+    "type": 34,
+    "value": "try"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 23,
+    "lineNumberEnd": 70,
+    "lineNumberStart": 69,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 70,
+    "lineNumberStart": 70,
+    "type": 35,
+    "value": "foo"
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 70,
+    "lineNumberStart": 70,
+    "type": 13,
+    "value": "."
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 70,
+    "lineNumberStart": 70,
+    "type": 35,
+    "value": "bar"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 70,
+    "lineNumberStart": 70,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 70,
+    "lineNumberStart": 70,
+    "type": 26,
+    "value": "*"
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 70,
+    "lineNumberStart": 70,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 70,
+    "lineNumberStart": 70,
+    "type": 35,
+    "value": "baz"
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 70,
+    "lineNumberStart": 70,
+    "type": 13,
+    "value": "."
+  },
+  {
+    "columnNumberEnd": 21,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 70,
+    "lineNumberStart": 70,
+    "type": 35,
+    "value": "quux"
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 21,
+    "lineNumberEnd": 70,
+    "lineNumberStart": 70,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 23,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 70,
+    "lineNumberStart": 70,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 23,
+    "lineNumberEnd": 71,
+    "lineNumberStart": 70,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 71,
+    "lineNumberStart": 71,
+    "type": 19,
+    "value": "handle"
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 71,
+    "lineNumberStart": 71,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 71,
+    "lineNumberStart": 71,
+    "type": 35,
+    "value": "error"
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 71,
+    "lineNumberStart": 71,
+    "type": 6,
+    "value": ":"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 72,
+    "lineNumberStart": 71,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 72,
+    "lineNumberStart": 72,
+    "type": 35,
+    "value": "console"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 72,
+    "lineNumberStart": 72,
+    "type": 13,
+    "value": "."
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 72,
+    "lineNumberStart": 72,
+    "type": 35,
+    "value": "log"
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 72,
+    "lineNumberStart": 72,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 20,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 72,
+    "lineNumberStart": 72,
+    "type": 35,
+    "value": "error"
+  },
+  {
+    "columnNumberEnd": 21,
+    "columnNumberStart": 20,
+    "lineNumberEnd": 72,
+    "lineNumberStart": 72,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 21,
+    "lineNumberEnd": 73,
+    "lineNumberStart": 72,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 73,
+    "lineNumberStart": 73,
+    "type": 35,
+    "value": "foo"
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 73,
+    "lineNumberStart": 73,
+    "type": 28,
+    "value": "("
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 73,
+    "lineNumberStart": 73,
+    "type": 27,
+    "value": ")"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 74,
+    "lineNumberStart": 73,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 75,
+    "lineNumberStart": 74,
+    "type": 8,
+    "value": "# NOTE: While this constructs a valid AST, we don't have pattern matching in the JS compiler yet!\n  "
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 76,
+    "lineNumberStart": 75,
+    "type": 8,
+    "value": "# handle %[my_key: \"foo\"]:\n  "
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 77,
+    "lineNumberStart": 76,
+    "type": 8,
+    "value": "#   baz()\n"
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 77,
+    "lineNumberStart": 77,
+    "type": 15,
+    "value": "end"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 79,
+    "lineNumberStart": 77,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 80,
+    "lineNumberStart": 79,
+    "type": 8,
+    "value": "# Structs may be used to enforce the shape of certain pieces of data\n"
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 80,
+    "lineNumberStart": 80,
+    "type": 33,
+    "value": "struct"
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 80,
+    "lineNumberStart": 80,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 80,
+    "lineNumberStart": 80,
+    "type": 35,
+    "value": "MyStruct"
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 80,
+    "lineNumberStart": 80,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 80,
+    "lineNumberStart": 80,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 81,
+    "lineNumberStart": 80,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 81,
+    "lineNumberStart": 81,
+    "type": 35,
+    "value": "foo"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 82,
+    "lineNumberStart": 81,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 82,
+    "lineNumberStart": 82,
+    "type": 35,
+    "value": "bar"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 83,
+    "lineNumberStart": 82,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 83,
+    "lineNumberStart": 83,
+    "type": 35,
+    "value": "baz"
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 83,
+    "lineNumberStart": 83,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 83,
+    "lineNumberStart": 83,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 83,
+    "lineNumberStart": 83,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 83,
+    "lineNumberStart": 83,
+    "type": 32,
+    "value": "\"default key\""
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 84,
+    "lineNumberStart": 83,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 2,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 84,
+    "lineNumberStart": 84,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 2,
+    "lineNumberEnd": 86,
+    "lineNumberStart": 84,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 2,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 86,
+    "lineNumberStart": 86,
+    "type": 26,
+    "value": "%"
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 2,
+    "lineNumberEnd": 86,
+    "lineNumberStart": 86,
+    "type": 35,
+    "value": "MyStruct"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 86,
+    "lineNumberStart": 86,
+    "type": 5,
+    "value": "["
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 86,
+    "lineNumberStart": 86,
+    "type": 35,
+    "value": "foo"
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 86,
+    "lineNumberStart": 86,
+    "type": 6,
+    "value": ":"
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 86,
+    "lineNumberStart": 86,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 86,
+    "lineNumberStart": 86,
+    "type": 32,
+    "value": "\"nice\""
+  },
+  {
+    "columnNumberEnd": 23,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 86,
+    "lineNumberStart": 86,
+    "type": 7,
+    "value": ","
+  },
+  {
+    "columnNumberEnd": 24,
+    "columnNumberStart": 23,
+    "lineNumberEnd": 86,
+    "lineNumberStart": 86,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 27,
+    "columnNumberStart": 24,
+    "lineNumberEnd": 86,
+    "lineNumberStart": 86,
+    "type": 35,
+    "value": "bar"
+  },
+  {
+    "columnNumberEnd": 28,
+    "columnNumberStart": 27,
+    "lineNumberEnd": 86,
+    "lineNumberStart": 86,
+    "type": 6,
+    "value": ":"
+  },
+  {
+    "columnNumberEnd": 29,
+    "columnNumberStart": 28,
+    "lineNumberEnd": 86,
+    "lineNumberStart": 86,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 32,
+    "columnNumberStart": 29,
+    "lineNumberEnd": 86,
+    "lineNumberStart": 86,
+    "type": 25,
+    "value": "420"
+  },
+  {
+    "columnNumberEnd": 33,
+    "columnNumberStart": 32,
+    "lineNumberEnd": 86,
+    "lineNumberStart": 86,
+    "type": 4,
+    "value": "]"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 33,
+    "lineNumberEnd": 88,
+    "lineNumberStart": 86,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 89,
+    "lineNumberStart": 88,
+    "type": 8,
+    "value": "# Enumerations are supported with the \"enum\" keyword. Case values are unique, and in JS they are stored as strings.\n"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 89,
+    "lineNumberStart": 89,
+    "type": 16,
+    "value": "enum"
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 89,
+    "lineNumberStart": 89,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 89,
+    "lineNumberStart": 89,
+    "type": 35,
+    "value": "Directions"
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 89,
+    "lineNumberStart": 89,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 89,
+    "lineNumberStart": 89,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 90,
+    "lineNumberStart": 89,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 90,
+    "lineNumberStart": 90,
+    "type": 35,
+    "value": "north"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 91,
+    "lineNumberStart": 90,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 91,
+    "lineNumberStart": 91,
+    "type": 35,
+    "value": "east"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 92,
+    "lineNumberStart": 91,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 92,
+    "lineNumberStart": 92,
+    "type": 35,
+    "value": "south"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 93,
+    "lineNumberStart": 92,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 93,
+    "lineNumberStart": 93,
+    "type": 35,
+    "value": "west"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 94,
+    "lineNumberStart": 93,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 2,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 94,
+    "lineNumberStart": 94,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 2,
+    "lineNumberEnd": 96,
+    "lineNumberStart": 94,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 96,
+    "lineNumberStart": 96,
+    "type": 35,
+    "value": "Directions"
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 96,
+    "lineNumberStart": 96,
+    "type": 13,
+    "value": "."
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 96,
+    "lineNumberStart": 96,
+    "type": 35,
+    "value": "north"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 97,
+    "lineNumberStart": 96,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 97,
+    "lineNumberStart": 97,
+    "type": 35,
+    "value": "Directions"
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 97,
+    "lineNumberStart": 97,
+    "type": 13,
+    "value": "."
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 97,
+    "lineNumberStart": 97,
+    "type": 35,
+    "value": "east"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 99,
+    "lineNumberStart": 97,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 100,
+    "lineNumberStart": 99,
+    "type": 8,
+    "value": "# Enums also allow explicit assigning of case values.\n"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 100,
+    "lineNumberStart": 100,
+    "type": 16,
+    "value": "enum"
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 100,
+    "lineNumberStart": 100,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 100,
+    "lineNumberStart": 100,
+    "type": 35,
+    "value": "Suites"
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 100,
+    "lineNumberStart": 100,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 100,
+    "lineNumberStart": 100,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 101,
+    "lineNumberStart": 100,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 101,
+    "lineNumberStart": 101,
+    "type": 35,
+    "value": "heart"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 101,
+    "lineNumberStart": 101,
+    "type": 37,
+    "value": "   "
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 101,
+    "lineNumberStart": 101,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 101,
+    "lineNumberStart": 101,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 101,
+    "lineNumberStart": 101,
+    "type": 25,
+    "value": "1"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 102,
+    "lineNumberStart": 101,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 102,
+    "lineNumberStart": 102,
+    "type": 35,
+    "value": "diamond"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 102,
+    "lineNumberStart": 102,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 102,
+    "lineNumberStart": 102,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 102,
+    "lineNumberStart": 102,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 102,
+    "lineNumberStart": 102,
+    "type": 25,
+    "value": "2"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 103,
+    "lineNumberStart": 102,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 103,
+    "lineNumberStart": 103,
+    "type": 35,
+    "value": "spade"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 103,
+    "lineNumberStart": 103,
+    "type": 37,
+    "value": "   "
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 103,
+    "lineNumberStart": 103,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 103,
+    "lineNumberStart": 103,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 103,
+    "lineNumberStart": 103,
+    "type": 25,
+    "value": "3"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 104,
+    "lineNumberStart": 103,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 104,
+    "lineNumberStart": 104,
+    "type": 35,
+    "value": "club"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 104,
+    "lineNumberStart": 104,
+    "type": 37,
+    "value": "    "
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 104,
+    "lineNumberStart": 104,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 104,
+    "lineNumberStart": 104,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 104,
+    "lineNumberStart": 104,
+    "type": 25,
+    "value": "4"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 105,
+    "lineNumberStart": 104,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 2,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 105,
+    "lineNumberStart": 105,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 2,
+    "lineNumberEnd": 107,
+    "lineNumberStart": 105,
+    "type": 37,
+    "value": "\n\n"
+  },
+  {
+    "columnNumberEnd": 7,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 107,
+    "lineNumberStart": 107,
+    "type": 35,
+    "value": "Suites"
+  },
+  {
+    "columnNumberEnd": 8,
+    "columnNumberStart": 7,
+    "lineNumberEnd": 107,
+    "lineNumberStart": 107,
+    "type": 13,
+    "value": "."
+  },
+  {
+    "columnNumberEnd": 15,
+    "columnNumberStart": 8,
+    "lineNumberEnd": 107,
+    "lineNumberStart": 107,
+    "type": 35,
+    "value": "diamond"
+  },
+  {
+    "columnNumberEnd": 16,
+    "columnNumberStart": 15,
+    "lineNumberEnd": 107,
+    "lineNumberStart": 107,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 16,
+    "lineNumberEnd": 109,
+    "lineNumberStart": 107,
+    "type": 8,
+    "value": "# -> 2\n\n"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 110,
+    "lineNumberStart": 109,
+    "type": 8,
+    "value": "# Strings may be interpolated using curly braces. Everything between curly braces is called an \"interpolation context\", and these contexts may be recursive.\n"
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 110,
+    "lineNumberStart": 110,
+    "type": 35,
+    "value": "my_string"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 110,
+    "lineNumberStart": 110,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 12,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 110,
+    "lineNumberStart": 110,
+    "type": 1,
+    "value": "="
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 110,
+    "lineNumberStart": 110,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 33,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 110,
+    "lineNumberStart": 110,
+    "type": 30,
+    "value": "\"Hello! My name is {"
+  },
+  {
+    "columnNumberEnd": 34,
+    "columnNumberStart": 33,
+    "lineNumberEnd": 110,
+    "lineNumberStart": 110,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 38,
+    "columnNumberStart": 34,
+    "lineNumberEnd": 110,
+    "lineNumberStart": 110,
+    "type": 35,
+    "value": "name"
+  },
+  {
+    "columnNumberEnd": 39,
+    "columnNumberStart": 38,
+    "lineNumberEnd": 110,
+    "lineNumberStart": 110,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 56,
+    "columnNumberStart": 39,
+    "lineNumberEnd": 110,
+    "lineNumberStart": 110,
+    "type": 31,
+    "value": "}. I am feeling {"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 56,
+    "lineNumberEnd": 111,
+    "lineNumberStart": 110,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 111,
+    "lineNumberStart": 111,
+    "type": 21,
+    "value": "if"
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 111,
+    "lineNumberStart": 111,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 111,
+    "lineNumberStart": 111,
+    "type": 35,
+    "value": "mood"
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 111,
+    "lineNumberStart": 111,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 13,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 111,
+    "lineNumberStart": 111,
+    "type": 9,
+    "value": "=="
+  },
+  {
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
+    "lineNumberEnd": 111,
+    "lineNumberStart": 111,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 20,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 111,
+    "lineNumberStart": 111,
+    "type": 32,
+    "value": "\"good\""
+  },
+  {
+    "columnNumberEnd": 21,
+    "columnNumberStart": 20,
+    "lineNumberEnd": 111,
+    "lineNumberStart": 111,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 21,
+    "lineNumberEnd": 111,
+    "lineNumberStart": 111,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 112,
+    "lineNumberStart": 111,
+    "type": 37,
+    "value": "\n    "
+  },
+  {
+    "columnNumberEnd": 17,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 112,
+    "lineNumberStart": 112,
+    "type": 32,
+    "value": "\"just fine!\""
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 113,
+    "lineNumberStart": 112,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 113,
+    "lineNumberStart": 113,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 113,
+    "lineNumberStart": 113,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 9,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 113,
+    "lineNumberStart": 113,
+    "type": 14,
+    "value": "else"
+  },
+  {
+    "columnNumberEnd": 10,
+    "columnNumberStart": 9,
+    "lineNumberEnd": 113,
+    "lineNumberStart": 113,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 11,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 113,
+    "lineNumberStart": 113,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 11,
+    "lineNumberEnd": 114,
+    "lineNumberStart": 113,
+    "type": 37,
+    "value": "\n    "
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 114,
+    "lineNumberStart": 114,
+    "type": 32,
+    "value": "\"not so hot.\""
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 115,
+    "lineNumberStart": 114,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 115,
+    "lineNumberStart": 115,
+    "type": 11,
+    "value": "}"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 116,
+    "lineNumberStart": 115,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 116,
+    "lineNumberStart": 116,
+    "type": 29,
+    "value": "}\""
+  }
+]
