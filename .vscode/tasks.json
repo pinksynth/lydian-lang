@@ -1,0 +1,11 @@
+{
+  "tasks": [
+    {
+      "label": "Initial Build",
+      "type": "shell",
+      "command": "${workspaceFolder}/scripts/initial-build.sh",
+      "problemMatcher": []
+    }
+  ],
+  "version": "2.0.0"
+}

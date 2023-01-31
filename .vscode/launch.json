@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Lang",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceRoot}/build/bin/sammy-lang",
+      "args": [],
+      "cwd": "${workspaceRoot}"
+    },
+    {
+      "name": "Debug Tests",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceRoot}/build/bin/tests",
+      "args": [],
+      "cwd": "${workspaceRoot}"
+    }
+  ]
+}
