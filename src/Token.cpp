@@ -38,21 +38,22 @@ public:
   };
 
   std::string inspectString(bool detailed = false) const {
-    std::string message = "Token: ";
-    message += value;
+    std::string message = "Token: " + value + "\n";
     if (detailed) {
-      message += " (";
-      message += "type: ";
+      message += " {";
+      message += "\"value\": ";
+      message += (value == "\n") ? "\"\\n\"" : "\"" + value + "\"";
+      message += ", \"type\": ";
       message += std::to_string(type);
-      message += "; lineNumberStart: ";
+      message += ", \"lineNumberStart\": ";
       message += std::to_string(lineNumberStart);
-      message += "; columnNumberStart: ";
+      message += ", \"columnNumberStart\": ";
       message += std::to_string(columnNumberStart);
-      message += "; lineNumberEnd: ";
+      message += ", \"lineNumberEnd\": ";
       message += std::to_string(lineNumberEnd);
-      message += "; columnNumberEnd: ";
+      message += ", \"columnNumberEnd\": ";
       message += std::to_string(columnNumberEnd);
-      message += ")";
+      message += "}";
     }
     return message;
   };
