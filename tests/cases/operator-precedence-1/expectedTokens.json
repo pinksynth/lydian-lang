@@ -886,5 +886,13 @@
     "lineNumberStart": 7,
     "type": 35,
     "value": "s"
+  },
+  {
+    "value": "\n",
+    "type": 37,
+    "lineNumberStart": 7,
+    "columnNumberStart": 14,
+    "lineNumberEnd": 8,
+    "columnNumberEnd": 1
   }
 ]

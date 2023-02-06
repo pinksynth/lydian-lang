@@ -14,5 +14,13 @@
     "lineNumberStart": 3,
     "type": 8,
     "value": "<<<\n  Multiline comment\n>>>"
+  },
+  {
+    "value": "\n",
+    "type": 37,
+    "lineNumberStart": 5,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 6,
+    "columnNumberEnd": 1
   }
 ]

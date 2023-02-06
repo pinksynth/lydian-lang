@@ -4470,5 +4470,13 @@
     "lineNumberStart": 116,
     "type": 29,
     "value": "}\""
+  },
+  {
+    "value": "\n",
+    "type": 37,
+    "lineNumberStart": 116,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 117,
+    "columnNumberEnd": 1
   }
 ]

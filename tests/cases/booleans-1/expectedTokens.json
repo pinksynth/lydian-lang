@@ -22,5 +22,13 @@
     "lineNumberStart": 2,
     "type": 3,
     "value": "false"
+  },
+  {
+    "value": "\n",
+    "type": 37,
+    "lineNumberStart": 2,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 3,
+    "columnNumberEnd": 1
   }
 ]

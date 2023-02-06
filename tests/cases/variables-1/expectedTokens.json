@@ -150,5 +150,13 @@
     "lineNumberStart": 4,
     "type": 32,
     "value": "\"Austero\""
+  },
+  {
+    "value": "\n",
+    "type": 37,
+    "lineNumberStart": 4,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 5,
+    "columnNumberEnd": 1
   }
 ]

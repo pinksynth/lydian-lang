@@ -278,5 +278,13 @@
     "lineNumberStart": 2,
     "type": 37,
     "value": " "
+  },
+  {
+    "value": "}",
+    "type": 11,
+    "lineNumberStart": 2,
+    "columnNumberStart": 38,
+    "lineNumberEnd": 2,
+    "columnNumberEnd": 39
   }
 ]

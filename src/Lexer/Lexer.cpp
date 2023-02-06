@@ -96,7 +96,24 @@ std::vector<Token> Lexer::lex(std::string rawInput) {
 
   inspect();
 
+  // We have stopped consuming tokens, so reset any types for remaining characters. Unsure if these values are actually what we want, but they seem to work.
+  character = 0;
+  nextCharacter = 0;
+  thirdCharacter = 0;
+  characterType = ct_NONE;
+  nextCharacterType = ct_NONE;
+  thirdCharacterType = ct_NONE;
+
   defineLatestCharType();
+
+  Token *token = getToken();
+  if (token != NULL) {
+    debug(token->inspectString());
+    j.push_back(token->toJson());
+    pushToken(*token);
+  } else {
+    debug(charAccumulator);
+  }
 
   debug(j.dump(2));
 

@@ -70,5 +70,13 @@
     "lineNumberStart": 1,
     "type": 25,
     "value": "2"
+  },
+  {
+    "value": "\n",
+    "type": 37,
+    "lineNumberStart": 1,
+    "columnNumberStart": 10,
+    "lineNumberEnd": 2,
+    "columnNumberEnd": 1
   }
 ]

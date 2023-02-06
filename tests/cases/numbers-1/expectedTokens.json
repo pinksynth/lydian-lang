@@ -94,5 +94,13 @@
     "lineNumberStart": 5,
     "type": 25,
     "value": "315_000_000"
+  },
+  {
+    "value": "\n",
+    "type": 37,
+    "lineNumberStart": 5,
+    "columnNumberStart": 12,
+    "lineNumberEnd": 6,
+    "columnNumberEnd": 1
   }
 ]
