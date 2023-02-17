@@ -1,3 +1,6 @@
+#include "../Token.cpp"
+#include <vector>
+
 #pragma once
 class SammyAST {
 

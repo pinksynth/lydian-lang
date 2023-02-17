@@ -1,8 +1,8 @@
 #include "../NodeType.cpp"
 
+#pragma once
 class Node {
 
 public:
   NodeType nodeType;
-  Node(NodeType theNodeType) { nodeType = theNodeType; }
 };
