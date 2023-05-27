@@ -13,6 +13,8 @@ std::string testInput = R"sammy(
   4_000.5
   true
   false
+  $1
+  $25
 )sammy";
 
 int main() {

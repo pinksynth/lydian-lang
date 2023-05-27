@@ -4,6 +4,7 @@
 #include "../TokenType.cpp"
 #include "./Node.cpp"
 #include "./nodeTypes/NodeBoolean/NodeBoolean.cpp"
+#include "./nodeTypes/NodeConciseLambdaArg/NodeConciseLambdaArg.cpp"
 #include "./nodeTypes/NodeIdentifier/NodeIdentifier.cpp"
 #include "./nodeTypes/NodeNil/NodeNil.cpp"
 #include "./nodeTypes/NodeNumber/NodeNumber.cpp"
@@ -76,6 +77,9 @@ Node *SammyAST::getTerminalNodeFromToken(Token token) {
 
   case tt_nil:
     return new NodeNil();
+
+  case tt_conciseLambdaArgument:
+    return new NodeConciseLambdaArg(token);
 
   default:
     // throw std::out_of_range("Encountered an unknown token type.");
