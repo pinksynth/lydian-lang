@@ -4,6 +4,7 @@
 #include "../TokenType.cpp"
 #include "./Node.cpp"
 #include "./nodeTypes/NodeIdentifier/NodeIdentifier.cpp"
+#include "./nodeTypes/NodeNumber/NodeNumber.cpp"
 #include "./nodeTypes/NodeRoot/NodeRoot.cpp"
 #include <vector>
 
@@ -36,7 +37,7 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
     }
 
     // if (TT_TERMINALS.includes(tokenType) && !TT_BINARY_OPERATORS.includes(nextTokenType)) {
-    //   node.children.push(getNodeFromToken(token))
+    //   node.children.push(getTerminalNodeFromToken(token))
     // }
 
     std::cout << "Token type:" << std::endl;
@@ -49,7 +50,7 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
     if (isTerminal(tokenType)) {
       // Get node from token and push onto children.
       std::cout << "Pushing..." << std::endl;
-      Node *child = getNodeFromToken(token);
+      Node *child = getTerminalNodeFromToken(token);
       node->pushToExpressionList(child);
     }
 
@@ -60,10 +61,13 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
   print(node->inspectString());
 };
 
-Node *SammyAST::getNodeFromToken(Token token) {
+Node *SammyAST::getTerminalNodeFromToken(Token token) {
   switch (token.type) {
   case tt_var:
     return new NodeIdentifier(token);
+
+  case tt_number:
+    return new NodeNumber(token);
 
   default:
     // throw std::out_of_range("Encountered an unknown token type.");

@@ -8,5 +8,5 @@ class SammyAST {
 public:
   void fromTokens(std::vector<Token> tokens);
 
-  static Node *getNodeFromToken(Token token);
+  static Node *getTerminalNodeFromToken(Token token);
 };
