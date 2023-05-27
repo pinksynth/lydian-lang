@@ -13,8 +13,8 @@ Token *Lexer::getToken() {
 
   TokenType tokenType = tt_NONE;
 
-  if (charAccumulator == "null") {
-    tokenType = tt_null;
+  if (charAccumulator == "nil") {
+    tokenType = tt_nil;
   } else if (charAccumulator == "weak") {
     tokenType = tt_weak;
   } else if (charAccumulator == "if") {
