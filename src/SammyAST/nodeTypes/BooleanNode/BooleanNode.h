@@ -10,7 +10,7 @@ public:
   bool booleanValue;
 
   BooleanNode(Token token) {
-    nodeType = nt_identifier;
+    nodeType = nt_literalBoolean;
     value = token.value;
     booleanValue = value == "true";
   }

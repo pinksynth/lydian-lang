@@ -9,10 +9,14 @@ std::string testInput = R"sammy(
   nil
   a
   2
-  3.0
-  4_000.5
-  true
-  false
+  [
+    3.0
+    [
+      4_000.5
+      true
+    ]
+    false
+  ]
   $1
   $25
 )sammy";

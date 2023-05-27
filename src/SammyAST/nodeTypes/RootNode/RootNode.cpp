@@ -4,8 +4,14 @@ void RootNode::pushToExpressionList(Node *node) { children.push_back(node); };
 
 std::string RootNode::inspectString(int pad) {
   std::string output = "Root Node: [\n";
+
+  std::string padString = "";
+  for (int i = 0; i <= pad; i++) {
+    padString += " ";
+  }
+
   for (Node *node : children) {
-    output += "  " + node->inspectString(pad + 2) + "\n";
+    output += padString + node->inspectString(pad + 2) + "\n";
   }
   output += "]";
   return output;

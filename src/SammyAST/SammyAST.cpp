@@ -6,6 +6,7 @@
 #include "./nodeTypes/BooleanNode/BooleanNode.cpp"
 #include "./nodeTypes/ConciseLambdaArgNode/ConciseLambdaArgNode.cpp"
 #include "./nodeTypes/IdentifierNode/IdentifierNode.cpp"
+#include "./nodeTypes/ListNode/ListNode.cpp"
 #include "./nodeTypes/NilNode/NilNode.cpp"
 #include "./nodeTypes/NumberNode/NumberNode.cpp"
 #include "./nodeTypes/RootNode/RootNode.cpp"
@@ -40,13 +41,18 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
     }
 
     if (tokenType == tt_bracketOpen) {
-      // child = new ListNode();
+      Node *child = new ListNode();
+      child->parent = node;
+      node->pushToExpressionList(child);
+      node = child;
     }
     if (tokenType == tt_bracketClose) {
+      node = node->parent;
     }
     if (isTerminal(tokenType) && !isBinaryOperator(nextTokenType)) {
       // Get node from token and push onto children.
       Node *child = getTerminalNodeFromToken(token);
+      child->parent = node;
       node->pushToExpressionList(child);
     }
 

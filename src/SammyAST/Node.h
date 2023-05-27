@@ -4,6 +4,7 @@
 class Node {
 
 public:
+  Node *parent;
   NodeType nodeType;
 
   virtual void pushToExpressionList(Node *node);
