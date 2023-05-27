@@ -1,8 +1,8 @@
-#include "./NodeRoot.h"
+#include "./RootNode.h"
 
-void NodeRoot::pushToExpressionList(Node *node) { children.push_back(node); };
+void RootNode::pushToExpressionList(Node *node) { children.push_back(node); };
 
-std::string NodeRoot::inspectString(int pad) {
+std::string RootNode::inspectString(int pad) {
   std::string output = "Root Node: [\n";
   for (Node *node : children) {
     output += "  " + node->inspectString(pad + 2) + "\n";

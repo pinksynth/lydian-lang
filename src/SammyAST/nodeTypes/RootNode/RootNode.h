@@ -2,13 +2,13 @@
 #include "../../Node.h"
 #include <vector>
 
-class NodeRoot : public Node {
+class RootNode : public Node {
 public:
   std::vector<Node *> children;
   void pushToExpressionList(Node *node);
   std::string inspectString(int pad = 0);
 
-  NodeRoot() {
+  RootNode() {
     nodeType = nt_root;
     children = {};
   }

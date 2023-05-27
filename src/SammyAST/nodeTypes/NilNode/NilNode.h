@@ -3,9 +3,9 @@
 #include "../../Node.h"
 #include <vector>
 
-class NodeNil : public Node {
+class NilNode : public Node {
 public:
   std::string inspectString(int pad = 0);
 
-  NodeNil() { nodeType = nt_nil; }
+  NilNode() { nodeType = nt_nil; }
 };

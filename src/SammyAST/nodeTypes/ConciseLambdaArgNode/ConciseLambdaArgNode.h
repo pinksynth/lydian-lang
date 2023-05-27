@@ -3,13 +3,15 @@
 #include "../../Node.h"
 #include <vector>
 
-class NodeIdentifier : public Node {
+class ConciseLambdaArgNode : public Node {
 public:
   std::string inspectString(int pad = 0);
   std::string value;
+  int id;
 
-  NodeIdentifier(Token token) {
-    nodeType = nt_identifier;
+  ConciseLambdaArgNode(Token token) {
+    nodeType = nt_conciseLambdaArgument;
     value = token.value;
+    id = std::stoi(value.substr(1));
   }
 };

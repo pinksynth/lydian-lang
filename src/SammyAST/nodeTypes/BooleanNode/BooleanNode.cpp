@@ -1,5 +1,5 @@
-#include "./NodeBoolean.h"
+#include "./BooleanNode.h"
 
-std::string NodeBoolean::inspectString(int pad) {
+std::string BooleanNode::inspectString(int pad) {
   return "Boolean Node: " + value + " (" + std::to_string(booleanValue) + ")";
 };

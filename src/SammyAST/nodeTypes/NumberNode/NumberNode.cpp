@@ -1,5 +1,5 @@
-#include "./NodeNumber.h"
+#include "./NumberNode.h"
 
-std::string NodeNumber::inspectString(int pad) {
+std::string NumberNode::inspectString(int pad) {
   return "Number Node: " + value + " (" + std::to_string(doubleValue) + ")";
 };

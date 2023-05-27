@@ -3,13 +3,13 @@
 #include "../../Node.h"
 #include <vector>
 
-class NodeNumber : public Node {
+class NumberNode : public Node {
 public:
   std::string inspectString(int pad = 0);
   std::string value;
   double doubleValue;
 
-  NodeNumber(Token token) {
+  NumberNode(Token token) {
     nodeType = nt_literalNumber;
     value = token.value;
     std::string underscoresStripped = value;
