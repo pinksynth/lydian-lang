@@ -5,7 +5,7 @@
 #include "./Lexer/Lexer.cpp"
 #include "./SammyAST/SammyAST.cpp"
 
-std::string testInput = R"sammy(a 2)sammy";
+std::string testInput = R"sammy(a 2 3.0 4_000.5 true false)sammy";
 
 int main() {
   debug("Compiling...");
