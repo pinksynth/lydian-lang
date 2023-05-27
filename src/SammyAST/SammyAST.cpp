@@ -3,14 +3,13 @@
 #include "../Token.cpp"
 #include "../TokenType.cpp"
 #include "./Node.cpp"
+#include "./nodeTypes/NodeIdentifier/NodeIdentifier.cpp"
 #include "./nodeTypes/NodeRoot/NodeRoot.cpp"
 #include <vector>
 
 void SammyAST::fromTokens(std::vector<Token> tokens) {
   NodeRoot root = NodeRoot();
   Node *node = &root;
-
-  // NOTE: Choosing not to implement a "removeWhitespace" function because we should just be able to continue our loop instead of explicitly traversing the list before walking the AST.
 
   size_t tokensCount = tokens.size();
   for (size_t i = 0; i < tokensCount; i++) {
@@ -50,7 +49,8 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
     if (isTerminal(tokenType)) {
       // Get node from token and push onto children.
       std::cout << "Pushing..." << std::endl;
-      node->pushToExpressionList(getNodeFromToken(token));
+      Node *child = getNodeFromToken(token);
+      node->pushToExpressionList(child);
     }
 
     print(token.inspectString());
@@ -60,7 +60,14 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
   print(node->inspectString());
 };
 
-Node SammyAST::getNodeFromToken(Token token) {
-  Node node = Node();
-  return node;
+Node *SammyAST::getNodeFromToken(Token token) {
+  switch (token.type) {
+  case tt_var:
+    return new NodeIdentifier(token);
+
+  default:
+    // throw std::out_of_range("Encountered an unknown token type.");
+    // break;
+    return new Node();
+  }
 };

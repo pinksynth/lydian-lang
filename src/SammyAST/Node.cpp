@@ -1,6 +1,6 @@
 #include "./Node.h"
 
-void Node::pushToExpressionList(Node node) {
+void Node::pushToExpressionList(Node *node) {
   throw std::logic_error(
       "Cannot push a child to this node because its `pushToExpressionList` is not implemented.");
 };
