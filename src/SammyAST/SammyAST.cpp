@@ -5,6 +5,7 @@
 #include "./Node.cpp"
 #include "./nodeTypes/NodeBoolean/NodeBoolean.cpp"
 #include "./nodeTypes/NodeIdentifier/NodeIdentifier.cpp"
+#include "./nodeTypes/NodeNil/NodeNil.cpp"
 #include "./nodeTypes/NodeNumber/NodeNumber.cpp"
 #include "./nodeTypes/NodeRoot/NodeRoot.cpp"
 #include <vector>
@@ -72,6 +73,9 @@ Node *SammyAST::getTerminalNodeFromToken(Token token) {
 
   case tt_boolean:
     return new NodeBoolean(token);
+
+  case tt_nil:
+    return new NodeNil();
 
   default:
     // throw std::out_of_range("Encountered an unknown token type.");
