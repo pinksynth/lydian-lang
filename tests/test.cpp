@@ -11,6 +11,7 @@
 
 #include "../src/InterpolationContextStack/InterpolationContextStack.cpp"
 #include "../src/Lexer/Lexer.cpp"
+#include "../src/SammyAST/SammyAST.cpp"
 #include "../src/Token.cpp"
 #include "../src/TokenType.cpp"
 #include "./testUtils.cpp"
@@ -21,6 +22,7 @@
 		* `input.sammy` - The input SammyLang file.
 		* `expectedTokens.json` The expected lexer tokens for the given input.
 */
+
 #include "./cases/big-file-1/test.cpp"
 #include "./cases/booleans-1/test.cpp"
 #include "./cases/comments-1/test.cpp"

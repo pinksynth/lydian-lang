@@ -16,3 +16,14 @@ std::string RootNode::inspectString(int pad) {
   output += "]";
   return output;
 };
+
+json RootNode::toJson() {
+  json childJson = json::array();
+  for (Node *child : children) {
+    childJson.push_back(child->toJson());
+  }
+
+  json nodeJson = {{"node_type", nt_root}, {"children", childJson}};
+
+  return nodeJson;
+};

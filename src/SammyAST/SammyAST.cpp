@@ -56,11 +56,15 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
       node->pushToExpressionList(child);
     }
 
-    print(token.inspectString());
+    debug(token.inspectString());
   }
 
-  std::cout << "AST:" << std::endl;
-  print(node->inspectString());
+  debug("AST:");
+  debug(node->inspectString());
+
+  jsonAST = node->toJson();
+  debug("JSON:");
+  debug(jsonAST.dump());
 };
 
 Node *SammyAST::getTerminalNodeFromToken(Token token) {

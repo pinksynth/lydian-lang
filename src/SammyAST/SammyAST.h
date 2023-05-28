@@ -6,6 +6,7 @@
 class SammyAST {
 
 public:
+  json jsonAST;
   void fromTokens(std::vector<Token> tokens);
 
   static Node *getTerminalNodeFromToken(Token token);

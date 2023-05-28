@@ -6,6 +6,7 @@
 class ConciseLambdaArgNode : public Node {
 public:
   std::string inspectString(int pad = 0);
+  json toJson();
   std::string value;
   int id;
 

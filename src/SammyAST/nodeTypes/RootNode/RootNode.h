@@ -7,6 +7,7 @@ public:
   std::vector<Node *> children;
   void pushToExpressionList(Node *node);
   std::string inspectString(int pad = 0);
+  json toJson();
 
   RootNode() {
     nodeType = nt_root;

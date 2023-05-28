@@ -100,7 +100,8 @@
       "__verbose_abort": "cpp",
       "codecvt": "cpp",
       "*.tcc": "cpp",
-      "memory_resource": "cpp"
+      "memory_resource": "cpp",
+      "filesystem": "cpp"
     }
   },
   "extensions": {

@@ -9,4 +9,5 @@ public:
 
   virtual void pushToExpressionList(Node *node);
   virtual std::string inspectString(int pad = 0);
+  virtual json toJson();
 };

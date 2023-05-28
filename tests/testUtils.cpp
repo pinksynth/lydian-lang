@@ -1,3 +1,5 @@
+#include "dtl/dtl.hpp"
+
 std::vector<Token> tokenArrayFromJson(json jsonArray) {
   std::vector<Token> tokens = {};
 
@@ -33,18 +35,33 @@ void compareTokens(std::vector<Token> expectedTokens, std::vector<Token> receive
   }
 }
 
+// Makes assertions based on three files per test case. The test case's `input.sammy` is the Sammy Lang input. The Lexer produces tokens and those tokens are compared with `expectedTokens.json`. Then the tokens are fed to the AST, which is expected to look like `expectedAST.json`.
 void doAssertions(std::filesystem::path currentFile) {
-  std::ifstream expectedTokensFileStream(currentFile.parent_path() / "expectedTokens.json");
-  json expectedTokensJson = json::parse(expectedTokensFileStream);
-  std::vector<Token> expectedTokens = tokenArrayFromJson(expectedTokensJson);
-
   std::ifstream inputFileStream(currentFile.parent_path() / "input.sammy");
   std::ostringstream inputFileStreamString;
   inputFileStreamString << inputFileStream.rdbuf();
   std::string inputString = inputFileStreamString.str();
 
-  Lexer lexer = Lexer();
-  std::vector<Token> received = lexer.lex(inputString);
+  std::ifstream expectedTokensFileStream(currentFile.parent_path() / "expectedTokens.json");
+  json expectedTokensJson = json::parse(expectedTokensFileStream);
+  std::vector<Token> expectedTokens = tokenArrayFromJson(expectedTokensJson);
 
-  compareTokens(expectedTokens, received);
+  Lexer lexer = Lexer();
+  std::vector<Token> receivedTokens = lexer.lex(inputString);
+
+  compareTokens(expectedTokens, receivedTokens);
+
+  std::filesystem::path expectedASTPath(currentFile.parent_path() / "expectedAST.json");
+
+  if (!std::filesystem::exists(expectedASTPath)) {
+    alert("WARNING: Could not find " + expectedASTPath.generic_string());
+  } else {
+    std::ifstream expectedASTFileStream(expectedASTPath);
+    json expectedASTJson = json::parse(expectedASTFileStream);
+
+    SammyAST ast = SammyAST();
+    ast.fromTokens(receivedTokens);
+    json receivedASTJson = ast.jsonAST;
+    REQUIRE(expectedASTJson == receivedASTJson);
+  }
 }

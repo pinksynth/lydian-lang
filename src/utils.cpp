@@ -28,6 +28,8 @@ void debug(std::string string) {
     print(string);
 }
 
+void alert(std::string string) { print("\033[1;31m" + string + "\033[0m\n"); };
+
 std::string padded_label(int width, std::string name, std::string value) {
   std::string nameWithColon = name + ":";
   int padSize = width - nameWithColon.size() - value.size();

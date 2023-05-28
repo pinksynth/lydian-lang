@@ -1,0 +1,10 @@
+{
+  "children": [
+    { "nodeType": 4, "value": 1.0 },
+    { "nodeType": 4, "value": 0.0 },
+    { "nodeType": 4, "value": 1.0 },
+    { "nodeType": 4, "value": 1234.5678 },
+    { "nodeType": 4, "value": 315000000.0 }
+  ],
+  "node_type": 6
+}

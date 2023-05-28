@@ -6,6 +6,7 @@
 class NumberNode : public Node {
 public:
   std::string inspectString(int pad = 0);
+  json toJson();
   std::string value;
   double doubleValue;
 

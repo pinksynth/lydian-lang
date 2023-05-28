@@ -16,3 +16,14 @@ std::string ListNode::inspectString(int pad) {
   output += padString + "]";
   return output;
 };
+
+json ListNode::toJson() {
+  json childJson;
+  for (Node *child : children) {
+    childJson.push_back(child->toJson());
+  }
+
+  json nodeJson = {{"node_type", nt_list}, {"children", childJson}};
+
+  return nodeJson;
+};
