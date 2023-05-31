@@ -1,9 +1,11 @@
 {
   "folders": [
     {
+      "name": "sammy-lang",
       "path": "../sammy-lang"
     },
     {
+      "name": "sammy-lang-cpp",
       "path": "."
     }
   ],
