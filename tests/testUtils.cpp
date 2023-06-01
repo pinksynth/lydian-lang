@@ -124,6 +124,8 @@ void doASTAssertions(std::filesystem::path currentFile, std::vector<Token> recei
       fclose(diffOut);
       remove(tmpFilename1.c_str());
       remove(tmpFilename2.c_str());
+
+      throw std::logic_error("Test failed AST assertion.");
     };
   }
 }
