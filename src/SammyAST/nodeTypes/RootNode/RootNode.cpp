@@ -23,7 +23,7 @@ json RootNode::toJson() {
     childJson.push_back(child->toJson());
   }
 
-  json nodeJson = {{"node_type", nt_root}, {"children", childJson}};
+  json nodeJson = {{"nodeType", nt_root}, {"children", childJson}};
 
   return nodeJson;
 };
