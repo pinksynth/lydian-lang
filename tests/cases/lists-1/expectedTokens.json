@@ -1,0 +1,154 @@
+[
+  {
+    "columnNumberEnd": 2,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 35,
+    "value": "a"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 2,
+    "lineNumberEnd": 2,
+    "lineNumberStart": 1,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 2,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 2,
+    "lineNumberStart": 2,
+    "type": 5,
+    "value": "["
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 2,
+    "lineNumberEnd": 3,
+    "lineNumberStart": 2,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 3,
+    "lineNumberStart": 3,
+    "type": 35,
+    "value": "b"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 4,
+    "lineNumberStart": 3,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 4,
+    "lineNumberStart": 4,
+    "type": 5,
+    "value": "["
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 5,
+    "lineNumberStart": 4,
+    "type": 37,
+    "value": "\n    "
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 5,
+    "lineNumberStart": 5,
+    "type": 35,
+    "value": "c"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 6,
+    "lineNumberStart": 5,
+    "type": 37,
+    "value": "\n    "
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 6,
+    "lineNumberStart": 6,
+    "type": 35,
+    "value": "d"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 7,
+    "lineNumberStart": 6,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 7,
+    "lineNumberStart": 7,
+    "type": 4,
+    "value": "]"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 8,
+    "lineNumberStart": 7,
+    "type": 37,
+    "value": "\n  "
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 8,
+    "lineNumberStart": 8,
+    "type": 35,
+    "value": "e"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 8,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 2,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 9,
+    "lineNumberStart": 9,
+    "type": 4,
+    "value": "]"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 2,
+    "lineNumberEnd": 10,
+    "lineNumberStart": 9,
+    "type": 37,
+    "value": "\n"
+  },
+  {
+    "columnNumberEnd": 2,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 10,
+    "lineNumberStart": 10,
+    "type": 35,
+    "value": "f"
+  }
+]

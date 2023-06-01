@@ -28,6 +28,7 @@
 #include "./cases/comments-1/test.cpp"
 #include "./cases/function-definitions-1/test.cpp"
 #include "./cases/lambdas-1/test.cpp"
+#include "./cases/lists-1/test.cpp"
 #include "./cases/numbers-1/test.cpp"
 #include "./cases/operator-precedence-1/test.cpp"
 #include "./cases/small-file-1/test.cpp"
