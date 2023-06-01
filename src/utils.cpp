@@ -1,7 +1,10 @@
+#include <fstream>
+#include <iostream>
+#include <sstream>
+
 #define PRINT_MEMBER(name) print_member_fn(#name, (name))
 #include "./InterpolationContextStack/InterpolationContextStack.h"
 #include "./Token.cpp"
-#include <iostream>
 
 #pragma once
 
@@ -82,4 +85,14 @@ void replace_all(std::string &s, std::string const &toReplace, std::string const
 
   buf.append(s, prevPos, s.size() - prevPos);
   s.swap(buf);
+}
+
+// Taken from https://stackoverflow.com/questions/2602013/read-whole-ascii-file-into-c-stdstring
+std::string getFileString(std::string stringPath) {
+  std::ifstream inFile;
+  inFile.open(stringPath);
+
+  std::stringstream strStream;
+  strStream << inFile.rdbuf();
+  return strStream.str();
 }

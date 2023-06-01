@@ -1,3 +1,4 @@
+#include <fstream>
 #include <iostream>
 
 #include "../src/utils.cpp"
@@ -5,23 +6,12 @@
 #include "./Lexer/Lexer.cpp"
 #include "./SammyAST/SammyAST.cpp"
 
-std::string testInput = R"sammy(
-  nil
-  a
-  2
-  [
-    3.0
-    [
-      4_000.5
-      true
-    ]
-    false
-  ]
-  $1
-  $25
-)sammy";
-
 int main() {
+  std::string testInput = getFileString("../../tests/cases/lists-1/input.sammy");
+  // std::string testInput = R"sammy(a [ b [ c d ] e ] f)sammy";
+  std::cout << "Test input:" << std::endl;
+  std::cout << testInput << std::endl;
+
   debug("Compiling...");
   Lexer lexer = Lexer();
   std::vector<Token> tokens = lexer.lex(testInput);
