@@ -30,10 +30,6 @@ add_definitions(${LLVM_DEFINITIONS_LIST})
 # that we wish to use
 llvm_map_components_to_libnames(llvm_libs support core irreader)
 
-add_executable(sammy-lang src/main.cpp)
-target_link_libraries(sammy-lang ${CONAN_LIBS})
-target_link_libraries(sammy-lang ${llvm_libs})
-
 #
 # String formatting
 #
@@ -43,6 +39,11 @@ FetchContent_Declare(
   GIT_TAG 7.0.0
 )
 FetchContent_MakeAvailable(fmt)
+
+add_executable(sammy-lang src/main.cpp)
+target_link_libraries(sammy-lang ${CONAN_LIBS})
+target_link_libraries(sammy-lang ${llvm_libs})
+target_link_libraries(sammy-lang fmt)
 
 #
 # Testing

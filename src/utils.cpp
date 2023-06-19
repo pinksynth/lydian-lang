@@ -3,6 +3,8 @@
 #include <iostream>
 #include <sstream>
 
+#include <fmt/core.h>
+
 #define PRINT_MEMBER(name) print_member_fn(#name, (name))
 #include "./InterpolationContextStack/InterpolationContextStack.h"
 #include "./Token.cpp"
@@ -107,3 +109,32 @@ std::string getFileString(std::string stringPath) {
 bool isTerminal(TokenType tokenType) { return inList(tokenType, tt_TERMINALS); };
 bool isBinaryOperator(TokenType tokenType) { return inList(tokenType, tt_BINARY_OPERATORS); };
 bool isUnaryOperator(TokenType tokenType) { return inList(tokenType, tt_UNARY_OPERATORS); };
+
+int operatorPrecedence(std::string op) {
+  if (op == "..") {
+    return 0;
+  }
+  if (op == ".") {
+    return -1;
+  }
+  if (op == "^" || op == "%") {
+    return -2;
+  }
+  if (op == "*" || op == "/") {
+    return -3;
+  }
+  if (op == "+" || op == "-") {
+    return -4;
+  }
+  if (op == "==" || op == "!=" || op == ">" || op == "<" || op == ">=" || op == "<=") {
+    return -5;
+  }
+  if (op == "->") {
+    return -6;
+  }
+  if (op == "=") {
+    return -7;
+  }
+
+  throw std::logic_error(fmt::format("Could not determine precedence for operator {}", op));
+}
