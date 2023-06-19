@@ -2,6 +2,8 @@
 
 #pragma once
 
+namespace sammylang {
+
 std::vector<Node *> RootNode::getCurrentExpressionList(ScopeType scope) { return children; };
 
 void RootNode::pushToExpressionList(Node *node) { children.push_back(node); };
@@ -31,3 +33,5 @@ json RootNode::toJson() {
 
   return nodeJson;
 };
+
+} // namespace sammylang

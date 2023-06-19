@@ -13,6 +13,10 @@
 #include "./nodeTypes/RootNode/RootNode.cpp"
 #include <vector>
 
+#pragma once
+
+namespace sammylang {
+
 void SammyAST::fromTokens(std::vector<Token> tokens) {
   RootNode root = RootNode();
   Node *node = &root;
@@ -110,3 +114,5 @@ void SammyAST::pop_scopes(std::vector<ScopeType> *scopes) {
   if (scopes->size() > 0)
     scopes->pop_back();
 }
+
+} // namespace sammylang

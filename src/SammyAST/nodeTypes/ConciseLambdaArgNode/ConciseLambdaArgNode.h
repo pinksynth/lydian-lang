@@ -3,6 +3,8 @@
 #include "../../Node.h"
 #include <vector>
 
+namespace sammylang {
+
 class ConciseLambdaArgNode : public Node {
 public:
   std::string inspectString(int pad = 0);
@@ -16,3 +18,5 @@ public:
     id = std::stoi(value.substr(1));
   }
 };
+
+} // namespace sammylang

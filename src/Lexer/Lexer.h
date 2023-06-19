@@ -6,6 +6,9 @@
 #include <vector>
 
 #pragma once
+
+namespace sammylang {
+
 class Lexer {
   // These values change while in the loop to consume characters.
   int index;
@@ -68,3 +71,5 @@ public:
   // Debugging (public)
   void inspect();
 };
+
+} // namespace sammylang

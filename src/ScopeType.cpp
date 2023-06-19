@@ -1,6 +1,9 @@
 #include <vector>
 
 #pragma once
+
+namespace sammylang {
+
 enum ScopeType {
   st_array,
   st_assignment,
@@ -95,3 +98,5 @@ void debugScopes(std::vector<ScopeType> scopeTypes) {
 
   std::cout << scopesString << std::endl;
 }
+
+} // namespace sammylang

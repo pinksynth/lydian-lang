@@ -1,5 +1,8 @@
 // TODO: Figure out how the heck to print enum cases by name during runtime.
 #pragma once
+
+namespace sammylang {
+
 enum CharacterType {
   ct_NONE,
   ct_ampersand,
@@ -34,3 +37,5 @@ enum CharacterType {
   ct_underscore,
   ct_whitespace
 };
+
+}

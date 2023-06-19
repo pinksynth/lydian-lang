@@ -43,6 +43,10 @@ Because we have not entered into any interpolation contexts.
 #include <iostream>
 #include <stack>
 
+#pragma once
+
+namespace sammylang {
+
 InterpolationContextStack::InterpolationContextStack() { body.push(0); };
 
 int InterpolationContextStack::top() { return body.top(); };
@@ -82,3 +86,5 @@ std::string InterpolationContextStack::inspectString() {
 
   return icsValue;
 }
+
+} // namespace sammylang

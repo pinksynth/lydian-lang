@@ -41,24 +41,25 @@ std::string writeStringToTmpFile(std::string contents) {
   return stringFileName;
 }
 
-std::vector<Token> tokenArrayFromJson(json jsonArray) {
-  std::vector<Token> tokens = {};
+std::vector<sammylang::Token> tokenArrayFromJson(json jsonArray) {
+  std::vector<sammylang::Token> tokens = {};
 
   for (json::iterator item = jsonArray.begin(); item != jsonArray.end(); ++item)
-    tokens.push_back(Token(*item));
+    tokens.push_back(sammylang::Token(*item));
 
   return tokens;
 };
 
-void compareTokens(std::vector<Token> expectedTokens, std::vector<Token> receivedTokens) {
+void compareTokens(std::vector<sammylang::Token> expectedTokens,
+                   std::vector<sammylang::Token> receivedTokens) {
   unsigned expectedTokensIndex = 0;
   unsigned receivedTokensIndex = 0;
   unsigned expectedSize = expectedTokens.size();
   unsigned receivedSize = receivedTokens.size();
 
   while (expectedTokensIndex < expectedSize || receivedTokensIndex < receivedSize) {
-    Token tokenA = expectedTokens[expectedTokensIndex];
-    Token tokenB = receivedTokens[receivedTokensIndex];
+    sammylang::Token tokenA = expectedTokens[expectedTokensIndex];
+    sammylang::Token tokenB = receivedTokens[receivedTokensIndex];
 
     REQUIRE(tokenA == tokenB);
 
@@ -76,7 +77,7 @@ void compareTokens(std::vector<Token> expectedTokens, std::vector<Token> receive
   }
 }
 
-std::vector<Token> doTokenAssertions(std::filesystem::path currentFile) {
+std::vector<sammylang::Token> doTokenAssertions(std::filesystem::path currentFile) {
   std::ifstream inputFileStream(currentFile.parent_path() / "input.sammy");
   std::ostringstream inputFileStreamString;
   inputFileStreamString << inputFileStream.rdbuf();
@@ -84,27 +85,28 @@ std::vector<Token> doTokenAssertions(std::filesystem::path currentFile) {
 
   std::ifstream expectedTokensFileStream(currentFile.parent_path() / "expectedTokens.json");
   json expectedTokensJson = json::parse(expectedTokensFileStream);
-  std::vector<Token> expectedTokens = tokenArrayFromJson(expectedTokensJson);
+  std::vector<sammylang::Token> expectedTokens = tokenArrayFromJson(expectedTokensJson);
 
-  Lexer lexer = Lexer();
-  std::vector<Token> receivedTokens = lexer.lex(inputString);
+  sammylang::Lexer lexer = sammylang::Lexer();
+  std::vector<sammylang::Token> receivedTokens = lexer.lex(inputString);
 
   compareTokens(expectedTokens, receivedTokens);
 
   return receivedTokens;
 }
 
-void doASTAssertions(std::filesystem::path currentFile, std::vector<Token> receivedTokens) {
+void doASTAssertions(std::filesystem::path currentFile,
+                     std::vector<sammylang::Token> receivedTokens) {
   std::filesystem::path expectedASTPath(currentFile.parent_path() / "expectedAST.json");
 
   if (!std::filesystem::exists(expectedASTPath)) {
-    alert("WARNING: Could not find " + expectedASTPath.generic_string());
+    sammylang::alert("WARNING: Could not find " + expectedASTPath.generic_string());
   } else {
 
     std::ifstream expectedASTFileStream(expectedASTPath);
     std::string expectedASTJson = json::parse(expectedASTFileStream).dump(2);
 
-    SammyAST ast = SammyAST();
+    sammylang::SammyAST ast = sammylang::SammyAST();
     ast.fromTokens(receivedTokens);
     std::string receivedASTJson = ast.jsonAST.dump(2);
 
@@ -117,7 +119,7 @@ void doASTAssertions(std::filesystem::path currentFile, std::vector<Token> recei
       int diffOutputFd = mkstemp(diffOutputFilename);
       FILE *diffOut = fdopen(diffOutputFd, "w");
 
-      alert("AST is invalid for\n\n  " + currentFile.generic_string());
+      sammylang::alert("AST is invalid for\n\n  " + currentFile.generic_string());
       std::cout << getOutputFromSystemCommand(
                        fmt::format("diff -u --color=always {} {}", tmpFilename1, tmpFilename2))
                 << std::endl;
@@ -132,6 +134,6 @@ void doASTAssertions(std::filesystem::path currentFile, std::vector<Token> recei
 
 // Makes assertions based on three files per test case. The test case's `input.sammy` is the Sammy Lang input. The Lexer produces tokens and those tokens are compared with `expectedTokens.json`. Then the tokens are fed to the AST, which is expected to look like `expectedAST.json`.
 void doAssertions(std::filesystem::path currentFile) {
-  std::vector<Token> receivedTokens = doTokenAssertions(currentFile);
+  std::vector<sammylang::Token> receivedTokens = doTokenAssertions(currentFile);
   doASTAssertions(currentFile, receivedTokens);
 }

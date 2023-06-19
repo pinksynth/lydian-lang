@@ -5,11 +5,13 @@
 
 #include <fmt/core.h>
 
-#define PRINT_MEMBER(name) print_member_fn(#name, (name))
+#define PRINT_MEMBER(name) sammylang::print_member_fn(#name, (name))
 #include "./InterpolationContextStack/InterpolationContextStack.h"
 #include "./Token.cpp"
 
 #pragma once
+
+namespace sammylang {
 
 int defaultPadding = 60;
 
@@ -35,8 +37,8 @@ void print(int value) { print(toString(value)); };
 void print(const char *string) { std::cout << string << std::endl; };
 
 void debug(std::string string) {
-  if (getenv("DEBUG"))
-    print(string);
+  // if (getenv("DEBUG"))
+  print(string);
 }
 
 void alert(std::string string) { print("\033[1;31m" + string + "\033[0m\n"); };
@@ -138,3 +140,5 @@ int operatorPrecedence(std::string op) {
 
   throw std::logic_error(fmt::format("Could not determine precedence for operator {}", op));
 }
+
+} // namespace sammylang

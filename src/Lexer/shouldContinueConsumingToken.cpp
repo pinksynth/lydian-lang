@@ -2,6 +2,8 @@
 // const ct = require("../characterTypes")
 #include "../CharacterType.cpp"
 
+namespace sammylang {
+
 // Uses the current state and accumulated characters to determine whether the next character should be a part of the current token.
 bool Lexer::shouldContinueConsumingToken() {
   // "String literal mode"
@@ -84,3 +86,5 @@ bool Lexer::shouldContinueConsumingToken() {
 
   return false;
 };
+
+} // namespace sammylang

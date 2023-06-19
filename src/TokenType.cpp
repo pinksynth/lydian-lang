@@ -3,6 +3,9 @@
 
 // TODO: Definitely namespace this stuff 😅
 #pragma once
+
+namespace sammylang {
+
 enum TokenType {
   tt_NONE,
   tt_assignment,
@@ -50,3 +53,5 @@ std::vector<int> tt_BINARY_OPERATORS = {tt_assignment,  tt_compare, tt_dot,
                                         tt_forwardPipe, tt_hyphen,  tt_operatorInfix};
 
 std::vector<int> tt_UNARY_OPERATORS = {tt_hyphen, tt_bang};
+
+} // namespace sammylang

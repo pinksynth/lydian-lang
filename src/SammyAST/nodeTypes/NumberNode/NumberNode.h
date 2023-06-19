@@ -3,6 +3,8 @@
 #include "../../Node.h"
 #include <vector>
 
+namespace sammylang {
+
 class NumberNode : public Node {
 public:
   std::string inspectString(int pad = 0);
@@ -18,3 +20,5 @@ public:
     doubleValue = std::stod(underscoresStripped);
   }
 };
+
+} // namespace sammylang

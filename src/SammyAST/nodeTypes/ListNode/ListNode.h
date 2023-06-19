@@ -2,6 +2,8 @@
 #include "../../Node.h"
 #include <vector>
 
+namespace sammylang {
+
 class ListNode : public Node {
 public:
   std::vector<Node *> children;
@@ -15,3 +17,5 @@ public:
     children = {};
   }
 };
+
+} // namespace sammylang

@@ -2,6 +2,9 @@
 #include "../ScopeType.cpp"
 
 #pragma once
+
+namespace sammylang {
+
 class Node {
 
 public:
@@ -13,3 +16,5 @@ public:
   virtual std::string inspectString(int pad = 0);
   virtual json toJson();
 };
+
+} // namespace sammylang

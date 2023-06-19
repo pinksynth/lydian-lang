@@ -4,6 +4,8 @@
 #include "./getStringTokenType.cpp"
 #include "./shouldContinueConsumingToken.cpp"
 
+namespace sammylang {
+
 Token *Lexer::getToken() {
   if (charAccumulator.length() == 0)
     return nullptr;
@@ -112,3 +114,5 @@ Token *Lexer::getToken() {
 
   return token;
 };
+
+} // namespace sammylang

@@ -3,6 +3,8 @@
 #include "../../Node.h"
 #include <vector>
 
+namespace sammylang {
+
 class IdentifierNode : public Node {
 public:
   std::string inspectString(int pad = 0);
@@ -14,3 +16,5 @@ public:
     value = token.value;
   }
 };
+
+} // namespace sammylang

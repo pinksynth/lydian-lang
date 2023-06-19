@@ -1,3 +1,5 @@
+namespace sammylang {
+
 void Lexer::handleIncrementLinesAndColumns() {
   if (character == '\n') {
     currentLineNumber++;
@@ -8,3 +10,5 @@ void Lexer::handleIncrementLinesAndColumns() {
     currentLineValue += character;
   };
 };
+
+} // namespace sammylang

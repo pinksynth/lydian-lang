@@ -1,3 +1,5 @@
+namespace sammylang {
+
 void Lexer::handleStrings() {
   if (multilineCommentMode || singleLineCommentMode) {
     return;
@@ -38,3 +40,5 @@ void Lexer::handleStrings() {
     }
   }
 };
+
+} // namespace sammylang

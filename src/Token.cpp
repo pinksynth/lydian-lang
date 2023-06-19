@@ -6,6 +6,8 @@ using json = nlohmann::json;
 
 // NOTE: A struct might make more sense for this.
 #pragma once
+
+namespace sammylang {
 class Token {
 
 public:
@@ -81,3 +83,5 @@ bool operator==(const Token &tokenA, const Token &tokenB) {
          tokenA.lineNumberEnd == tokenB.lineNumberEnd &&
          tokenA.columnNumberEnd == tokenB.columnNumberEnd;
 }
+
+} // namespace sammylang

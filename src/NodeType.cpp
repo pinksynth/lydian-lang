@@ -1,4 +1,7 @@
 #pragma once
+
+namespace sammylang {
+
 enum NodeType {
   nt_conciseLambdaArgument,
   nt_identifier,
@@ -8,3 +11,5 @@ enum NodeType {
   nt_nil,
   nt_root
 };
+
+}
