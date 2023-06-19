@@ -25,6 +25,7 @@ std::string toString(std::vector<int> value) {
 void print(std::string string) { std::cout << string << std::endl; };
 void print(bool value) { print(toString(value)); };
 void print(int value) { print(toString(value)); };
+void print(const char *string) { std::cout << string << std::endl; };
 
 void debug(std::string string) {
   if (getenv("DEBUG"))
