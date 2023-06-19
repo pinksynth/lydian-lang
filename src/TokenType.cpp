@@ -1,4 +1,4 @@
-#include <algorithm>
+
 #include <vector>
 
 // TODO: Definitely namespace this stuff 😅
@@ -50,13 +50,3 @@ std::vector<int> tt_BINARY_OPERATORS = {tt_assignment,  tt_compare, tt_dot,
                                         tt_forwardPipe, tt_hyphen,  tt_operatorInfix};
 
 std::vector<int> tt_UNARY_OPERATORS = {tt_hyphen, tt_bang};
-
-bool inList(int needle, std::vector<int> haystack) {
-  return std::find(haystack.begin(), haystack.end(), needle) != haystack.end();
-};
-
-bool isTerminal(TokenType tokenType) { return inList(tokenType, tt_TERMINALS); };
-
-bool isBinaryOperator(TokenType tokenType) { return inList(tokenType, tt_BINARY_OPERATORS); };
-
-bool isUnaryOperator(TokenType tokenType) { return inList(tokenType, tt_UNARY_OPERATORS); };

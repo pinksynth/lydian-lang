@@ -1,5 +1,6 @@
 #include "./SammyAST.h"
 #include "../NodeType.cpp"
+#include "../ScopeType.cpp"
 #include "../Token.cpp"
 #include "../TokenType.cpp"
 #include "./Node.cpp"
@@ -15,11 +16,16 @@
 void SammyAST::fromTokens(std::vector<Token> tokens) {
   RootNode root = RootNode();
   Node *node = &root;
+  std::vector<ScopeType> scopes = {st_root};
 
   size_t tokensCount = tokens.size();
   for (size_t i = 0; i < tokensCount; i++) {
+    ScopeType currentScope = scopes.back();
     Token token = tokens[i];
     TokenType tokenType = token.type;
+
+    debugScopes(scopes);
+    print("Token: " + token.value);
 
     // Ignore all whitespace. This language only uses whitespace at the lexer level, not the AST level.
     if (tokenType == tt_whitespace)
@@ -43,10 +49,15 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
     if (tokenType == tt_bracketOpen) {
       Node *child = new ListNode();
       child->parent = node;
+      print("Abouts to add");
       node->pushToExpressionList(child);
+      print("Abouts to push");
+      scopes.push_back(st_array);
+      print("Pushed");
       node = child;
     }
     if (tokenType == tt_bracketClose) {
+      pop_scopes(&scopes);
       node = node->parent;
     }
     if (isTerminal(tokenType) && !isBinaryOperator(nextTokenType)) {
@@ -54,6 +65,9 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
       Node *child = getTerminalNodeFromToken(token);
       child->parent = node;
       node->pushToExpressionList(child);
+
+      if (inList(currentScope, st_operandScopeTypes))
+        pop_scopes(&scopes);
     }
 
     debug(token.inspectString());
@@ -90,3 +104,8 @@ Node *SammyAST::getTerminalNodeFromToken(Token token) {
     return new Node();
   }
 };
+
+void SammyAST::pop_scopes(std::vector<ScopeType> *scopes) {
+  if (scopes->size() > 0)
+    scopes->pop_back();
+}

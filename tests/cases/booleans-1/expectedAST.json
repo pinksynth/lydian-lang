@@ -1,7 +1,7 @@
 {
   "children": [
     { "nodeType": 3, "value": true },
-    { "nodeType": 3, "value": false, "blurns": true }
+    { "nodeType": 3, "value": false }
   ],
   "nodeType": 6
 }

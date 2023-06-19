@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <fstream>
 #include <iostream>
 #include <sstream>
@@ -9,6 +10,10 @@
 #pragma once
 
 int defaultPadding = 60;
+
+bool inList(int needle, std::vector<int> haystack) {
+  return std::find(haystack.begin(), haystack.end(), needle) != haystack.end();
+};
 
 std::string toString(bool value) { return (value ? "true" : "false"); };
 std::string toString(int value) { return std::to_string(value); };
@@ -97,3 +102,8 @@ std::string getFileString(std::string stringPath) {
   strStream << inFile.rdbuf();
   return strStream.str();
 }
+
+// Helpers for token types
+bool isTerminal(TokenType tokenType) { return inList(tokenType, tt_TERMINALS); };
+bool isBinaryOperator(TokenType tokenType) { return inList(tokenType, tt_BINARY_OPERATORS); };
+bool isUnaryOperator(TokenType tokenType) { return inList(tokenType, tt_UNARY_OPERATORS); };
