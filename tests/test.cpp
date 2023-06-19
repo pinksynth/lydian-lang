@@ -23,6 +23,7 @@
 		* `expectedTokens.json` The expected lexer tokens for the given input.
 */
 
+// #include "./cases/assignment-1/test.cpp"
 // #include "./cases/big-file-1/test.cpp"
 // #include "./cases/booleans-1/test.cpp"
 // #include "./cases/comments-1/test.cpp"

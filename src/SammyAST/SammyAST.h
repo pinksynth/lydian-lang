@@ -5,11 +5,10 @@
 
 #pragma once
 class SammyAST {
+  static void pop_scopes(std::vector<ScopeType> *scopes);
+  static Node *getTerminalNodeFromToken(Token token);
 
 public:
   json jsonAST;
   void fromTokens(std::vector<Token> tokens);
-
-  static Node *getTerminalNodeFromToken(Token token);
-  static void pop_scopes(std::vector<ScopeType> *scopes);
 };

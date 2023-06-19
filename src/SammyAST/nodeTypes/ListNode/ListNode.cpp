@@ -1,5 +1,9 @@
 #include "./ListNode.h"
 
+#pragma once
+
+std::vector<Node *> ListNode::getCurrentExpressionList(ScopeType scope) { return children; };
+
 void ListNode::pushToExpressionList(Node *node) { children.push_back(node); };
 
 std::string ListNode::inspectString(int pad) {

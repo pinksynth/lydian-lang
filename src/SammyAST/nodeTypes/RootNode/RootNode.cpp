@@ -1,5 +1,9 @@
 #include "./RootNode.h"
 
+#pragma once
+
+std::vector<Node *> RootNode::getCurrentExpressionList(ScopeType scope) { return children; };
+
 void RootNode::pushToExpressionList(Node *node) { children.push_back(node); };
 
 std::string RootNode::inspectString(int pad) {
