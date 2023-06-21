@@ -37,8 +37,11 @@ void print(int value) { print(toString(value)); };
 void print(const char *string) { std::cout << string << std::endl; };
 
 void debug(std::string string) {
-  if (getenv("DEBUG"))
-    print(string);
+#ifdef NDEBUG
+
+#else
+  print(string);
+#endif
 }
 
 void alert(std::string string) { print("\033[1;31m" + string + "\033[0m\n"); };

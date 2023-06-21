@@ -31,7 +31,8 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
     tokenType = token.type;
 
     debugScopes(scopes);
-    print("Token: " + token.value);
+
+    debug("Token: " + token.value);
 
     // Ignore all whitespace. This language only uses whitespace at the lexer level, not the AST level.
     if (tokenType == tt_whitespace)
@@ -50,11 +51,11 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
     if (tokenType == tt_bracketOpen) {
       Node *child = new ListNode();
       child->parent = node;
-      print("Abouts to add");
+      debug("Abouts to add");
       node->pushToExpressionList(child);
-      print("Abouts to push");
+      debug("Abouts to push");
       scopes.push_back(st_array);
-      print("Pushed");
+      debug("Pushed");
       node = child;
 
       continue;
