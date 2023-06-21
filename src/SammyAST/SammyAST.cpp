@@ -4,6 +4,7 @@
 #include "../Token.cpp"
 #include "../TokenType.cpp"
 #include "./Node.cpp"
+#include "./handlers/handleBinaryOperator.cpp"
 #include "./nodeTypes/BooleanNode/BooleanNode.cpp"
 #include "./nodeTypes/ConciseLambdaArgNode/ConciseLambdaArgNode.cpp"
 #include "./nodeTypes/IdentifierNode/IdentifierNode.cpp"
@@ -19,15 +20,15 @@ namespace sammylang {
 
 void SammyAST::fromTokens(std::vector<Token> tokens) {
   RootNode root = RootNode();
-  Node *node = &root;
+  node = &root;
   std::vector<ScopeType> scopes = {st_root};
 
   size_t tokensCount = tokens.size();
   for (size_t i = 0; i < tokensCount; i++) {
     ScopeType currentScope = scopes.back();
-    std::vector<Node *> currentExpressionList = node->getCurrentExpressionList(currentScope);
-    Token token = tokens[i];
-    TokenType tokenType = token.type;
+    currentExpressionList = node->getCurrentExpressionList(currentScope);
+    token = tokens[i];
+    tokenType = token.type;
 
     debugScopes(scopes);
     print("Token: " + token.value);
@@ -35,11 +36,6 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
     // Ignore all whitespace. This language only uses whitespace at the lexer level, not the AST level.
     if (tokenType == tt_whitespace)
       continue;
-
-    Token nextToken;
-    TokenType nextTokenType;
-    Token thirdToken;
-    TokenType thirdTokenType;
 
     if (i != tokensCount - 1) {
       nextToken = tokens[i + 1];
@@ -60,10 +56,14 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
       scopes.push_back(st_array);
       print("Pushed");
       node = child;
+
+      continue;
     }
     if (tokenType == tt_bracketClose) {
       pop_scopes(&scopes);
       node = node->parent;
+
+      continue;
     }
     if (isTerminal(tokenType) && !isBinaryOperator(nextTokenType)) {
       // Get node from token and push onto children.
@@ -73,6 +73,8 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
 
       if (inList(currentScope, st_operandScopeTypes))
         pop_scopes(&scopes);
+
+      continue;
     }
 
     debug(token.inspectString());
