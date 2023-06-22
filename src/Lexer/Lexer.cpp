@@ -118,6 +118,7 @@ std::vector<Token> Lexer::lex(std::string rawInput) {
     // debug(charAccumulator);
   }
 
+  // debug("JSON from Lexer:");
   // debug(j.dump(2));
 
   return tokens;

@@ -1,4 +1,5 @@
 #include "./ListNode.h"
+#include "../../../utils.cpp"
 
 #pragma once
 
@@ -25,8 +26,12 @@ std::string ListNode::inspectString(int pad) {
 
 json ListNode::toJson() {
   json childJson;
+
   for (Node *child : children) {
-    childJson.push_back(child->toJson());
+    if (child == NULL)
+      debug("Child is null for some reason...");
+    else
+      childJson.push_back(child->toJson());
   }
 
   json nodeJson = {{"nodeType", nt_list}, {"children", childJson}};

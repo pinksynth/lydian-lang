@@ -1,6 +1,7 @@
-#include "./TokenType.cpp"
 #include <iostream>
 #include <nlohmann/json.hpp>
+
+#include "./TokenType.cpp"
 
 using json = nlohmann::json;
 
@@ -38,6 +39,7 @@ public:
     lineNumberEnd = tokenJson.at("lineNumberEnd");
     columnNumberEnd = tokenJson.at("columnNumberEnd");
   };
+  ~Token(){};
 
   std::string inspectString(bool detailed = false) const {
     std::string message = "Token: " + value + "\n";

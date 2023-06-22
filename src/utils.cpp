@@ -44,6 +44,8 @@ void debug(std::string string) {
 #endif
 }
 
+void debug(int arg) { debug(toString(arg)); }
+
 void alert(std::string string) { print("\033[1;31m" + string + "\033[0m\n"); };
 
 std::string padded_label(int width, std::string name, std::string value) {

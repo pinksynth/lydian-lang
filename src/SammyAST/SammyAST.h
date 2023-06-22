@@ -15,6 +15,7 @@ public:
 
 private:
   std::vector<Node *> currentExpressionList;
+  std::vector<ScopeType> scopes;
 
   Node *node;
 
@@ -25,8 +26,7 @@ private:
   Token thirdToken;
   TokenType thirdTokenType;
 
-  // FIXME: This should not be static and should just use a scopes instance variable.
-  static void pop_scopes(std::vector<ScopeType> *scopes);
+  void pop_scopes();
   static Node *getTerminalNodeFromToken(Token token);
 
   void handleBinaryOperator();

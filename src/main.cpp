@@ -7,11 +7,12 @@
 #include "./SammyAST/SammyAST.cpp"
 
 int main() {
-  std::string testInput =
-      sammylang::getFileString("../../tests/cases/operator-precedence-small-1/input.sammy");
-  // std::string testInput = R"sammy(a [ b [ c d ] e ] f)sammy";
-  std::cout << "Test input:" << std::endl;
-  std::cout << testInput << std::endl;
+  // FIXME: Figure out why this path works correctly with the CMake tools but not with your "Debug Language" command.
+  // std::string testInput =
+  //     sammylang::getFileString("../../tests/cases/operator-precedence-small-1/input.sammy");
+  std::string testInput = R"sammy(a [b [c]])sammy";
+  sammylang::print("Test input:");
+  sammylang::print(testInput);
 
   sammylang::debug("Compiling...");
   sammylang::Lexer lexer = sammylang::Lexer();

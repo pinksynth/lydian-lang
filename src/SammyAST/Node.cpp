@@ -23,4 +23,19 @@ std::vector<Node *> Node::getCurrentExpressionList(ScopeType scope) {
                          "which it is not implemented.");
 };
 
+std::string inspect(std::vector<Node *> nodes, int pad = 0) {
+  std::string output = "[\n";
+
+  std::string padString = "";
+
+  for (int i = 0; i <= pad; i++)
+    padString += " ";
+
+  // for (Node *node : *nodes)
+  // output += padString + node->inspectString(pad + 2) + "\n";
+
+  output += padString + "]";
+  return output;
+};
+
 } // namespace sammylang

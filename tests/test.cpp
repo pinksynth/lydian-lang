@@ -32,7 +32,7 @@
 #include "./cases/lists-1/test.cpp"
 #include "./cases/numbers-1/test.cpp"
 #include "./cases/operator-precedence-big-1/test.cpp"
-// #include "./cases/operator-precedence-small-1/test.cpp"
+#include "./cases/operator-precedence-small-1/test.cpp"
 #include "./cases/small-file-1/test.cpp"
 #include "./cases/string-interpolation-1/test.cpp"
 #include "./cases/variables-1/test.cpp"

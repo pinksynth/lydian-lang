@@ -1,5 +1,7 @@
 #include <vector>
 
+#include "./utils.cpp"
+
 #pragma once
 
 namespace sammylang {
@@ -90,13 +92,13 @@ std::string scopeString(ScopeType scopeType) {
 }
 
 void debugScopes(std::vector<ScopeType> scopeTypes) {
-  std::string scopesString = "{ ";
+  std::string scopesString = "Scopes: { ";
   for (ScopeType scopeType : scopeTypes) {
     scopesString += scopeString(scopeType) + ", ";
   }
   scopesString += "}";
 
-  std::cout << scopesString << std::endl;
+  debug(scopesString);
 }
 
 } // namespace sammylang

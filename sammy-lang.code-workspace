@@ -103,7 +103,9 @@
       "codecvt": "cpp",
       "*.tcc": "cpp",
       "memory_resource": "cpp",
-      "filesystem": "cpp"
+      "filesystem": "cpp",
+      "list": "cpp",
+      "queue": "cpp"
     }
   },
   "extensions": {

@@ -12,10 +12,7 @@ public:
   std::string inspectString(int pad = 0);
   json toJson();
 
-  ListNode() {
-    nodeType = nt_list;
-    children = {};
-  }
+  ListNode() { nodeType = nt_list; }
 };
 
 } // namespace sammylang
