@@ -10,7 +10,16 @@ int main() {
   // FIXME: Figure out why this path works correctly with the CMake tools but not with your "Debug Language" command.
   // std::string testInput =
   //     sammylang::getFileString("../../tests/cases/operator-precedence-small-1/input.sammy");
-  std::string testInput = R"sammy(a [b [c]])sammy";
+  std::string testInput = R"sammy(a
+[
+  b
+  [
+    c
+    d
+  ]
+  e
+]
+f)sammy";
   sammylang::print("Test input:");
   sammylang::print(testInput);
 

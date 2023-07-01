@@ -1,21 +1,21 @@
 {
   "children": [
-    { "nodeType": 1, "value": "a" },
+    { "nodeType": 2, "value": "a" },
     {
       "children": [
-        { "nodeType": 1, "value": "b" },
+        { "nodeType": 2, "value": "b" },
         {
           "children": [
-            { "nodeType": 1, "value": "c" },
-            { "nodeType": 1, "value": "d" }
+            { "nodeType": 2, "value": "c" },
+            { "nodeType": 2, "value": "d" }
           ],
-          "nodeType": 2
+          "nodeType": 3
         },
-        { "nodeType": 1, "value": "e" }
+        { "nodeType": 2, "value": "e" }
       ],
-      "nodeType": 2
+      "nodeType": 3
     },
-    { "nodeType": 1, "value": "f" }
+    { "nodeType": 2, "value": "f" }
   ],
   "nodeType": 7
 }
