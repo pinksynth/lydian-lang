@@ -146,4 +146,10 @@ int operatorPrecedence(std::string op) {
   throw std::logic_error(fmt::format("Could not determine precedence for operator {}", op));
 }
 
+// Shamelessly copied from:
+//   https://www.tutorialspoint.com/cplusplus-equivalent-of-instanceof
+template <typename Base, typename T> inline bool instanceof (const T *ptr) {
+  return dynamic_cast<const Base *>(ptr) != nullptr;
+}
+
 } // namespace sammylang

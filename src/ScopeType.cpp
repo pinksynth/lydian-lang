@@ -96,7 +96,7 @@ void debugScopes(std::vector<ScopeType> scopeTypes) {
   for (ScopeType scopeType : scopeTypes) {
     scopesString += scopeString(scopeType) + ", ";
   }
-  scopesString += "}";
+  scopesString += "}\n";
 
   debug(scopesString);
 }

@@ -21,26 +21,27 @@
 namespace sammylang {
 
 void SammyAST::fromTokens(std::vector<Token> tokens) {
-  RootNode *root = new RootNode();
+  root = new RootNode();
   node = root;
   scopes = {st_root};
   debug("Inside SammyAST...");
 
   size_t tokensCount = tokens.size();
   for (size_t i = 0; i < tokensCount; i++) {
-    // sleep(1);
     debug("\n\n==================================================\n");
     ScopeType currentScope = scopes.back();
     currentExpressionList = node->getCurrentExpressionList(currentScope);
     token = tokens[i];
     tokenType = token.type;
 
-    debug("Token: " + token.value);
+    debug("Token: " + token.value + "\n");
+
+    debug("Current AST: " + root->toJson().dump() + "\n");
 
     if (node != NULL) {
-      debug("Latest JSON:");
+      debug("Current Node:");
       jsonAST = node->toJson();
-      debug(jsonAST.dump());
+      debug(jsonAST.dump() + "\n");
     }
 
     debugScopes(scopes);
@@ -76,7 +77,9 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
       continue;
     }
 
+    debug("Checking for binary operator");
     if (inList(tokenType, tt_BINARY_OPERATORS) && currentExpressionList.size() > 0) {
+      debug("Calling handleBinaryOperator");
       handleBinaryOperator();
       continue;
     }

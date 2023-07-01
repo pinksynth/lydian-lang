@@ -7,6 +7,7 @@ namespace sammylang {
 std::vector<Node *> RootNode::getCurrentExpressionList(ScopeType scope) { return children; };
 
 void RootNode::pushToExpressionList(Node *node) { children.push_back(node); };
+void RootNode::popCurrentExpressionList() { children.pop_back(); };
 
 std::string RootNode::inspectString(int pad) {
   std::string output = "Root Node: [\n";

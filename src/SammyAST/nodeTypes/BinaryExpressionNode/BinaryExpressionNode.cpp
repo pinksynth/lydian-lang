@@ -4,7 +4,9 @@
 
 namespace sammylang {
 
-std::vector<Node *> BinaryExpressionNode::getCurrentExpressionList(ScopeType scope) { return {}; }
+std::vector<Node *> BinaryExpressionNode::getCurrentExpressionList(ScopeType scope) {
+  return children;
+}
 
 void BinaryExpressionNode::pushToExpressionList(Node *node) { right = node; };
 

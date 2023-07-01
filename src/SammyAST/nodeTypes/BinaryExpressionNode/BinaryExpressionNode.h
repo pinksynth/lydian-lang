@@ -5,6 +5,8 @@
 namespace sammylang {
 
 class BinaryExpressionNode : public Node {
+  std::vector<Node *> children;
+
 public:
   std::vector<Node *> getCurrentExpressionList(ScopeType scope);
   void pushToExpressionList(Node *node);

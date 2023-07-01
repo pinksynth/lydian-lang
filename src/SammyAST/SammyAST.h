@@ -1,7 +1,9 @@
+#include <vector>
+
 #include "../ScopeType.cpp"
 #include "../Token.cpp"
 #include "./Node.h"
-#include <vector>
+#include "./nodeTypes/RootNode/RootNode.h"
 
 #pragma once
 
@@ -17,6 +19,7 @@ private:
   std::vector<Node *> currentExpressionList;
   std::vector<ScopeType> scopes;
 
+  RootNode *root;
   Node *node;
 
   Token token;

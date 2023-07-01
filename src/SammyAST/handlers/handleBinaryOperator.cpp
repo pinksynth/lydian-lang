@@ -4,14 +4,23 @@
 namespace sammylang {
 
 void SammyAST::handleBinaryOperator() {
-  return;
-  debug("Handling binary operator...");
+  debug("Inside handleBinaryOperator...");
   ScopeType prevScope = scopes.back();
+  currentExpressionList = node->getCurrentExpressionList(prevScope);
   scopes.push_back(st_binaryOperator);
 
+  debug("BEFORE currentExpressionList:");
+  debug(inspect(currentExpressionList));
+  debug("BEFORE current node:");
+  debug(node->inspectString());
   // When we encounter a binary operator, it means that the previous sibling must be treated not as its own statement, but rather an operand of this operator.
   Node *leftOperand = currentExpressionList.back();
   currentExpressionList.pop_back();
+  node->popCurrentExpressionList();
+  debug("AFTER currentExpressionList:");
+  debug(inspect(currentExpressionList));
+  debug("AFTER current node:");
+  debug(node->inspectString());
 
   // TODO: Handle superior operators later.
   // Here we do some swapping to handle operator precedence.
@@ -19,40 +28,49 @@ void SammyAST::handleBinaryOperator() {
   // The algorithm wants this to be ((2 + 3) * 4).
   // So we have to tell it to be (2 + (3 * 4)).
   // In order to do this, we take the left operand ((2 + 3)) and check if it is a binary expression with a lower-priority operator. If it is, then we instead replace the whole node with its lefthand operand (2).
-  // if (
-  //   leftOperand.type === nt.BINARY_EXPR &&
-  //   operatorPrecedence(leftOperand.operator) < operatorPrecedence(token.value)
-  // ) {
-  //   handleSuperiorOperator({
-  //     leftOperand,
-  //     node,
-  //     pushToExpressionList,
-  //     scopes,
-  //     setNode,
-  //     token,
-  //   })
-  //   return
-  // TODO: Handle assignments later.
-  //   // If the operator is the righthand side of an assignment, we do essentially the same thing as the ("foo = 3 * 4" instead of "2 + 3 * 4") scenario, except that the structure of the replaced parent node is slightly different (assignments are like binary operators, but with slightly different rules).
-  // } else if (leftOperand.type === nt.ASSIGNMENT) {
-  //   handleOperatorAsRightSideOfAssignment({
-  //     leftOperand,
-  //     node,
-  //     pushToExpressionList,
-  //     scopes,
-  //     setNode,
-  //     token,
-  //   })
+  BinaryExpressionNode *binaryExpressionLeftOperand =
+      dynamic_cast<BinaryExpressionNode *>(leftOperand);
+  if (leftOperand->nodeType == nt_binaryExpression && binaryExpressionLeftOperand != nullptr &&
+      operatorPrecedence(binaryExpressionLeftOperand->op) < operatorPrecedence(token.value)) {
+    debug("Encountered superior operator in righthand binary expression...");
+  } else {
 
-  //   return
-  // } else {
-  // If we encountered neither an assignment (foo = 3 * 4) nor an operator precedence conflict (2 + 3 * 4), then simply treat the previous sibling node as our left operand and proceed.
-  BinaryExpressionNode *child = new BinaryExpressionNode();
-  child->parent = node;
-  child->left = leftOperand;
-  child->op = token.value;
-  node->pushToExpressionList(child);
-  node = child;
+    // if (
+    //   leftOperand.type === nt.BINARY_EXPR &&
+    //   operatorPrecedence(leftOperand.operator) < operatorPrecedence(token.value)
+    // ) {
+    //   handleSuperiorOperator({
+    //     leftOperand,
+    //     node,
+    //     pushToExpressionList,
+    //     scopes,
+    //     setNode,
+    //     token,
+    //   })
+    //   return
+    // TODO: Handle assignments later.
+    //   // If the operator is the righthand side of an assignment, we do essentially the same thing as the ("foo = 3 * 4" instead of "2 + 3 * 4") scenario, except that the structure of the replaced parent node is slightly different (assignments are like binary operators, but with slightly different rules).
+    // } else if (leftOperand.type === nt.ASSIGNMENT) {
+    //   handleOperatorAsRightSideOfAssignment({
+    //     leftOperand,
+    //     node,
+    //     pushToExpressionList,
+    //     scopes,
+    //     setNode,
+    //     token,
+    //   })
+
+    //   return
+    // } else {
+    // If we encountered neither an assignment (foo = 3 * 4) nor an operator precedence conflict (2 + 3 * 4), then simply treat the previous sibling node as our left operand and proceed.
+    debug("Handling binary operator...");
+    BinaryExpressionNode *child = new BinaryExpressionNode();
+    child->parent = node;
+    child->left = leftOperand;
+    child->op = token.value;
+    node->pushToExpressionList(child);
+    node = child;
+  }
 }
 
 } // namespace sammylang

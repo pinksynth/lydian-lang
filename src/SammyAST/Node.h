@@ -13,6 +13,7 @@ public:
 
   virtual std::vector<Node *> getCurrentExpressionList(ScopeType scope);
   virtual void pushToExpressionList(Node *node);
+  virtual void popCurrentExpressionList();
   virtual std::string inspectString(int pad = 0);
   virtual json toJson();
 };

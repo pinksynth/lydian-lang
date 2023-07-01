@@ -1,7 +1,17 @@
 {
   "children": [
-    { "nodeType": 5, "value": 2.0 },
-    { "nodeType": 5, "value": 3.0 }
+    {
+      "left": {
+        "nodeType": 5,
+        "value": 2.0
+      },
+      "nodeType": 3,
+      "operator": "*",
+      "right": {
+        "nodeType": 5,
+        "value": 3.0
+      }
+    }
   ],
   "nodeType": 7
 }
