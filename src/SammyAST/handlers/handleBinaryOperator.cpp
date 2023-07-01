@@ -33,22 +33,28 @@ void SammyAST::handleBinaryOperator() {
   if (leftOperand->nodeType == nt_binaryExpression && binaryExpressionLeftOperand != nullptr &&
       operatorPrecedence(binaryExpressionLeftOperand->op) < operatorPrecedence(token.value)) {
     debug("Encountered superior operator in righthand binary expression...");
+    Node *parentLeft = binaryExpressionLeftOperand->left;
+    Node *childLeft = binaryExpressionLeftOperand->right;
+    std::string parentOperator = binaryExpressionLeftOperand->op;
+
+    BinaryExpressionNode *replacedParent = new BinaryExpressionNode();
+    replacedParent->left = parentLeft;
+    replacedParent->op = parentOperator;
+    replacedParent->parent = node;
+
+    BinaryExpressionNode *rightChild = new BinaryExpressionNode();
+    rightChild->left = childLeft;
+    rightChild->op = token.value;
+    rightChild->parent = replacedParent;
+
+    scopes.push_back(st_binaryOperator);
+    replacedParent->right = rightChild;
+    node->pushToExpressionList(replacedParent);
+    node = rightChild;
+
+    return;
   } else {
 
-    // if (
-    //   leftOperand.type === nt.BINARY_EXPR &&
-    //   operatorPrecedence(leftOperand.operator) < operatorPrecedence(token.value)
-    // ) {
-    //   handleSuperiorOperator({
-    //     leftOperand,
-    //     node,
-    //     pushToExpressionList,
-    //     scopes,
-    //     setNode,
-    //     token,
-    //   })
-    //   return
-    // TODO: Handle assignments later.
     //   // If the operator is the righthand side of an assignment, we do essentially the same thing as the ("foo = 3 * 4" instead of "2 + 3 * 4") scenario, except that the structure of the replaced parent node is slightly different (assignments are like binary operators, but with slightly different rules).
     // } else if (leftOperand.type === nt.ASSIGNMENT) {
     //   handleOperatorAsRightSideOfAssignment({

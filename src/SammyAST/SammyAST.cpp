@@ -103,7 +103,7 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
 
     jsonAST = root->toJson();
     debug("JSON:");
-    debug(jsonAST.dump());
+    debug(jsonAST.dump(2));
   }
 };
 
