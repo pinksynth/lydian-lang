@@ -2,12 +2,12 @@
   "children": [
     {
       "child": {
-        "nodeType": 5,
+        "nodeType": "nt_literalNumber",
         "value": 1.0
       },
-      "nodeType": 8,
+      "nodeType": "nt_assignment",
       "variable": "a"
     }
   ],
-  "nodeType": 7
+  "nodeType": "nt_root"
 }

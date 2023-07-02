@@ -35,7 +35,7 @@ json ListNode::toJson() {
       childJson.push_back(child->toJson());
   }
 
-  json nodeJson = {{"nodeType", nt_list}, {"children", childJson}};
+  json nodeJson = {{"nodeType", "nt_list"}, {"children", childJson}};
 
   return nodeJson;
 };

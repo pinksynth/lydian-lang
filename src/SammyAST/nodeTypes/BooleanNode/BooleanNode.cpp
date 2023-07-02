@@ -7,7 +7,7 @@ std::string BooleanNode::inspectString(int pad) {
 };
 
 json BooleanNode::toJson() {
-  json booleanJson = {{"nodeType", nt_literalBoolean}, {"value", booleanValue}};
+  json booleanJson = {{"nodeType", "nt_literalBoolean"}, {"value", booleanValue}};
   return booleanJson;
 };
 

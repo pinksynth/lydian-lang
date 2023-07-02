@@ -1,7 +1,7 @@
 {
   "children": [
-    { "nodeType": 4, "value": true },
-    { "nodeType": 4, "value": false }
+    { "nodeType": "nt_literalBoolean", "value": true },
+    { "nodeType": "nt_literalBoolean", "value": false }
   ],
-  "nodeType": 7
+  "nodeType": "nt_root"
 }

@@ -7,7 +7,7 @@ std::string NumberNode::inspectString(int pad) {
 };
 
 json NumberNode::toJson() {
-  json numberJson = {{"nodeType", nt_literalNumber}, {"value", doubleValue}};
+  json numberJson = {{"nodeType", "nt_literalNumber"}, {"value", doubleValue}};
   return numberJson;
 };
 

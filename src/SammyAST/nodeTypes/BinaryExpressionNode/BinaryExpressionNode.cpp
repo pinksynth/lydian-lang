@@ -23,7 +23,7 @@ std::string BinaryExpressionNode::inspectString(int pad) {
 };
 
 json BinaryExpressionNode::toJson() {
-  json nodeJson = {{"nodeType", nt_list},
+  json nodeJson = {{"nodeType", "nt_binaryExpression"},
                    {"left", (left == NULL ? nullptr : left->toJson())},
                    {"right", (right == NULL ? nullptr : right->toJson())},
                    {"operator", op}};

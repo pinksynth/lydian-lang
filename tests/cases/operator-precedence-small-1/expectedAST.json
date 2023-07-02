@@ -2,16 +2,16 @@
   "children": [
     {
       "left": {
-        "nodeType": 5,
+        "nodeType": "nt_literalNumber",
         "value": 2.0
       },
-      "nodeType": 3,
+      "nodeType": "nt_binaryExpression",
       "operator": "*",
       "right": {
-        "nodeType": 5,
+        "nodeType": "nt_literalNumber",
         "value": 3.0
       }
     }
   ],
-  "nodeType": 7
+  "nodeType": "nt_root"
 }

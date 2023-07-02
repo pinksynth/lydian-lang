@@ -1,21 +1,21 @@
 {
   "children": [
-    { "nodeType": 2, "value": "a" },
+    { "nodeType": "nt_identifier", "value": "a" },
     {
       "children": [
-        { "nodeType": 2, "value": "b" },
+        { "nodeType": "nt_identifier", "value": "b" },
         {
           "children": [
-            { "nodeType": 2, "value": "c" },
-            { "nodeType": 2, "value": "d" }
+            { "nodeType": "nt_identifier", "value": "c" },
+            { "nodeType": "nt_identifier", "value": "d" }
           ],
-          "nodeType": 3
+          "nodeType": "nt_list"
         },
-        { "nodeType": 2, "value": "e" }
+        { "nodeType": "nt_identifier", "value": "e" }
       ],
-      "nodeType": 3
+      "nodeType": "nt_list"
     },
-    { "nodeType": 2, "value": "f" }
+    { "nodeType": "nt_identifier", "value": "f" }
   ],
-  "nodeType": 7
+  "nodeType": "nt_root"
 }

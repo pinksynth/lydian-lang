@@ -29,7 +29,7 @@ std::string AssignmentNode::inspectString(int pad) {
 }
 
 json AssignmentNode::toJson() {
-  json nodeJson = {{"nodeType", nt_assignment},
+  json nodeJson = {{"nodeType", "nt_assignment"},
                    {"variable", variable},
                    {"child", (child == NULL ? nullptr : child->toJson())}};
 

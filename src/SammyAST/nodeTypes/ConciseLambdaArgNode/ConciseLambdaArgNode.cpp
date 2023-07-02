@@ -7,7 +7,7 @@ std::string ConciseLambdaArgNode::inspectString(int pad) {
 };
 
 json ConciseLambdaArgNode::toJson() {
-  json lambdaJson = {{"nodeType", nt_conciseLambdaArgument}, {"id", id}};
+  json lambdaJson = {{"nodeType", "nt_conciseLambdaArgument"}, {"id", id}};
   return lambdaJson;
 };
 
