@@ -34,8 +34,6 @@ enum ScopeType {
   st_unaryOperator,
 };
 
-std::vector<int> st_operandScopeTypes = {st_assignment, st_binaryOperator, st_unaryOperator};
-
 std::string scopeString(ScopeType scopeType) {
   if (scopeType == st_array)
     return "array";
@@ -100,5 +98,11 @@ void debugScopes(std::vector<ScopeType> scopeTypes) {
 
   debug(scopesString);
 }
+
+std::vector<int> st_operandScopeTypes = {st_assignment, st_binaryOperator, st_unaryOperator};
+
+std::vector<int> st_validAssignmentScopes = {
+    st_enumDefinition, st_functionDecBody,     st_ifBody,          st_lambdaBody,
+    st_root,           st_stringInterpolation, st_structDefinition};
 
 } // namespace sammylang

@@ -10,7 +10,8 @@ enum NodeType {
   nt_literalBoolean,
   nt_literalNumber,
   nt_nil,
-  nt_root
+  nt_root,
+  nt_assignment
 };
 
 }

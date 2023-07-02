@@ -1,0 +1,13 @@
+{
+  "children": [
+    {
+      "child": {
+        "nodeType": 5,
+        "value": 1.0
+      },
+      "nodeType": 8,
+      "variable": "a"
+    }
+  ],
+  "nodeType": 7
+}

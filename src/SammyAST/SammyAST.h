@@ -19,6 +19,8 @@ private:
   std::vector<Node *> currentExpressionList;
   std::vector<ScopeType> scopes;
 
+  size_t i;
+
   RootNode *root;
   Node *node;
 
@@ -32,7 +34,10 @@ private:
   void pop_scopes();
   static Node *getTerminalNodeFromToken(Token token);
 
+  void consumeExtra();
+
   void handleBinaryOperator();
+  void handleVariableAssignment();
 };
 
 } // namespace sammylang

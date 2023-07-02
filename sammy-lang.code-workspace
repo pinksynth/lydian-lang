@@ -105,7 +105,8 @@
       "memory_resource": "cpp",
       "filesystem": "cpp",
       "list": "cpp",
-      "queue": "cpp"
+      "queue": "cpp",
+      "hash_map": "cpp"
     }
   },
   "extensions": {

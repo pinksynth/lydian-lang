@@ -7,7 +7,8 @@
 #include "../TokenType.cpp"
 #include "./Node.cpp"
 #include "./SammyAST.h"
-#include "./handlers/handleBinaryOperator.cpp"
+
+// Node types
 #include "./nodeTypes/BooleanNode/BooleanNode.cpp"
 #include "./nodeTypes/ConciseLambdaArgNode/ConciseLambdaArgNode.cpp"
 #include "./nodeTypes/IdentifierNode/IdentifierNode.cpp"
@@ -16,18 +17,27 @@
 #include "./nodeTypes/NumberNode/NumberNode.cpp"
 #include "./nodeTypes/RootNode/RootNode.cpp"
 
+// Handlers
+#include "./handlers/handleBinaryOperator.cpp"
+#include "./handlers/handleVariableAssignment.cpp"
+
 #pragma once
 
 namespace sammylang {
 
-void SammyAST::fromTokens(std::vector<Token> tokens) {
+void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
+  std::vector<Token> tokens;
+
+  std::copy_if(unfilteredTokens.begin(), unfilteredTokens.end(), std::back_inserter(tokens),
+               [](Token token) { return token.type != tt_whitespace && token.type != tt_comment; });
+
   root = new RootNode();
   node = root;
   scopes = {st_root};
   debug("Inside SammyAST...");
 
   size_t tokensCount = tokens.size();
-  for (size_t i = 0; i < tokensCount; i++) {
+  for (i = 0; i < tokensCount; i++) {
     debug("\n\n==================================================\n");
     ScopeType currentScope = scopes.back();
     currentExpressionList = node->getCurrentExpressionList(currentScope);
@@ -50,14 +60,37 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
     if (tokenType == tt_whitespace)
       continue;
 
-    if (i != tokensCount - 1) {
+    if (i < tokensCount - 1) {
       nextToken = tokens[i + 1];
-      nextTokenType = nextToken.type;
+    } else {
+      nextToken = Token();
     }
+    nextTokenType = nextToken.type;
 
-    if (i != tokensCount - 2) {
+    if (i < tokensCount - 2) {
       thirdToken = tokens[i + 2];
-      thirdTokenType = thirdToken.type;
+    } else {
+      thirdToken = Token();
+    }
+    thirdTokenType = thirdToken.type;
+    debug("token");
+    debug(token.inspectString());
+    debug("tokenType");
+    debug(tokenType);
+    debug("nextToken");
+    debug(nextToken.inspectString());
+    debug("nextTokenType");
+    debug(nextTokenType);
+    debug("thirdToken");
+    debug(thirdToken.inspectString());
+    debug("thirdTokenType");
+    debug(thirdTokenType);
+
+    // Variable assignment
+    if (tokenType == tt_var && nextTokenType == tt_assignment) {
+
+      handleVariableAssignment();
+      continue;
     }
 
     if (tokenType == tt_bracketOpen) {
@@ -77,17 +110,21 @@ void SammyAST::fromTokens(std::vector<Token> tokens) {
       continue;
     }
 
-    debug("Checking for binary operator");
+    debug("currentExpressionList.size()");
+    debug(currentExpressionList.size());
+    debug("inspect(currentExpressionList)");
+    debug(inspect(currentExpressionList));
+
     if (inList(tokenType, tt_BINARY_OPERATORS) && currentExpressionList.size() > 0) {
-      debug("Calling handleBinaryOperator");
       handleBinaryOperator();
       continue;
     }
 
-    if (isTerminal(tokenType) && !isBinaryOperator(nextTokenType)) {
+    if (isTerminal(tokenType)) {
       // Get node from token and push onto children.
       Node *child = getTerminalNodeFromToken(token);
       child->parent = node;
+      debug("Pushing to expression list...");
       node->pushToExpressionList(child);
 
       if (inList(currentScope, st_operandScopeTypes))
@@ -142,5 +179,7 @@ void SammyAST::pop_scopes() {
   if (inList(currentScope, st_operandScopeTypes))
     pop_scopes();
 }
+
+void SammyAST::consumeExtra() { i++; };
 
 } // namespace sammylang

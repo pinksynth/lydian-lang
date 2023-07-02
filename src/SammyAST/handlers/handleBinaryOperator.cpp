@@ -4,23 +4,15 @@
 namespace sammylang {
 
 void SammyAST::handleBinaryOperator() {
-  debug("Inside handleBinaryOperator...");
+  debug("Handling binary operator...");
   ScopeType prevScope = scopes.back();
   currentExpressionList = node->getCurrentExpressionList(prevScope);
   scopes.push_back(st_binaryOperator);
 
-  debug("BEFORE currentExpressionList:");
-  debug(inspect(currentExpressionList));
-  debug("BEFORE current node:");
-  debug(node->inspectString());
   // When we encounter a binary operator, it means that the previous sibling must be treated not as its own statement, but rather an operand of this operator.
   Node *leftOperand = currentExpressionList.back();
   currentExpressionList.pop_back();
   node->popCurrentExpressionList();
-  debug("AFTER currentExpressionList:");
-  debug(inspect(currentExpressionList));
-  debug("AFTER current node:");
-  debug(node->inspectString());
 
   // TODO: Handle superior operators later.
   // Here we do some swapping to handle operator precedence.
@@ -32,7 +24,7 @@ void SammyAST::handleBinaryOperator() {
       dynamic_cast<BinaryExpressionNode *>(leftOperand);
   if (leftOperand->nodeType == nt_binaryExpression && binaryExpressionLeftOperand != nullptr &&
       operatorPrecedence(binaryExpressionLeftOperand->op) < operatorPrecedence(token.value)) {
-    debug("Encountered superior operator in righthand binary expression...");
+    // debug("Encountered superior operator in righthand binary expression...");
     Node *parentLeft = binaryExpressionLeftOperand->left;
     Node *childLeft = binaryExpressionLeftOperand->right;
     std::string parentOperator = binaryExpressionLeftOperand->op;
@@ -53,9 +45,10 @@ void SammyAST::handleBinaryOperator() {
     node = rightChild;
 
     return;
+    // } else if () {
   } else {
 
-    //   // If the operator is the righthand side of an assignment, we do essentially the same thing as the ("foo = 3 * 4" instead of "2 + 3 * 4") scenario, except that the structure of the replaced parent node is slightly different (assignments are like binary operators, but with slightly different rules).
+    // If the operator is the righthand side of an assignment, we do essentially the same thing as the ("foo = 3 * 4" instead of "2 + 3 * 4") scenario, except that the structure of the replaced parent node is slightly different (assignments are like binary operators, but with slightly different rules).
     // } else if (leftOperand.type === nt.ASSIGNMENT) {
     //   handleOperatorAsRightSideOfAssignment({
     //     leftOperand,
@@ -69,7 +62,6 @@ void SammyAST::handleBinaryOperator() {
     //   return
     // } else {
     // If we encountered neither an assignment (foo = 3 * 4) nor an operator precedence conflict (2 + 3 * 4), then simply treat the previous sibling node as our left operand and proceed.
-    debug("Handling binary operator...");
     BinaryExpressionNode *child = new BinaryExpressionNode();
     child->parent = node;
     child->left = leftOperand;

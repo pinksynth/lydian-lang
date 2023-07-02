@@ -33,8 +33,11 @@ std::string inspect(std::vector<Node *> nodes, int pad = 0) {
   for (int i = 0; i <= pad; i++)
     padString += " ";
 
-  for (Node *node : nodes)
-    output += padString + node->inspectString(pad + 2) + "\n";
+  for (Node *node : nodes) {
+    if (node != nullptr) {
+      output += padString + node->inspectString(pad + 2) + "\n";
+    }
+  }
 
   output += padString + "]";
   return output;
