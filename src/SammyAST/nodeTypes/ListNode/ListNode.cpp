@@ -12,11 +12,7 @@ void ListNode::popCurrentExpressionList() { children.pop_back(); };
 
 std::string ListNode::inspectString(int pad) {
   std::string output = "List Node: [\n";
-
-  std::string padString = "";
-  for (int i = 0; i <= pad; i++) {
-    padString += " ";
-  }
+  std::string padString = getPadString(pad);
 
   for (Node *node : children) {
     output += padString + node->inspectString(pad + 2) + "\n";

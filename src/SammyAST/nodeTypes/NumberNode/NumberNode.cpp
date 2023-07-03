@@ -3,7 +3,8 @@
 namespace sammylang {
 
 std::string NumberNode::inspectString(int pad) {
-  return "Number Node: " + value + " (" + std::to_string(doubleValue) + ")";
+  std::string padString = getPadString(pad);
+  return padString + "Number Node: " + value + " (" + std::to_string(doubleValue) + ")";
 };
 
 json NumberNode::toJson() {

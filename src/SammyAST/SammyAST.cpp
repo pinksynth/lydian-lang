@@ -46,12 +46,14 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
 
     debug("Token: " + token.value + "\n");
 
-    debug("Current AST: " + root->toJson().dump() + "\n");
+    debug("Current AST JSON: " + root->toJson().dump() + "\n");
+    debug("Current AST: " + root->inspectString());
 
     if (node != NULL) {
       debug("Current Node:");
-      jsonAST = node->toJson();
-      debug(jsonAST.dump() + "\n");
+      debug(nodeString(node->nodeType) + "\n");
+      //   jsonAST = node->toJson();
+      //   debug(jsonAST.dump() + "\n");
     }
 
     debugScopes(scopes);
@@ -73,18 +75,16 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
       thirdToken = Token();
     }
     thirdTokenType = thirdToken.type;
-    debug("token");
     debug(token.inspectString());
-    debug("tokenType");
-    debug(tokenType);
-    debug("nextToken");
-    debug(nextToken.inspectString());
-    debug("nextTokenType");
-    debug(nextTokenType);
-    debug("thirdToken");
-    debug(thirdToken.inspectString());
-    debug("thirdTokenType");
-    debug(thirdTokenType);
+    debug("Token type: " + std::to_string(tokenType));
+    // debug("nextToken");
+    // debug(nextToken.inspectString());
+    // debug("nextTokenType");
+    // debug(nextTokenType);
+    // debug("thirdToken");
+    // debug(thirdToken.inspectString());
+    // debug("thirdTokenType");
+    // debug(thirdTokenType);
 
     // Variable assignment
     if (tokenType == tt_var && nextTokenType == tt_assignment) {
@@ -112,8 +112,8 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
 
     debug("currentExpressionList.size()");
     debug(currentExpressionList.size());
-    debug("inspect(currentExpressionList)");
-    debug(inspect(currentExpressionList));
+    // debug("inspect(currentExpressionList)");
+    // debug(inspect(currentExpressionList));
 
     if (inList(tokenType, tt_BINARY_OPERATORS) && currentExpressionList.size() > 0) {
       handleBinaryOperator();
@@ -135,11 +135,11 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
   }
 
   if (node != NULL) {
-    debug("AST:");
+    debug("FINAL AST:");
     debug(root->inspectString());
 
     jsonAST = root->toJson();
-    debug("JSON:");
+    debug("FINAL AST JSON:");
     debug(jsonAST.dump(2));
   }
 };

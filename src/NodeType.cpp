@@ -14,4 +14,27 @@ enum NodeType {
   nt_assignment
 };
 
+std::string nodeString(NodeType nodeType) {
+  if (nodeType == nt_binaryExpression)
+    return "nt_binaryExpression";
+  if (nodeType == nt_conciseLambdaArgument)
+    return "nt_conciseLambdaArgument";
+  if (nodeType == nt_identifier)
+    return "nt_identifier";
+  if (nodeType == nt_list)
+    return "nt_list";
+  if (nodeType == nt_literalBoolean)
+    return "nt_literalBoolean";
+  if (nodeType == nt_literalNumber)
+    return "nt_literalNumber";
+  if (nodeType == nt_nil)
+    return "nt_nil";
+  if (nodeType == nt_root)
+    return "nt_root";
+  if (nodeType == nt_assignment)
+    return "nt_assignment";
+
+  throw std::logic_error("Error in AST. Unrecognized Node Type.");
 }
+
+} // namespace sammylang

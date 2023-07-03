@@ -11,16 +11,14 @@ void RootNode::popCurrentExpressionList() { children.pop_back(); };
 
 std::string RootNode::inspectString(int pad) {
   std::string output = "Root Node: [\n";
-
-  std::string padString = "";
-  for (int i = 0; i <= pad; i++) {
-    padString += " ";
-  }
+  std::string padString = getPadString(pad);
 
   for (Node *node : children) {
-    output += padString + node->inspectString(pad + 2) + "\n";
+    if (node != nullptr) {
+      output += padString + node->inspectString(pad + 2) + "\n";
+    }
   }
-  output += "]";
+  output += padString + "]";
   return output;
 };
 

@@ -112,6 +112,14 @@ std::string getFileString(std::string stringPath) {
   return strStream.str();
 }
 
+std::string getPadString(int pad = 0) {
+  std::string padString = "";
+  for (int i = 0; i < pad; i++) {
+    padString += " ";
+  }
+  return padString;
+}
+
 // Helpers for token types
 bool isTerminal(TokenType tokenType) { return inList(tokenType, tt_TERMINALS); };
 bool isBinaryOperator(TokenType tokenType) { return inList(tokenType, tt_BINARY_OPERATORS); };

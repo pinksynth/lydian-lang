@@ -13,17 +13,14 @@ std::vector<Node *> AssignmentNode::getCurrentExpressionList(ScopeType scope) {
 };
 
 std::string AssignmentNode::inspectString(int pad) {
-  std::string padString = "";
-  for (int i = 0; i <= pad; i++) {
-    padString += " ";
-  }
-  std::string output = "Assignment node: \"" + variable + "\" -> (";
+  std::string padString = getPadString(pad);
+  std::string output = padString + "Assignment node: \"" + variable + "\" -> (\n";
   if (child == NULL) {
     output += "null";
   } else {
     output += child->inspectString(pad + 2);
   }
-  output += ")";
+  output += "\n" + padString + ")";
 
   return output;
 }

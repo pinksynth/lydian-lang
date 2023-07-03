@@ -27,11 +27,7 @@ std::vector<Node *> Node::getCurrentExpressionList(ScopeType scope) {
 
 std::string inspect(std::vector<Node *> nodes, int pad = 0) {
   std::string output = "[\n";
-
-  std::string padString = "";
-
-  for (int i = 0; i <= pad; i++)
-    padString += " ";
+  std::string padString = getPadString(pad);
 
   for (Node *node : nodes) {
     if (node != nullptr) {
