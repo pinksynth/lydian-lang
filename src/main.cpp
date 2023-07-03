@@ -11,8 +11,9 @@ int main() {
   // std::string testInput =
   //     sammylang::getFileString("../../tests/cases/operator-precedence-small-1/input.sammy");
   std::string testInput = R"sammy(
-    # This one works for operator precedence:
+    # These ones work for operator precedence:
     # 4 * 5 + 6 * 7
+    # a + b - c * d + e / f
 
     # This one doesn't.
     a = 4 * 5 + 6 * 7

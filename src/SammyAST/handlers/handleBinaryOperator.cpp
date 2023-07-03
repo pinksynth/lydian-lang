@@ -25,11 +25,6 @@ void SammyAST::handleBinaryOperator() {
 
   AssignmentNode *assignmentLeftOperand = dynamic_cast<AssignmentNode *>(leftOperand);
 
-  //
-  //
-  // FIXME: This ain't working. Operator precedence is being broken by the current input in main.cpp.
-  //
-  //
   if (leftOperand->nodeType == nt_binaryExpression &&
       operatorPrecedence(binaryExpressionLeftOperand->op) < operatorPrecedence(token.value)) {
     // debug("Encountered superior operator in righthand binary expression...");
@@ -54,10 +49,34 @@ void SammyAST::handleBinaryOperator() {
 
     return;
   } else if (leftOperand->nodeType == nt_assignment && assignmentLeftOperand != nullptr) {
+    //
+    //
+    // FIXME: SAMMY! This is not properly handling operator precedence inside of assignment because it's a holdover from JS, which also does not properly handle operator precedence inside of assignment. Lol.
+    //
+    //
     debug("Handling assignment left operand...");
     std::string parentVariable = assignmentLeftOperand->variable;
     Node *childLeft = assignmentLeftOperand->child;
 
+    BinaryExpressionNode *binaryExpressionAssignmentChild =
+        dynamic_cast<BinaryExpressionNode *>(childLeft);
+
+    if (binaryExpressionAssignmentChild != nullptr) {
+      debug("Dynamic cast to BinaryExpressionNode.");
+      debug("operatorPrecedence(binaryExpressionAssignmentChild->op)");
+      debug(operatorPrecedence(binaryExpressionAssignmentChild->op));
+      debug("operatorPrecedence(token.value)");
+      debug(operatorPrecedence(token.value));
+      bool encounteredSuperiorOperator = (operatorPrecedence(binaryExpressionAssignmentChild->op) <
+                                          operatorPrecedence(token.value));
+
+      //
+      //
+      // FIXME: SAMMY! This is true when it's supposed to be true! Figure out what to do with it though.
+      //
+      //
+      debug(encounteredSuperiorOperator);
+    }
     AssignmentNode *replacedParent = new AssignmentNode();
     replacedParent->parent = node;
     replacedParent->variable = parentVariable;
