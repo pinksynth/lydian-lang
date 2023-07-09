@@ -20,6 +20,7 @@
 // Handlers
 #include "./handlers/handleBinaryOperator.cpp"
 #include "./handlers/handleVariableAssignment.cpp"
+#include "./prepareCallableLeftSibling.cpp"
 
 #pragma once
 
@@ -85,6 +86,8 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
     // debug(thirdToken.inspectString());
     // debug("thirdTokenType");
     // debug(thirdTokenType);
+
+    auto [callableLeftSibling, appendedScopes] = prepareCallableLeftSibling(currentExpressionList);
 
     // Variable assignment
     if (tokenType == tt_var && nextTokenType == tt_assignment) {

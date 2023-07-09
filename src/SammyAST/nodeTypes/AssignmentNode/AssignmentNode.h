@@ -2,6 +2,8 @@
 #include "../../Node.h"
 #include <vector>
 
+#pragma once
+
 namespace sammylang {
 
 class AssignmentNode : public Node {

@@ -10,8 +10,8 @@ int main() {
   // FIXME: Figure out why this path works correctly with the CMake tools but not with your "Debug Language" command.
   // std::string testInput =
   //     sammylang::getFileString("../../tests/cases/operator-precedence-small-1/input.sammy");
-  std::string testInput = R"sammy(a = 1
-a = 2 * 3 + 4 / 5 - 7 ^ 8)sammy";
+  std::string testInput = R"sammy(4 * (5 + 6) * 7
+  )sammy";
   sammylang::print("Test input:");
   sammylang::print(testInput);
 
