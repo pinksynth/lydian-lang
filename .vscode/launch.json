@@ -5,7 +5,7 @@
       "name": "Debug Lang",
       "type": "lldb",
       "request": "launch",
-      "program": "${workspaceRoot}/build/bin/sammy-lang",
+      "program": "${workspaceRoot}/build/sammy-lang",
       "args": [],
       "cwd": "${workspaceRoot}"
     },
@@ -13,7 +13,7 @@
       "name": "Debug Tests",
       "type": "lldb",
       "request": "launch",
-      "program": "${workspaceRoot}/build/bin/tests",
+      "program": "${workspaceRoot}/build/tests",
       "args": [],
       "cwd": "${workspaceRoot}"
     }

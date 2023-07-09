@@ -37,6 +37,23 @@
     "*.tcc": "cpp",
     "iterator": "cpp",
     "memory_resource": "cpp",
-    "utility": "cpp"
+    "utility": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "__node_handle": "cpp",
+    "bitset": "cpp",
+    "__memory": "cpp",
+    "optional": "cpp",
+    "ratio": "cpp",
+    "regex": "cpp",
+    "system_error": "cpp",
+    "chrono": "cpp",
+    "filesystem": "cpp",
+    "random": "cpp",
+    "format": "cpp",
+    "array": "cpp",
+    "functional": "cpp",
+    "variant": "cpp",
+    "ios": "cpp"
   }
 }
