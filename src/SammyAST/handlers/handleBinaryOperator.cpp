@@ -27,7 +27,7 @@ void SammyAST::handleBinaryOperator() {
 
   if (leftOperand->nodeType == nt_binaryExpression &&
       operatorPrecedence(binaryExpressionLeftOperand->op) < operatorPrecedence(token.value)) {
-    // debug("Encountered superior operator in righthand binary expression...");
+    debug("Encountered superior operator in righthand binary expression...");
     Node *parentLeft = binaryExpressionLeftOperand->left;
     Node *childLeft = binaryExpressionLeftOperand->right;
     std::string parentOperator = binaryExpressionLeftOperand->op;
@@ -61,87 +61,69 @@ void SammyAST::handleBinaryOperator() {
     BinaryExpressionNode *binaryExpressionAssignmentChild =
         dynamic_cast<BinaryExpressionNode *>(childLeft);
 
-    if (binaryExpressionAssignmentChild != nullptr) {
-      debug("Dynamic cast to BinaryExpressionNode.");
-      debug("operatorPrecedence(binaryExpressionAssignmentChild->op)");
-      debug(operatorPrecedence(binaryExpressionAssignmentChild->op));
-      debug("operatorPrecedence(token.value)");
-      debug(operatorPrecedence(token.value));
-      bool encounteredSuperiorOperator = (operatorPrecedence(binaryExpressionAssignmentChild->op) <
-                                          operatorPrecedence(token.value));
+    //
+    //
+    // FIXME: SAMMY! This is true when it's supposed to be true! Figure out what to do with it though.
+    //
+    //
+    if (binaryExpressionAssignmentChild != nullptr &&
+        (operatorPrecedence(binaryExpressionAssignmentChild->op) <
+         operatorPrecedence(token.value))) {
 
-      //
-      //
-      // FIXME: SAMMY! This is true when it's supposed to be true! Figure out what to do with it though.
-      //
-      //
-      debug(encounteredSuperiorOperator);
+      debug("Encountered superior operator as child of assignment.");
+
+      AssignmentNode *replacedParent = new AssignmentNode();
+      replacedParent->parent = node;
+      replacedParent->variable = parentVariable;
+
+      Node *parentLeft = binaryExpressionAssignmentChild->left;
+      Node *childLeft = binaryExpressionAssignmentChild->right;
+      std::string parentOperator = binaryExpressionAssignmentChild->op;
+
+      BinaryExpressionNode *replacedAssignmentChild = new BinaryExpressionNode();
+      replacedAssignmentChild->left = parentLeft;
+      replacedAssignmentChild->op = parentOperator;
+      replacedAssignmentChild->parent = node;
+
+      BinaryExpressionNode *rightChild = new BinaryExpressionNode();
+      rightChild->left = childLeft;
+      rightChild->op = token.value;
+      rightChild->parent = replacedAssignmentChild;
+
+      scopes.push_back(st_binaryOperator);
+      replacedAssignmentChild->right = rightChild;
+      replacedParent->child = replacedAssignmentChild;
+      node->pushToExpressionList(replacedParent);
+      node = rightChild;
+
+      return;
+    } else {
+      debug("Handling inferior operator to other operator child of assignment");
+      AssignmentNode *replacedParent = new AssignmentNode();
+      replacedParent->parent = node;
+      replacedParent->variable = parentVariable;
+
+      BinaryExpressionNode *child = new BinaryExpressionNode();
+      child->left = childLeft;
+      child->op = token.value;
+      child->parent = replacedParent;
+
+      scopes.push_back(st_binaryOperator);
+      replacedParent->child = child;
+      node->pushToExpressionList(replacedParent);
+      node = child;
+
+      return;
     }
-    AssignmentNode *replacedParent = new AssignmentNode();
-    replacedParent->parent = node;
-    replacedParent->variable = parentVariable;
-
-    BinaryExpressionNode *rightChild = new BinaryExpressionNode();
-    rightChild->left = childLeft;
-    rightChild->op = token.value;
-    rightChild->parent = replacedParent;
-
-    scopes.push_back(st_binaryOperator);
-    replacedParent->child = rightChild;
-    debug("replacedParent->inspectString()");
-    debug(replacedParent->inspectString());
-    node->pushToExpressionList(replacedParent);
-    node = rightChild;
-    /*
-      const parentVariable = leftOperand.variable
-      const childLeft = leftOperand.children[0]
-
-      const replacedParent = {
-        variable: parentVariable,
-        parent: node,
-        type: nt.ASSIGNMENT,
-        lineNumberStart: leftOperand.lineNumberStart,
-        columnNumberStart: leftOperand.columnNumberStart,
-      }
-      const rightChild = {
-        left: childLeft,
-        operator: token.value,
-        parent: replacedParent,
-        type: nt.BINARY_EXPR,
-        lineNumberStart: token.lineNumberStart,
-        columnNumberStart: token.columnNumberStart,
-      }
-
-      scopes.push(st.BINARY_OPERATOR)
-      replacedParent.children = [rightChild]
-      pushToExpressionList(replacedParent)
-
-      setNode(rightChild)
-
-      */
-
   } else {
-
-    // If the operator is the righthand side of an assignment, we do essentially the same thing as the ("foo = 3 * 4" instead of "2 + 3 * 4") scenario, except that the structure of the replaced parent node is slightly different (assignments are like binary operators, but with slightly different rules).
-    // } else if (leftOperand.type === nt.ASSIGNMENT) {
-    //   handleOperatorAsRightSideOfAssignment({
-    //     leftOperand,
-    //     node,
-    //     pushToExpressionList,
-    //     scopes,
-    //     setNode,
-    //     token,
-    //   })
-
-    //   return
-    // } else {
-    // If we encountered neither an assignment (foo = 3 * 4) nor an operator precedence conflict (2 + 3 * 4), then simply treat the previous sibling node as our left operand and proceed.
     BinaryExpressionNode *child = new BinaryExpressionNode();
     child->parent = node;
     child->left = leftOperand;
     child->op = token.value;
     node->pushToExpressionList(child);
     node = child;
+
+    return;
   }
 }
 

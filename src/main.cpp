@@ -16,7 +16,7 @@ int main() {
     # a + b - c * d + e / f
 
     # This one doesn't.
-    a = 4 * 5 + 6 * 7
+    a = 4 * 5 + 6 * 7 - 1 - b + 6 / 9 -> foo
   )sammy";
   sammylang::print("Test input:");
   sammylang::print(testInput);

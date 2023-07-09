@@ -46,7 +46,12 @@ void debug(std::string string) {
 
 void debug(int arg) { debug(toString(arg)); }
 
-void alert(std::string string) { print("\033[1;31m" + string + "\033[0m\n"); };
+std::string alertString(std::string string) { return "\033[1;31m" + string + "\033[0m\n"; };
+void alert(std::string string) { print(alertString(string)); };
+void alertDebug(std::string string) { debug(alertString(string)); };
+std::string highlightString(std::string string) { return "\033[1;34m" + string + "\033[0m\n"; };
+void highlight(std::string string) { print(highlightString(string)); };
+void highlightDebug(std::string string) { debug(highlightString(string)); };
 
 std::string padded_label(int width, std::string name, std::string value) {
   std::string nameWithColon = name + ":";

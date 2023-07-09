@@ -16,7 +16,7 @@ std::string AssignmentNode::inspectString(int pad) {
   std::string padString = getPadString(pad);
   std::string output = padString + "Assignment node: \"" + variable + "\" -> (\n";
   if (child == NULL) {
-    output += "null";
+    output += padString + "  " + "null";
   } else {
     output += child->inspectString(pad + 2);
   }

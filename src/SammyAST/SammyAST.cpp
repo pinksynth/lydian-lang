@@ -38,7 +38,7 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
 
   size_t tokensCount = tokens.size();
   for (i = 0; i < tokensCount; i++) {
-    debug("\n\n==================================================\n");
+    highlightDebug("\n\n==================================================\n");
     ScopeType currentScope = scopes.back();
     currentExpressionList = node->getCurrentExpressionList(currentScope);
     token = tokens[i];
