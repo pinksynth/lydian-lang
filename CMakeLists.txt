@@ -31,6 +31,16 @@ add_definitions(${LLVM_DEFINITIONS_LIST})
 llvm_map_components_to_libnames(llvm_libs support core irreader)
 
 #
+# JSON
+#
+FetchContent_Declare(
+  json
+  GIT_REPOSITORY https://github.com/nlohmann/json
+  GIT_TAG v3.11.2
+)
+FetchContent_MakeAvailable(json)
+
+#
 # String formatting
 #
 FetchContent_Declare(
@@ -41,9 +51,13 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(fmt)
 
 add_executable(sammy-lang src/main.cpp)
-target_link_libraries(sammy-lang ${CONAN_LIBS})
-target_link_libraries(sammy-lang ${llvm_libs})
-target_link_libraries(sammy-lang fmt)
+target_link_libraries(
+  sammy-lang
+  ${CONAN_LIBS}
+  ${llvm_libs}
+  fmt
+  nlohmann_json::nlohmann_json
+)
 
 #
 # Testing
@@ -55,4 +69,11 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(Catch2)
 add_executable(tests tests/test.cpp)
-target_link_libraries(tests PRIVATE fmt Catch2::Catch2WithMain ${llvm_libs})
+target_link_libraries(
+  tests
+  PRIVATE
+  ${llvm_libs}
+  Catch2::Catch2WithMain
+  fmt
+  nlohmann_json::nlohmann_json
+)
