@@ -7,6 +7,54 @@
       },
       "nodeType": "nt_assignment",
       "variable": "a"
+    },
+    {
+      "child": {
+        "left": {
+          "left": {
+            "left": {
+              "nodeType": "nt_literalNumber",
+              "value": 2.0
+            },
+            "nodeType": "nt_binaryExpression",
+            "operator": "*",
+            "right": {
+              "nodeType": "nt_literalNumber",
+              "value": 3.0
+            }
+          },
+          "nodeType": "nt_binaryExpression",
+          "operator": "+",
+          "right": {
+            "left": {
+              "nodeType": "nt_literalNumber",
+              "value": 4.0
+            },
+            "nodeType": "nt_binaryExpression",
+            "operator": "/",
+            "right": {
+              "nodeType": "nt_literalNumber",
+              "value": 5.0
+            }
+          }
+        },
+        "nodeType": "nt_binaryExpression",
+        "operator": "-",
+        "right": {
+          "left": {
+            "nodeType": "nt_literalNumber",
+            "value": 7.0
+          },
+          "nodeType": "nt_binaryExpression",
+          "operator": "^",
+          "right": {
+            "nodeType": "nt_literalNumber",
+            "value": 8.0
+          }
+        }
+      },
+      "nodeType": "nt_assignment",
+      "variable": "a"
     }
   ],
   "nodeType": "nt_root"

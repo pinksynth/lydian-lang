@@ -21,6 +21,7 @@
 		* `test.cpp` - The entrypoint for the test case. May perform any assertions about the language feature. If `doAssertions` is called, the following files should also be present.
 		* `input.sammy` - The input SammyLang file.
 		* `expectedTokens.json` The expected lexer tokens for the given input.
+		* `expectedAST.json` The expected AST for the given input.
 */
 
 #include "./cases/assignment-1/test.cpp"
