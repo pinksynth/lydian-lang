@@ -4,7 +4,7 @@ An attempt to implement the sammy-lang language in C++ using LLVM.
 
 ## Building
 
-This project uses CMake and Conan. To build, first make sure that `conan` and `cmake` are installed. Then run `scripts/initial-build.sh`.
+This project uses CMake. To build, first make sure that `cmake` is installed. Then run `scripts/initial-build.sh`.
 
 Alternatively, you can follow the steps below:
 
@@ -13,19 +13,15 @@ Alternatively, you can follow the steps below:
    mkdir build; cd build
    ```
    **NOTE: All steps below must be run in the `build` folder.**
-2. Install dependencies:
-   ```sh
-   conan install ..
-   ```
-3. Run `cmake`:
+2. Run `cmake`:
    ```sh
    cmake ..
    ```
-4. Run `make`:
+3. Run `make`:
    ```sh
    make
    ```
-5. You can now run the built executables `sammy-lang` and `tests`:
+4. You can now run the built executables `sammy-lang` and `tests`:
 
    ```sh
    bin/sammy-lang

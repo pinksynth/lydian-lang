@@ -9,9 +9,6 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
-
 find_package(LLVM REQUIRED CONFIG)
 
 message(STATUS "Found LLVM ${LLVM_PACKAGE_VERSION}")
@@ -53,7 +50,6 @@ FetchContent_MakeAvailable(fmt)
 add_executable(sammy-lang src/main.cpp)
 target_link_libraries(
   sammy-lang
-  ${CONAN_LIBS}
   ${llvm_libs}
   fmt
   nlohmann_json::nlohmann_json

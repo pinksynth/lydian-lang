@@ -10,7 +10,6 @@
     }
   ],
   "settings": {
-    "C_Cpp.default.includePath": ["~/.conan/data/**"],
     "files.associations": {
       "**/*.html": "html",
       "**/templates/**/*.html": "django-html",
