@@ -156,8 +156,8 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
     debug(root->inspectString());
 
     jsonAST = root->toJson();
-    debug("FINAL AST JSON:");
-    debug(jsonAST.dump(2));
+    // debug("FINAL AST JSON:");
+    // debug(jsonAST.dump(2));
   }
 };
 

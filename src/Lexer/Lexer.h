@@ -70,6 +70,7 @@ public:
 
   // Debugging (public)
   void inspect();
+  json jsonTokens;
 };
 
 } // namespace sammylang
