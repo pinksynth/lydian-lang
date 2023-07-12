@@ -105,7 +105,10 @@
       "filesystem": "cpp",
       "list": "cpp",
       "queue": "cpp",
-      "hash_map": "cpp"
+      "hash_map": "cpp",
+      "condition_variable": "cpp",
+      "numbers": "cpp",
+      "semaphore": "cpp"
     }
   },
   "extensions": {
