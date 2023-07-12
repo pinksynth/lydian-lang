@@ -105,4 +105,7 @@ std::vector<int> st_validAssignmentScopes = {
     st_enumDefinition, st_functionDecBody,     st_ifBody,          st_lambdaBody,
     st_root,           st_stringInterpolation, st_structDefinition};
 
+std::vector<int> st_validClosingParenScopes = {st_functionCallArgs, st_functionDecArgs,
+                                               st_genericExpression, st_ifCondition};
+
 } // namespace sammylang

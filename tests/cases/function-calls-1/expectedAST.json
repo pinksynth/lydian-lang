@@ -1,0 +1,46 @@
+{
+  "children": [
+    {
+      "child": {
+        "arguments": null,
+        "callee": {
+          "nodeType": "nt_identifier",
+          "value": "foo"
+        },
+        "nodeType": "nt_functionCall"
+      },
+      "nodeType": "nt_assignment",
+      "variable": "a"
+    },
+    {
+      "child": {
+        "arguments": [
+          {
+            "nodeType": "nt_literalNumber",
+            "value": 1.0
+          },
+          {
+            "nodeType": "nt_literalNumber",
+            "value": 2.0
+          }
+        ],
+        "callee": {
+          "left": {
+            "nodeType": "nt_identifier",
+            "value": "bar"
+          },
+          "nodeType": "nt_binaryExpression",
+          "operator": ".",
+          "right": {
+            "nodeType": "nt_identifier",
+            "value": "baz"
+          }
+        },
+        "nodeType": "nt_functionCall"
+      },
+      "nodeType": "nt_assignment",
+      "variable": "b"
+    }
+  ],
+  "nodeType": "nt_root"
+}

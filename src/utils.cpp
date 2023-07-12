@@ -120,7 +120,7 @@ std::string getFileString(std::string stringPath) {
 std::string getPadString(int pad = 0) {
   std::string padString = "";
   for (int i = 0; i < pad; i++) {
-    padString += " ";
+    padString += "  ";
   }
   return padString;
 }

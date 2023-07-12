@@ -15,7 +15,7 @@ std::string RootNode::inspectString(int pad) {
 
   for (Node *node : children) {
     if (node != nullptr) {
-      output += padString + node->inspectString(pad + 2) + "\n";
+      output += padString + node->inspectString(pad + 1) + "\n";
     }
   }
   output += padString + "]";

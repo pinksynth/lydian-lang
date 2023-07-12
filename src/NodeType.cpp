@@ -11,7 +11,8 @@ enum NodeType {
   nt_literalNumber,
   nt_nil,
   nt_root,
-  nt_assignment
+  nt_assignment,
+  nt_functionCall
 };
 
 std::string nodeString(NodeType nodeType) {
@@ -33,6 +34,8 @@ std::string nodeString(NodeType nodeType) {
     return "nt_root";
   if (nodeType == nt_assignment)
     return "nt_assignment";
+  if (nodeType == nt_functionCall)
+    return "nt_functionCall";
 
   throw std::logic_error("Error in AST. Unrecognized Node Type.");
 }

@@ -19,6 +19,8 @@
 
 // Handlers
 #include "./handlers/handleBinaryOperator.cpp"
+#include "./handlers/handleCloseParen.cpp"
+#include "./handlers/handleFunctionCall.cpp"
 #include "./handlers/handleVariableAssignment.cpp"
 #include "./prepareCallableLeftSibling.cpp"
 
@@ -91,8 +93,15 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
 
     // Variable assignment
     if (tokenType == tt_var && nextTokenType == tt_assignment) {
-
       handleVariableAssignment();
+
+      continue;
+    }
+
+    // Function call, if we saw an open paren and the left sibling is callable
+    if (tokenType == tt_parenOpen && callableLeftSibling != nullptr) {
+      handleFunctionCall(callableLeftSibling, appendedScopes);
+
       continue;
     }
 
@@ -107,8 +116,13 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
       continue;
     }
 
+    if (tokenType == tt_parenClose) {
+      handleCloseParen(currentScope);
+      continue;
+    }
+
     if (tokenType == tt_bracketClose) {
-      pop_scopes();
+      popScopes();
 
       continue;
     }
@@ -131,7 +145,7 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
       node->pushToExpressionList(child);
 
       if (inList(currentScope, st_operandScopeTypes))
-        pop_scopes();
+        popScopes();
 
       continue;
     }
@@ -171,7 +185,7 @@ Node *SammyAST::getTerminalNodeFromToken(Token token) {
   }
 };
 
-void SammyAST::pop_scopes() {
+void SammyAST::popScopes() {
   if (scopes.size() > 0)
     scopes.pop_back();
 
@@ -180,7 +194,7 @@ void SammyAST::pop_scopes() {
   node = node->parent;
 
   if (inList(currentScope, st_operandScopeTypes))
-    pop_scopes();
+    popScopes();
 }
 
 void SammyAST::consumeExtra() { i++; };

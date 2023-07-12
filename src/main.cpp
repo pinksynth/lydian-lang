@@ -11,7 +11,7 @@ int main() {
   // std::string testInput =
   //     sammylang::getFileString("../../tests/cases/operator-precedence-small-1/input.sammy");
   std::string testInput = R"sammy(4 * (5 + 6) * 7
-  )sammy";
+)sammy";
   sammylang::print("Test input:");
   sammylang::print(testInput);
 

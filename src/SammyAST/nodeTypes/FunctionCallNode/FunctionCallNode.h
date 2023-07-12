@@ -1,26 +1,28 @@
+#include <vector>
+
 #include "../../../NodeType.cpp"
 #include "../../Node.h"
-#include <vector>
 
 #pragma once
 
 namespace sammylang {
 
-class AssignmentNode : public Node {
+class FunctionCallNode : public Node {
   std::vector<Node *> children;
 
 public:
   std::vector<Node *> getCurrentExpressionList(ScopeType scope);
   void pushToExpressionList(Node *node);
-  void popCurrentExpressionList();
   std::string inspectString(int pad = 0);
   json toJson();
 
-  std::string variable;
-  Node *child;
-  bool weak = false;
+  Node *callee;
+  std::vector<Node *> arguments;
 
-  AssignmentNode() { nodeType = nt_assignment; };
+  FunctionCallNode() {
+    nodeType = nt_functionCall;
+    arguments = {};
+  };
 };
 
 } // namespace sammylang

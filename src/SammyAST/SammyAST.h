@@ -31,12 +31,14 @@ private:
   Token thirdToken;
   TokenType thirdTokenType;
 
-  void pop_scopes();
+  void popScopes();
   static Node *getTerminalNodeFromToken(Token token);
 
   void consumeExtra();
 
   void handleBinaryOperator();
+  void handleCloseParen(ScopeType currentScope);
+  void handleFunctionCall(Node *, std::vector<ScopeType>);
   void handleVariableAssignment();
 };
 

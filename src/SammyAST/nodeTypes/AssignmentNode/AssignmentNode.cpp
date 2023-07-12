@@ -5,8 +5,9 @@
 namespace sammylang {
 
 void AssignmentNode::pushToExpressionList(Node *node) { child = node; };
+void AssignmentNode::popCurrentExpressionList() { child = nullptr; };
 
-std::vector<Node *> AssignmentNode::getCurrentExpressionList(ScopeType scope) {
+std::vector<Node *> AssignmentNode::getCurrentExpressionList(ScopeType _scope) {
   std::vector<Node *> *vec = new std::vector<Node *>();
   vec->push_back(child);
   return *vec;
@@ -18,7 +19,7 @@ std::string AssignmentNode::inspectString(int pad) {
   if (child == NULL) {
     output += padString + "  " + "null";
   } else {
-    output += child->inspectString(pad + 2);
+    output += child->inspectString(pad + 1);
   }
   output += "\n" + padString + ")";
 

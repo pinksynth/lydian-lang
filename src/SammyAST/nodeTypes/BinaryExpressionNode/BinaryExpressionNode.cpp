@@ -4,18 +4,19 @@
 
 namespace sammylang {
 
-std::vector<Node *> BinaryExpressionNode::getCurrentExpressionList(ScopeType scope) {
+std::vector<Node *> BinaryExpressionNode::getCurrentExpressionList(ScopeType _scope) {
   return children;
 }
 
 void BinaryExpressionNode::pushToExpressionList(Node *node) { right = node; };
+void BinaryExpressionNode::popCurrentExpressionList() { right = nullptr; };
 
 std::string BinaryExpressionNode::inspectString(int pad) {
   std::string padString = getPadString(pad);
   std::string output = padString + "Binary Expression Node: [\n" + padString + "  " + "LEFT:\n" +
-                       (left == nullptr ? padString + "  null" : left->inspectString(pad + 2)) +
+                       (left == nullptr ? padString + "  null" : left->inspectString(pad + 1)) +
                        "\n" + padString + "  " + op + "\n" + padString + "  " + "RIGHT:\n" +
-                       (right == nullptr ? padString + "  null" : right->inspectString(pad + 2));
+                       (right == nullptr ? padString + "  null" : right->inspectString(pad + 1));
 
   output += "\n" + padString + "]";
   return output;

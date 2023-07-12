@@ -1,0 +1,2 @@
+a = foo()
+b = bar.baz(1 2)
