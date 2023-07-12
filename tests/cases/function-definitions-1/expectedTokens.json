@@ -1,67 +1,115 @@
 [
   {
-    "columnNumberEnd": 9,
+    "columnNumberEnd": 3,
     "columnNumberStart": 1,
     "lineNumberEnd": 1,
     "lineNumberStart": 1,
     "type": 18,
-    "value": "function"
+    "value": "fn"
   },
   {
-    "columnNumberEnd": 10,
-    "columnNumberStart": 9,
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
     "lineNumberEnd": 1,
     "lineNumberStart": 1,
     "type": 37,
     "value": " "
   },
   {
-    "columnNumberEnd": 18,
-    "columnNumberStart": 10,
+    "columnNumberEnd": 12,
+    "columnNumberStart": 4,
     "lineNumberEnd": 1,
     "lineNumberStart": 1,
     "type": 35,
     "value": "multiply"
   },
   {
-    "columnNumberEnd": 19,
-    "columnNumberStart": 18,
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
     "lineNumberEnd": 1,
     "lineNumberStart": 1,
     "type": 28,
     "value": "("
   },
   {
-    "columnNumberEnd": 20,
-    "columnNumberStart": 19,
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
     "lineNumberEnd": 1,
     "lineNumberStart": 1,
     "type": 35,
     "value": "a"
   },
   {
-    "columnNumberEnd": 21,
-    "columnNumberStart": 20,
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
     "lineNumberEnd": 1,
     "lineNumberStart": 1,
     "type": 37,
     "value": " "
   },
   {
-    "columnNumberEnd": 22,
-    "columnNumberStart": 21,
+    "columnNumberEnd": 16,
+    "columnNumberStart": 15,
     "lineNumberEnd": 1,
     "lineNumberStart": 1,
     "type": 35,
     "value": "b"
   },
   {
-    "columnNumberEnd": 23,
-    "columnNumberStart": 22,
+    "columnNumberEnd": 17,
+    "columnNumberStart": 16,
     "lineNumberEnd": 1,
     "lineNumberStart": 1,
     "type": 27,
     "value": ")"
+  },
+  {
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 19,
+    "columnNumberStart": 18,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 12,
+    "value": "{"
+  },
+  {
+    "columnNumberEnd": 20,
+    "columnNumberStart": 19,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 21,
+    "columnNumberStart": 20,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 35,
+    "value": "a"
+  },
+  {
+    "columnNumberEnd": 22,
+    "columnNumberStart": 21,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 23,
+    "columnNumberStart": 22,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 26,
+    "value": "*"
   },
   {
     "columnNumberEnd": 24,
@@ -76,8 +124,8 @@
     "columnNumberStart": 24,
     "lineNumberEnd": 1,
     "lineNumberStart": 1,
-    "type": 12,
-    "value": "{"
+    "type": 35,
+    "value": "b"
   },
   {
     "columnNumberEnd": 26,
@@ -92,199 +140,151 @@
     "columnNumberStart": 26,
     "lineNumberEnd": 1,
     "lineNumberStart": 1,
-    "type": 35,
-    "value": "a"
-  },
-  {
-    "columnNumberEnd": 28,
-    "columnNumberStart": 27,
-    "lineNumberEnd": 1,
-    "lineNumberStart": 1,
-    "type": 37,
-    "value": " "
-  },
-  {
-    "columnNumberEnd": 29,
-    "columnNumberStart": 28,
-    "lineNumberEnd": 1,
-    "lineNumberStart": 1,
-    "type": 26,
-    "value": "*"
-  },
-  {
-    "columnNumberEnd": 30,
-    "columnNumberStart": 29,
-    "lineNumberEnd": 1,
-    "lineNumberStart": 1,
-    "type": 37,
-    "value": " "
-  },
-  {
-    "columnNumberEnd": 31,
-    "columnNumberStart": 30,
-    "lineNumberEnd": 1,
-    "lineNumberStart": 1,
-    "type": 35,
-    "value": "b"
-  },
-  {
-    "columnNumberEnd": 32,
-    "columnNumberStart": 31,
-    "lineNumberEnd": 1,
-    "lineNumberStart": 1,
-    "type": 37,
-    "value": " "
-  },
-  {
-    "columnNumberEnd": 33,
-    "columnNumberStart": 32,
-    "lineNumberEnd": 1,
-    "lineNumberStart": 1,
     "type": 11,
     "value": "}"
   },
   {
     "columnNumberEnd": 1,
-    "columnNumberStart": 33,
+    "columnNumberStart": 27,
     "lineNumberEnd": 2,
     "lineNumberStart": 1,
     "type": 37,
     "value": "\n"
   },
   {
-    "columnNumberEnd": 9,
+    "columnNumberEnd": 3,
     "columnNumberStart": 1,
     "lineNumberEnd": 2,
     "lineNumberStart": 2,
     "type": 18,
-    "value": "function"
+    "value": "fn"
   },
   {
-    "columnNumberEnd": 10,
-    "columnNumberStart": 9,
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
     "lineNumberEnd": 2,
     "lineNumberStart": 2,
     "type": 37,
     "value": " "
   },
   {
-    "columnNumberEnd": 18,
-    "columnNumberStart": 10,
+    "columnNumberEnd": 12,
+    "columnNumberStart": 4,
     "lineNumberEnd": 2,
     "lineNumberStart": 2,
     "type": 35,
     "value": "multiply"
   },
   {
-    "columnNumberEnd": 19,
-    "columnNumberStart": 18,
+    "columnNumberEnd": 13,
+    "columnNumberStart": 12,
     "lineNumberEnd": 2,
     "lineNumberStart": 2,
     "type": 28,
     "value": "("
   },
   {
-    "columnNumberEnd": 20,
-    "columnNumberStart": 19,
+    "columnNumberEnd": 14,
+    "columnNumberStart": 13,
     "lineNumberEnd": 2,
     "lineNumberStart": 2,
     "type": 35,
     "value": "a"
   },
   {
-    "columnNumberEnd": 21,
-    "columnNumberStart": 20,
+    "columnNumberEnd": 15,
+    "columnNumberStart": 14,
     "lineNumberEnd": 2,
     "lineNumberStart": 2,
     "type": 27,
     "value": ")"
   },
   {
-    "columnNumberEnd": 22,
-    "columnNumberStart": 21,
+    "columnNumberEnd": 16,
+    "columnNumberStart": 15,
     "lineNumberEnd": 2,
     "lineNumberStart": 2,
     "type": 37,
     "value": " "
   },
   {
-    "columnNumberEnd": 23,
-    "columnNumberStart": 22,
+    "columnNumberEnd": 17,
+    "columnNumberStart": 16,
     "lineNumberEnd": 2,
     "lineNumberStart": 2,
     "type": 12,
     "value": "{"
   },
   {
-    "columnNumberEnd": 24,
-    "columnNumberStart": 23,
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
     "lineNumberEnd": 2,
     "lineNumberStart": 2,
     "type": 37,
     "value": " "
   },
   {
-    "columnNumberEnd": 32,
-    "columnNumberStart": 24,
+    "columnNumberEnd": 26,
+    "columnNumberStart": 18,
     "lineNumberEnd": 2,
     "lineNumberStart": 2,
     "type": 35,
     "value": "multiply"
   },
   {
-    "columnNumberEnd": 33,
-    "columnNumberStart": 32,
+    "columnNumberEnd": 27,
+    "columnNumberStart": 26,
     "lineNumberEnd": 2,
     "lineNumberStart": 2,
     "type": 28,
     "value": "("
   },
   {
-    "columnNumberEnd": 34,
-    "columnNumberStart": 33,
+    "columnNumberEnd": 28,
+    "columnNumberStart": 27,
     "lineNumberEnd": 2,
     "lineNumberStart": 2,
     "type": 35,
     "value": "a"
   },
   {
-    "columnNumberEnd": 35,
-    "columnNumberStart": 34,
+    "columnNumberEnd": 29,
+    "columnNumberStart": 28,
     "lineNumberEnd": 2,
     "lineNumberStart": 2,
     "type": 37,
     "value": " "
   },
   {
-    "columnNumberEnd": 36,
-    "columnNumberStart": 35,
+    "columnNumberEnd": 30,
+    "columnNumberStart": 29,
     "lineNumberEnd": 2,
     "lineNumberStart": 2,
     "type": 35,
     "value": "a"
   },
   {
-    "columnNumberEnd": 37,
-    "columnNumberStart": 36,
+    "columnNumberEnd": 31,
+    "columnNumberStart": 30,
     "lineNumberEnd": 2,
     "lineNumberStart": 2,
     "type": 27,
     "value": ")"
   },
   {
-    "columnNumberEnd": 38,
-    "columnNumberStart": 37,
+    "columnNumberEnd": 32,
+    "columnNumberStart": 31,
     "lineNumberEnd": 2,
     "lineNumberStart": 2,
     "type": 37,
     "value": " "
   },
   {
-    "value": "}",
-    "type": 11,
-    "lineNumberStart": 2,
-    "columnNumberStart": 38,
+    "columnNumberEnd": 33,
+    "columnNumberStart": 32,
     "lineNumberEnd": 2,
-    "columnNumberEnd": 39
+    "lineNumberStart": 2,
+    "type": 11,
+    "value": "}"
   }
 ]

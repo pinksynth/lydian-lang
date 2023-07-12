@@ -29,7 +29,7 @@ Token *Lexer::getToken() {
     tokenType = tt_handle;
   } else if (charAccumulator == "end") {
     tokenType = tt_end;
-  } else if (charAccumulator == "function") {
+  } else if (charAccumulator == "fn") {
     tokenType = tt_function;
   } else if (charAccumulator == "struct") {
     tokenType = tt_structDefinition;
