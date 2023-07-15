@@ -23,7 +23,10 @@
 #include "./handlers/handleCloseParen.cpp"
 #include "./handlers/handleFunctionCall.cpp"
 #include "./handlers/handleFunctionDefinitionName.cpp"
+#include "./handlers/handleGenericExpressionOpen.cpp"
 #include "./handlers/handleVariableAssignment.cpp"
+
+// Other AST Helpers
 #include "./prepareCallableLeftSibling.cpp"
 
 #pragma once
@@ -61,10 +64,6 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
     }
 
     debugScopes(scopes);
-
-    // Ignore all whitespace. This language only uses whitespace at the lexer level, not the AST level.
-    if (tokenType == tt_whitespace)
-      continue;
 
     if (i < tokensCount - 1) {
       nextToken = tokens[i + 1];
@@ -130,6 +129,12 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
     // Function call, if we saw an open paren and the left sibling is callable
     if (tokenType == tt_parenOpen && callableLeftSibling != nullptr) {
       handleFunctionCall(callableLeftSibling, appendedScopes);
+
+      continue;
+    }
+
+    if (tokenType == tt_parenOpen) {
+      handleGenericExpressionOpen();
 
       continue;
     }

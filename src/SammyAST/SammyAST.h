@@ -44,6 +44,7 @@ private:
   void handleCloseParen(ScopeType currentScope);
   void handleFunctionCall(Node *, std::vector<ScopeType>);
   void handleFunctionDefinitionName();
+  void handleGenericExpressionOpen();
   void handleVariableAssignment();
 };
 
