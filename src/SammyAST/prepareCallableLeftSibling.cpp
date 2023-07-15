@@ -16,8 +16,8 @@ std::tuple<Node *, std::vector<ScopeType>> getCallable(Node *leftSiblingExpressi
     return {leftSiblingExpression, appendedScopes};
   }
 
-  debug("leftSiblingExpression->inspectString()");
-  debug(leftSiblingExpression->inspectString());
+  // debug("leftSiblingExpression->inspectString()");
+  // debug(leftSiblingExpression->inspectString());
 
   BinaryExpressionNode *leftSiblingBinaryExpression =
       dynamic_cast<BinaryExpressionNode *>(leftSiblingExpression);
@@ -42,7 +42,7 @@ std::tuple<Node *, std::vector<ScopeType>> getCallable(Node *leftSiblingExpressi
 
   if (siblingDescendant != nullptr) {
     appendedScopes.push_back(scopeType);
-    debug("Calling getCallable");
+    // debug("Calling getCallable");
     return getCallable(siblingDescendant, appendedScopes);
   } else {
     return {nullptr, {}};

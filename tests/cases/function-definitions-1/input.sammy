@@ -1,2 +1,2 @@
+fn multiply(a) { a * a }
 fn multiply(a b) { a * b }
-fn multiply(a) { multiply(a a) }

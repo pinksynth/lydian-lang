@@ -19,8 +19,10 @@
 
 // Handlers
 #include "./handlers/handleBinaryOperator.cpp"
+#include "./handlers/handleCloseCurly.cpp"
 #include "./handlers/handleCloseParen.cpp"
 #include "./handlers/handleFunctionCall.cpp"
+#include "./handlers/handleFunctionDefinitionName.cpp"
 #include "./handlers/handleVariableAssignment.cpp"
 #include "./prepareCallableLeftSibling.cpp"
 
@@ -37,12 +39,11 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
   root = new RootNode();
   node = root;
   scopes = {st_root};
-  debug("Inside SammyAST...");
 
   size_t tokensCount = tokens.size();
   for (i = 0; i < tokensCount; i++) {
     highlightDebug("\n\n==================================================\n");
-    ScopeType currentScope = scopes.back();
+    currentScope = scopes.back();
     currentExpressionList = node->getCurrentExpressionList(currentScope);
     token = tokens[i];
     tokenType = token.type;
@@ -98,6 +99,34 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
       continue;
     }
 
+    // Opening of function definition
+    if (tokenType == tt_function) {
+      if (nextTokenType != tt_var)
+        throw std::logic_error("The fn keyword must be followed by an identifier.");
+
+      if (thirdTokenType != tt_parenOpen)
+        throw std::logic_error("Unexpected token after function identifier.");
+
+      handleFunctionDefinitionName();
+
+      continue;
+    }
+
+    if (currentScope == st_functionDecArgs && tokenType == tt_parenClose) {
+      if (nextTokenType != tt_curlyOpen)
+        throw std::logic_error(
+            "Unexpected token after function declaration arguments. Expected \"{\"");
+
+      swapScope(st_functionDecBody);
+      consumeExtra();
+
+      continue;
+    }
+    // if (tokenType === tt.FUNCTION && nextTokenType === tt.VAR) {
+    //   handleFunctiondefinitionName(context)
+    //   continue
+    // }
+
     // Function call, if we saw an open paren and the left sibling is callable
     if (tokenType == tt_parenOpen && callableLeftSibling != nullptr) {
       handleFunctionCall(callableLeftSibling, appendedScopes);
@@ -109,7 +138,7 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
       ListNode *listNode = new ListNode();
       Node *child = listNode;
       child->parent = node;
-      node->pushToExpressionList(child);
+      node->pushToExpressionList(currentScope, child);
       scopes.push_back(st_array);
       node = child;
 
@@ -123,6 +152,12 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
 
     if (tokenType == tt_bracketClose) {
       popScopes();
+
+      continue;
+    }
+
+    if (tokenType == tt_curlyClose) {
+      handleCloseCurly();
 
       continue;
     }
@@ -141,8 +176,8 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
       // Get node from token and push onto children.
       Node *child = getTerminalNodeFromToken(token);
       child->parent = node;
-      debug("Pushing to expression list...");
-      node->pushToExpressionList(child);
+      // debug("Pushing to expression list...");
+      node->pushToExpressionList(currentScope, child);
 
       if (inList(currentScope, st_operandScopeTypes))
         popScopes();
@@ -156,8 +191,8 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
     debug(root->inspectString());
 
     jsonAST = root->toJson();
-    // debug("FINAL AST JSON:");
-    // debug(jsonAST.dump(2));
+    debug("FINAL AST JSON:");
+    debug(jsonAST.dump(2));
   }
 };
 
@@ -185,12 +220,20 @@ Node *SammyAST::getTerminalNodeFromToken(Token token) {
   }
 };
 
+void SammyAST::swapScope(ScopeType scope) {
+  scopes.pop_back();
+  scopes.push_back(scope);
+};
+
 void SammyAST::popScopes() {
   if (scopes.size() > 0)
     scopes.pop_back();
 
   ScopeType currentScope = scopes.back();
 
+  if (node->parent == nullptr) {
+    throw std::logic_error("Parent of node " + nodeString(node->nodeType) + " is null.");
+  }
   node = node->parent;
 
   if (inList(currentScope, st_operandScopeTypes))

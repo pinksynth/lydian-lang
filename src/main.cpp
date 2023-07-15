@@ -11,7 +11,9 @@ int main() {
   // FIXME: Figure out why this path works correctly with the CMake tools but not with your "Debug Language" command.
   // std::string testInput =
   //     sammylang::getFileString("../../tests/cases/operator-precedence-small-1/input.sammy");
-  std::string testInput = R"sammy(foo bar baz)sammy";
+  std::string testInput = R"sammy(fn multiply(a) { a * a }
+fn multiply(a b) { a * b }
+)sammy";
   sammylang::print("Test input:");
   sammylang::print(testInput);
 

@@ -5,7 +5,9 @@
 
 namespace sammylang {
 
-void FunctionCallNode::pushToExpressionList(Node *node) { arguments.push_back(node); };
+void FunctionCallNode::pushToExpressionList(ScopeType scope, Node *node) {
+  arguments.push_back(node);
+};
 
 std::vector<Node *> FunctionCallNode::getCurrentExpressionList(ScopeType scope) {
   return arguments;
@@ -25,12 +27,9 @@ std::string FunctionCallNode::inspectString(int pad) {
 json FunctionCallNode::toJson() {
   json argsJson;
 
-  for (Node *arg : arguments) {
-    if (arg == NULL)
-      debug("Arg is null for some reason...");
-    else
+  for (Node *arg : arguments)
+    if (arg != NULL)
       argsJson.push_back(arg->toJson());
-  }
 
   json nodeJson = {
       {"nodeType", "nt_functionCall"}, {"callee", callee->toJson()}, {"arguments", argsJson}};

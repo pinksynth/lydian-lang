@@ -8,7 +8,7 @@ std::vector<Node *> BinaryExpressionNode::getCurrentExpressionList(ScopeType _sc
   return children;
 }
 
-void BinaryExpressionNode::pushToExpressionList(Node *node) { right = node; };
+void BinaryExpressionNode::pushToExpressionList(ScopeType scope, Node *node) { right = node; };
 void BinaryExpressionNode::popCurrentExpressionList() { right = nullptr; };
 
 std::string BinaryExpressionNode::inspectString(int pad) {

@@ -4,7 +4,7 @@
 
 namespace sammylang {
 
-void Node::pushToExpressionList(Node *node) {
+void Node::pushToExpressionList(ScopeType scope, Node *node) {
   throw std::logic_error(
       "Cannot push a child to this node because its `pushToExpressionList` is not implemented.");
 };
@@ -38,5 +38,7 @@ std::string inspect(std::vector<Node *> nodes, int pad = 0) {
   output += padString + "]";
   return output;
 };
+
+std::string nodeString(Node *node) { return nodeString(node->nodeType); }
 
 } // namespace sammylang

@@ -4,7 +4,7 @@
 
 namespace sammylang {
 
-void AssignmentNode::pushToExpressionList(Node *node) { child = node; };
+void AssignmentNode::pushToExpressionList(ScopeType scope, Node *node) { child = node; };
 void AssignmentNode::popCurrentExpressionList() { child = nullptr; };
 
 std::vector<Node *> AssignmentNode::getCurrentExpressionList(ScopeType _scope) {
