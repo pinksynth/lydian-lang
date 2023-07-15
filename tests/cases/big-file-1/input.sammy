@@ -12,7 +12,7 @@ name = name.toUpperCase()
 # Arrays are space-separated
 [1 2 3 * 4 5]
 
-# Operator precedence works, so the folowing expression resolves to 26.
+# Operator precedence works, so the following expression resolves to 26.
 2 * 3 + 4 * 5
 
 # The range operator (..) can be used to construct arrays from integers or characters. They may iterate forwards or backwards.
