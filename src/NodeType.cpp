@@ -14,7 +14,8 @@ enum NodeType {
   nt_assignment,
   nt_functionCall,
   nt_functionDeclaration,
-  nt_genericExpression
+  nt_genericExpression,
+  nt_unaryExpression
 };
 
 std::string nodeString(NodeType nodeType) {
@@ -42,6 +43,8 @@ std::string nodeString(NodeType nodeType) {
     return "nt_functionDeclaration";
   if (nodeType == nt_genericExpression)
     return "nt_genericExpression";
+  if (nodeType == nt_unaryExpression)
+    return "nt_unaryExpression";
 
   throw std::logic_error("Error in AST. Unrecognized Node Type.");
 }

@@ -24,6 +24,7 @@
 #include "./handlers/handleFunctionCall.cpp"
 #include "./handlers/handleFunctionDefinitionName.cpp"
 #include "./handlers/handleGenericExpressionOpen.cpp"
+#include "./handlers/handleUnaryOperator.cpp"
 #include "./handlers/handleVariableAssignment.cpp"
 
 // Other AST Helpers
@@ -121,10 +122,6 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
 
       continue;
     }
-    // if (tokenType === tt.FUNCTION && nextTokenType === tt.VAR) {
-    //   handleFunctiondefinitionName(context)
-    //   continue
-    // }
 
     // Function call, if we saw an open paren and the left sibling is callable
     if (tokenType == tt_parenOpen && callableLeftSibling != nullptr) {
@@ -172,10 +169,24 @@ void SammyAST::fromTokens(std::vector<Token> unfilteredTokens) {
     // debug("inspect(currentExpressionList)");
     // debug(inspect(currentExpressionList));
 
-    if (inList(tokenType, tt_BINARY_OPERATORS) && currentExpressionList.size() > 0) {
+    if (inList(tokenType, tt_BINARY_OPERATORS) && currentExpressionList.size() > 0 &&
+        currentExpressionList.back() != nullptr) {
       handleBinaryOperator();
+
       continue;
     }
+
+    // Unary operators, such as ! or -
+    if (inList(tokenType, tt_UNARY_OPERATORS)) {
+      handleUnaryOperator();
+
+      continue;
+    }
+
+    // if (tt.UNARY_OPERATORS.includes(tokenType)) {
+    //   handleUnaryOperator(context)
+    //   continue
+    // }
 
     if (isTerminal(tokenType)) {
       // Get node from token and push onto children.
