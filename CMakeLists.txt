@@ -55,6 +55,14 @@ target_link_libraries(
   nlohmann_json::nlohmann_json
 )
 
+add_executable(repl src/repl.cpp)
+target_link_libraries(
+  repl
+  ${llvm_libs}
+  fmt
+  nlohmann_json::nlohmann_json
+)
+
 #
 # Testing
 #

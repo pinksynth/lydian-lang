@@ -10,6 +10,14 @@
       "cwd": "${workspaceRoot}"
     },
     {
+      "name": "Debug REPL",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceRoot}/build/repl",
+      "args": [],
+      "cwd": "${workspaceRoot}"
+    },
+    {
       "name": "Debug Tests",
       "type": "lldb",
       "request": "launch",
