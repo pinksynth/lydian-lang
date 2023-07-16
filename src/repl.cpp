@@ -21,9 +21,10 @@ int main() {
   signal(SIGINT, signalCallbackHandler);
 
   std::cout << sammylang::highlightString("Welcome to SammyLang") << std::endl;
+  int lineNumber = 1;
 
   while (true) {
-    std::cout << std::endl << "> ";
+    std::cout << std::endl << "𝖘" << std::to_string(lineNumber) << " ";
     std::string input;
     std::getline(std::cin, input);
     std::cout << input << std::endl;
@@ -33,6 +34,8 @@ int main() {
     ast.fromTokens(tokens);
     std::cout << "JSON Output from AST:" << std::endl;
     std::cout << ast.jsonAST.dump(2) << std::endl;
+
+    lineNumber = lineNumber + 1;
   }
 
   return 0;
