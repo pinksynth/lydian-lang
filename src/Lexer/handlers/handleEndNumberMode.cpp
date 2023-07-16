@@ -1,4 +1,4 @@
-namespace sammylang {
+namespace lydianlang {
 
 void Lexer::handleEndNumberMode() {
   if (numberMode && characterType != ct_number && characterType != ct_underscore &&
@@ -8,4 +8,4 @@ void Lexer::handleEndNumberMode() {
   }
 };
 
-} // namespace sammylang
+} // namespace lydianlang

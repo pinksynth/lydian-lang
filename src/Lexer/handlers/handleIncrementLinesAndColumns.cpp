@@ -1,4 +1,4 @@
-namespace sammylang {
+namespace lydianlang {
 
 void Lexer::handleIncrementLinesAndColumns() {
   if (character == '\n') {
@@ -11,4 +11,4 @@ void Lexer::handleIncrementLinesAndColumns() {
   };
 };
 
-} // namespace sammylang
+} // namespace lydianlang

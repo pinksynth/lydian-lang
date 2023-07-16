@@ -1,4 +1,4 @@
-namespace sammylang {
+namespace lydianlang {
 
 void Lexer::handleRangeOperator() {
   // If encountering a period followed by another period, turn off number mode because this will be a range operator (..)
@@ -7,4 +7,4 @@ void Lexer::handleRangeOperator() {
   }
 };
 
-} // namespace sammylang
+} // namespace lydianlang

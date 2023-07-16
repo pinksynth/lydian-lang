@@ -2,7 +2,7 @@
 
 #pragma once
 
-namespace sammylang {
+namespace lydianlang {
 
 class InterpolationContextStack {
 
@@ -23,4 +23,4 @@ private:
   void updateHead(int newValue);
 };
 
-} // namespace sammylang
+} // namespace lydianlang

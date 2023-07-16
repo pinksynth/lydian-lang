@@ -45,7 +45,7 @@ Because we have not entered into any interpolation contexts.
 
 #pragma once
 
-namespace sammylang {
+namespace lydianlang {
 
 InterpolationContextStack::InterpolationContextStack() { body.push(0); };
 
@@ -87,4 +87,4 @@ std::string InterpolationContextStack::inspectString() {
   return icsValue;
 }
 
-} // namespace sammylang
+} // namespace lydianlang

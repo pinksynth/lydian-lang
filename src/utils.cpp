@@ -5,13 +5,13 @@
 
 #include <fmt/core.h>
 
-#define PRINT_MEMBER(name) sammylang::print_member_fn(#name, (name))
+#define PRINT_MEMBER(name) lydianlang::print_member_fn(#name, (name))
 #include "./InterpolationContextStack/InterpolationContextStack.h"
 #include "./Token.cpp"
 
 #pragma once
 
-namespace sammylang {
+namespace lydianlang {
 
 int defaultPadding = 60;
 
@@ -165,4 +165,4 @@ template <typename Base, typename T> inline bool instanceof (const T *ptr) {
   return dynamic_cast<const Base *>(ptr) != nullptr;
 }
 
-} // namespace sammylang
+} // namespace lydianlang

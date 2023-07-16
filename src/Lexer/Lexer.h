@@ -7,7 +7,7 @@
 
 #pragma once
 
-namespace sammylang {
+namespace lydianlang {
 
 class Lexer {
   // These values change while in the loop to consume characters.
@@ -73,4 +73,4 @@ public:
   json jsonTokens;
 };
 
-} // namespace sammylang
+} // namespace lydianlang

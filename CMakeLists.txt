@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
-project(sammy-lang VERSION 0.0.1)
+project(lydian-lang VERSION 0.0.1)
 set(CMAKE_CXX_STANDARD 20)
 
 include(FetchContent)
@@ -47,9 +47,9 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(fmt)
 
-add_executable(sammy-lang src/main.cpp)
+add_executable(lydian-lang src/main.cpp)
 target_link_libraries(
-  sammy-lang
+  lydian-lang
   ${llvm_libs}
   fmt
   nlohmann_json::nlohmann_json

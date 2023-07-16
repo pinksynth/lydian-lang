@@ -1,4 +1,4 @@
-namespace sammylang {
+namespace lydianlang {
 
 void Lexer::handleCloseSingleLineComment() {
   if (character == '\n' && singleLineCommentMode) {
@@ -6,4 +6,4 @@ void Lexer::handleCloseSingleLineComment() {
   }
 };
 
-} // namespace sammylang
+} // namespace lydianlang

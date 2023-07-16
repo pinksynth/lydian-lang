@@ -1,4 +1,4 @@
-namespace sammylang {
+namespace lydianlang {
 
 void Lexer::handleOpenStringInterpolation() {
   if (!stringLiteralMode)
@@ -13,4 +13,4 @@ void Lexer::handleOpenStringInterpolation() {
     stringLiteralMode = false;
 };
 
-} // namespace sammylang
+} // namespace lydianlang

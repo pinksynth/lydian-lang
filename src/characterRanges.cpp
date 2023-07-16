@@ -3,7 +3,7 @@
 
 #pragma once
 
-namespace sammylang {
+namespace lydianlang {
 
 std::vector<std::pair<CharacterType, std::vector<char>>> characterRanges = {
     {ct_ampersand, {'&'}},

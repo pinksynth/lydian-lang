@@ -1,4 +1,4 @@
-namespace sammylang {
+namespace lydianlang {
 
 void Lexer::handleCloseMultilineComment() {
   if (characterType != ct_greaterThan)
@@ -16,4 +16,4 @@ void Lexer::handleCloseMultilineComment() {
   }
 };
 
-} // namespace sammylang
+} // namespace lydianlang

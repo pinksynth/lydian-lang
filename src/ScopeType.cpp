@@ -4,7 +4,7 @@
 
 #pragma once
 
-namespace sammylang {
+namespace lydianlang {
 
 enum ScopeType {
   st_array,
@@ -108,4 +108,4 @@ std::vector<int> st_validAssignmentScopes = {
 std::vector<int> st_validClosingParenScopes = {st_functionCallArgs, st_functionDecArgs,
                                                st_genericExpression, st_ifCondition};
 
-} // namespace sammylang
+} // namespace lydianlang

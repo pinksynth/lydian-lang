@@ -25,7 +25,7 @@ using json = nlohmann::json;
 
 #pragma once
 
-namespace sammylang {
+namespace lydianlang {
 
 std::vector<Token> Lexer::lex(std::string rawInput) {
   // debug("Lexer received input:\n" + rawInput);
@@ -202,4 +202,4 @@ std::string Lexer::inspectTokensString() {
   return output;
 };
 
-} // namespace sammylang
+} // namespace lydianlang

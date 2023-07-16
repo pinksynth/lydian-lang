@@ -1,6 +1,6 @@
-# sammy-lang-cpp
+# lydian-lang
 
-An attempt to implement the sammy-lang language in C++ using LLVM.
+An attempt to implement the lydian-lang language in C++ using LLVM.
 
 ## Building
 
@@ -21,20 +21,20 @@ Alternatively, you can follow the steps below:
    ```sh
    make
    ```
-4. You can now run the built executables `sammy-lang` and `tests`:
+4. You can now run the built executables `lydian-lang` and `tests`:
 
    ```sh
-   bin/sammy-lang
+   bin/lydian-lang
    bin/tests
 
    # With debug output
-   DEBUG=true bin/sammy-lang
+   DEBUG=true bin/lydian-lang
    DEBUG=true bin/tests
    ```
 
 ## Testing
 
-Follow the same steps as above, but instead of running the `sammy-lang` executable, run the `tests` executable.
+Follow the same steps as above, but instead of running the `lydian-lang` executable, run the `tests` executable.
 
 ## Note about compiler settings
 

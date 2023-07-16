@@ -1,4 +1,4 @@
-namespace sammylang {
+namespace lydianlang {
 
 void Lexer::handleOpenLambdaArgIdentifierMode() {
   if (charAccumulator.length() == 0 && characterType == ct_dollarSign) {
@@ -6,4 +6,4 @@ void Lexer::handleOpenLambdaArgIdentifierMode() {
   }
 };
 
-} // namespace sammylang
+} // namespace lydianlang

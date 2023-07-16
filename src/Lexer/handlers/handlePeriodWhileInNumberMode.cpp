@@ -1,4 +1,4 @@
-namespace sammylang {
+namespace lydianlang {
 
 void Lexer::handlePeriodWhileInNumberMode() {
   // If encountering a period in number mode, assume it is our decimal point.
@@ -13,4 +13,4 @@ void Lexer::handlePeriodWhileInNumberMode() {
   }
 };
 
-} // namespace sammylang
+} // namespace lydianlang

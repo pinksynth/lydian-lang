@@ -4,7 +4,7 @@
 // TODO: Definitely namespace this stuff 😅
 #pragma once
 
-namespace sammylang {
+namespace lydianlang {
 
 enum TokenType {
   tt_NONE,
@@ -54,4 +54,4 @@ std::vector<int> tt_BINARY_OPERATORS = {tt_assignment,  tt_compare, tt_dot,
 
 std::vector<int> tt_UNARY_OPERATORS = {tt_hyphen, tt_bang};
 
-} // namespace sammylang
+} // namespace lydianlang

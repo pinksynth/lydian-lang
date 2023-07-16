@@ -1,7 +1,7 @@
 // TODO: Figure out how the heck to print enum cases by name during runtime.
 #pragma once
 
-namespace sammylang {
+namespace lydianlang {
 
 enum CharacterType {
   ct_NONE,

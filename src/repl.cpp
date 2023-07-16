@@ -5,7 +5,7 @@
 #include "../src/utils.cpp"
 #include "./InterpolationContextStack/InterpolationContextStack.cpp"
 #include "./Lexer/Lexer.cpp"
-#include "./SammyAST/SammyAST.cpp"
+#include "./LydianAST/LydianAST.cpp"
 
 void signalCallbackHandler(int signum) {
   if (signum == 2) {
@@ -20,17 +20,17 @@ void signalCallbackHandler(int signum) {
 int main() {
   signal(SIGINT, signalCallbackHandler);
 
-  std::cout << sammylang::highlightString("Welcome to SammyLang") << std::endl;
+  std::cout << lydianlang::highlightString("Welcome to LydianLang") << std::endl;
   int lineNumber = 1;
 
   while (true) {
-    std::cout << std::endl << "𝖘" << std::to_string(lineNumber) << " ";
+    std::cout << std::endl << "𝐋" << std::to_string(lineNumber) << "> ";
     std::string input;
     std::getline(std::cin, input);
     std::cout << input << std::endl;
-    sammylang::Lexer lexer = sammylang::Lexer();
-    std::vector<sammylang::Token> tokens = lexer.lex(input);
-    sammylang::SammyAST ast = sammylang::SammyAST();
+    lydianlang::Lexer lexer = lydianlang::Lexer();
+    std::vector<lydianlang::Token> tokens = lexer.lex(input);
+    lydianlang::LydianAST ast = lydianlang::LydianAST();
     ast.fromTokens(tokens);
     std::cout << "JSON Output from AST:" << std::endl;
     std::cout << ast.jsonAST.dump(2) << std::endl;

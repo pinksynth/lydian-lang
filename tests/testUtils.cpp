@@ -41,25 +41,25 @@ std::string writeStringToTmpFile(std::string contents) {
   return stringFileName;
 }
 
-std::vector<sammylang::Token> tokenArrayFromJson(json jsonArray) {
-  std::vector<sammylang::Token> tokens = {};
+std::vector<lydianlang::Token> tokenArrayFromJson(json jsonArray) {
+  std::vector<lydianlang::Token> tokens = {};
 
   for (json::iterator item = jsonArray.begin(); item != jsonArray.end(); ++item)
-    tokens.push_back(sammylang::Token(*item));
+    tokens.push_back(lydianlang::Token(*item));
 
   return tokens;
 };
 
-void compareTokens(std::vector<sammylang::Token> expectedTokens,
-                   std::vector<sammylang::Token> receivedTokens) {
+void compareTokens(std::vector<lydianlang::Token> expectedTokens,
+                   std::vector<lydianlang::Token> receivedTokens) {
   unsigned expectedTokensIndex = 0;
   unsigned receivedTokensIndex = 0;
   unsigned expectedSize = expectedTokens.size();
   unsigned receivedSize = receivedTokens.size();
 
   while (expectedTokensIndex < expectedSize || receivedTokensIndex < receivedSize) {
-    sammylang::Token tokenA = expectedTokens[expectedTokensIndex];
-    sammylang::Token tokenB = receivedTokens[receivedTokensIndex];
+    lydianlang::Token tokenA = expectedTokens[expectedTokensIndex];
+    lydianlang::Token tokenB = receivedTokens[receivedTokensIndex];
 
     REQUIRE(tokenA == tokenB);
 
@@ -77,18 +77,18 @@ void compareTokens(std::vector<sammylang::Token> expectedTokens,
   }
 }
 
-std::vector<sammylang::Token> doTokenAssertions(std::filesystem::path currentFile) {
-  std::ifstream inputFileStream(currentFile.parent_path() / "input.sammy");
+std::vector<lydianlang::Token> doTokenAssertions(std::filesystem::path currentFile) {
+  std::ifstream inputFileStream(currentFile.parent_path() / "input.lydian");
   std::ostringstream inputFileStreamString;
   inputFileStreamString << inputFileStream.rdbuf();
   std::string inputString = inputFileStreamString.str();
 
   std::ifstream expectedTokensFileStream(currentFile.parent_path() / "expectedTokens.json");
   json expectedTokensJson = json::parse(expectedTokensFileStream);
-  std::vector<sammylang::Token> expectedTokens = tokenArrayFromJson(expectedTokensJson);
+  std::vector<lydianlang::Token> expectedTokens = tokenArrayFromJson(expectedTokensJson);
 
-  sammylang::Lexer lexer = sammylang::Lexer();
-  std::vector<sammylang::Token> receivedTokens = lexer.lex(inputString);
+  lydianlang::Lexer lexer = lydianlang::Lexer();
+  std::vector<lydianlang::Token> receivedTokens = lexer.lex(inputString);
 
   compareTokens(expectedTokens, receivedTokens);
 
@@ -96,17 +96,17 @@ std::vector<sammylang::Token> doTokenAssertions(std::filesystem::path currentFil
 }
 
 void doASTAssertions(std::filesystem::path currentFile,
-                     std::vector<sammylang::Token> receivedTokens) {
+                     std::vector<lydianlang::Token> receivedTokens) {
   std::filesystem::path expectedASTPath(currentFile.parent_path() / "expectedAST.json");
 
   if (!std::filesystem::exists(expectedASTPath)) {
-    sammylang::alert("WARNING: Could not find " + expectedASTPath.generic_string());
+    lydianlang::alert("WARNING: Could not find " + expectedASTPath.generic_string());
   } else {
 
     std::ifstream expectedASTFileStream(expectedASTPath);
     std::string expectedASTJson = json::parse(expectedASTFileStream).dump(2);
 
-    sammylang::SammyAST ast = sammylang::SammyAST();
+    lydianlang::LydianAST ast = lydianlang::LydianAST();
     ast.fromTokens(receivedTokens);
     std::string receivedASTJson = ast.jsonAST.dump(2);
 
@@ -119,7 +119,7 @@ void doASTAssertions(std::filesystem::path currentFile,
       int diffOutputFd = mkstemp(diffOutputFilename);
       FILE *diffOut = fdopen(diffOutputFd, "w");
 
-      sammylang::alert("AST is invalid for\n\n  " + currentFile.generic_string());
+      lydianlang::alert("AST is invalid for\n\n  " + currentFile.generic_string());
       std::cout << getOutputFromSystemCommand(
                        fmt::format("diff -u --color=always {} {}", tmpFilename1, tmpFilename2))
                 << std::endl;
@@ -132,8 +132,8 @@ void doASTAssertions(std::filesystem::path currentFile,
   }
 }
 
-// Makes assertions based on three files per test case. The test case's `input.sammy` is the Sammy Lang input. The Lexer produces tokens and those tokens are compared with `expectedTokens.json`. Then the tokens are fed to the AST, which is expected to look like `expectedAST.json`.
+// Makes assertions based on three files per test case. The test case's `input.lydian` is the Lydian Lang input. The Lexer produces tokens and those tokens are compared with `expectedTokens.json`. Then the tokens are fed to the AST, which is expected to look like `expectedAST.json`.
 void doAssertions(std::filesystem::path currentFile) {
-  std::vector<sammylang::Token> receivedTokens = doTokenAssertions(currentFile);
+  std::vector<lydianlang::Token> receivedTokens = doTokenAssertions(currentFile);
   doASTAssertions(currentFile, receivedTokens);
 }

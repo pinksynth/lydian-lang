@@ -6,7 +6,7 @@
 
 #pragma once
 
-namespace sammylang {
+namespace lydianlang {
 
 // FIXME: This is insanely inefficient. This happens several times for every single input character.
 CharacterType charTypeFrom(char character) {
@@ -28,4 +28,4 @@ CharacterType charTypeFrom(char character) {
   throw std::out_of_range(warning);
 }
 
-} // namespace sammylang
+} // namespace lydianlang

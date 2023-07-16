@@ -1,4 +1,4 @@
-namespace sammylang {
+namespace lydianlang {
 
 void Lexer::handleTokenStartNumber() {
   if (charAccumulator.length() == 0 && characterType == ct_number) {
@@ -6,4 +6,4 @@ void Lexer::handleTokenStartNumber() {
   }
 };
 
-} // namespace sammylang
+} // namespace lydianlang

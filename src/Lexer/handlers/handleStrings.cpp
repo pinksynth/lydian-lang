@@ -1,4 +1,4 @@
-namespace sammylang {
+namespace lydianlang {
 
 void Lexer::handleStrings() {
   if (multilineCommentMode || singleLineCommentMode) {
@@ -41,4 +41,4 @@ void Lexer::handleStrings() {
   }
 };
 
-} // namespace sammylang
+} // namespace lydianlang

@@ -1,6 +1,6 @@
 #pragma once
 
-namespace sammylang {
+namespace lydianlang {
 
 enum NodeType {
   nt_binaryExpression,
@@ -49,4 +49,4 @@ std::string nodeString(NodeType nodeType) {
   throw std::logic_error("Error in AST. Unrecognized Node Type.");
 }
 
-} // namespace sammylang
+} // namespace lydianlang

@@ -1,4 +1,4 @@
-namespace sammylang {
+namespace lydianlang {
 
 void Lexer::handleCloseLambdaArgIdentifierMode() {
   if (lambdaArgIdentifierMode && characterType != ct_number) {
@@ -6,4 +6,4 @@ void Lexer::handleCloseLambdaArgIdentifierMode() {
   }
 };
 
-} // namespace sammylang
+} // namespace lydianlang

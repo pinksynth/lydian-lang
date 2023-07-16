@@ -4,7 +4,7 @@
 #include "./getStringTokenType.cpp"
 #include "./shouldContinueConsumingToken.cpp"
 
-namespace sammylang {
+namespace lydianlang {
 
 Token *Lexer::getToken() {
   if (charAccumulator.length() == 0)
@@ -115,4 +115,4 @@ Token *Lexer::getToken() {
   return token;
 };
 
-} // namespace sammylang
+} // namespace lydianlang

@@ -1,4 +1,4 @@
-namespace sammylang {
+namespace lydianlang {
 
 void Lexer::handleOpenMultilineComment() {
   if (characterType == ct_lessThan && !stringLiteralMode && !singleLineCommentMode &&
@@ -7,4 +7,4 @@ void Lexer::handleOpenMultilineComment() {
   }
 };
 
-} // namespace sammylang
+} // namespace lydianlang

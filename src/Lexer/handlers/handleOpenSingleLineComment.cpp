@@ -1,4 +1,4 @@
-namespace sammylang {
+namespace lydianlang {
 
 void Lexer::handleOpenSingleLineComment() {
   if (characterType == ct_hash && !stringLiteralMode) {
@@ -6,4 +6,4 @@ void Lexer::handleOpenSingleLineComment() {
   }
 };
 
-} // namespace sammylang
+} // namespace lydianlang

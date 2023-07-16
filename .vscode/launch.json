@@ -5,7 +5,7 @@
       "name": "Debug Lang",
       "type": "lldb",
       "request": "launch",
-      "program": "${workspaceRoot}/build/sammy-lang",
+      "program": "${workspaceRoot}/build/lydian-lang",
       "args": [],
       "cwd": "${workspaceRoot}"
     },
