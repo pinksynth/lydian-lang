@@ -21,7 +21,7 @@ Alternatively, you can follow the steps below:
    ```sh
    make
    ```
-4. You can now run the built executables `lydian-lang` and `tests`:
+4. You can now run the built executables `lydian-lang`, `repl`, and `tests`:
 
    ```sh
    bin/lydian-lang
@@ -31,6 +31,51 @@ Alternatively, you can follow the steps below:
    DEBUG=true bin/lydian-lang
    DEBUG=true bin/tests
    ```
+
+Because the language is a work in progress, the REPL doesn't actually "evaluate" expressions, but it does produce an AST:
+
+```
+Welcome to LydianLang
+
+
+𝐋1> fn multiply(a b) { a * b }
+fn multiply(a b) { a * b }
+JSON Output from AST:
+{
+  "children": [
+    {
+      "arguments": [
+        {
+          "nodeType": "nt_identifier",
+          "value": "a"
+        },
+        {
+          "nodeType": "nt_identifier",
+          "value": "b"
+        }
+      ],
+      "children": [
+        {
+          "left": {
+            "nodeType": "nt_identifier",
+            "value": "a"
+          },
+          "nodeType": "nt_binaryExpression",
+          "operator": "*",
+          "right": {
+            "nodeType": "nt_identifier",
+            "value": "b"
+          }
+        }
+      ],
+      "nodeType": "nt_functionDeclaration"
+    }
+  ],
+  "nodeType": "nt_root"
+}
+
+𝐋2>
+```
 
 ## Testing
 
