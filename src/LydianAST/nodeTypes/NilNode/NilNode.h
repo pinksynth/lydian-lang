@@ -7,10 +7,13 @@ namespace lydianlang {
 
 class NilNode : public Node {
 public:
-  std::string inspectString(int pad = 0);
-  json toJson();
+  std::string inspectString(int pad = 0) override;
+  json toJson() override;
 
   NilNode() { nodeType = nt_nil; }
+
+  // LLVM
+  llvm::Value *codegen() override;
 };
 
 } // namespace lydianlang

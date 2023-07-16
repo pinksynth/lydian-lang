@@ -10,15 +10,18 @@ class GenericExpressionNode : public Node {
   std::vector<Node *> children;
 
 public:
-  std::vector<Node *> getCurrentExpressionList(ScopeType scope);
-  void pushToExpressionList(ScopeType scope, Node *node);
-  void popCurrentExpressionList();
-  std::string inspectString(int pad = 0);
-  json toJson();
+  std::vector<Node *> getCurrentExpressionList(ScopeType scope) override;
+  void pushToExpressionList(ScopeType scope, Node *node) override;
+  void popCurrentExpressionList() override;
+  std::string inspectString(int pad = 0) override;
+  json toJson() override;
 
   Node *child;
 
   GenericExpressionNode() { nodeType = nt_genericExpression; };
+
+  // LLVM
+  llvm::Value *codegen() override;
 };
 
 } // namespace lydianlang

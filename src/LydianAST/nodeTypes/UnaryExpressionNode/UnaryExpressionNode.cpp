@@ -19,6 +19,11 @@ std::vector<Node *> UnaryExpressionNode::getCurrentExpressionList(ScopeType _sco
   return *vec;
 };
 
+llvm::Value *UnaryExpressionNode::codegen() {
+  throw std::logic_error(
+      "The method for LLVM codegen is not yet implemented for UnaryExpressionNode.");
+};
+
 std::string UnaryExpressionNode::inspectString(int pad) {
   std::string padString = getPadString(pad);
   std::string output = padString + "Unary Expression Node: (\n";

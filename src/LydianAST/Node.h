@@ -16,6 +16,10 @@ public:
   virtual void popCurrentExpressionList();
   virtual std::string inspectString(int pad = 0);
   virtual json toJson();
+
+  // LLVM
+  // Node that for Lydian this is not a pure virtual method because we must be able to instantiate a Node pointer.
+  virtual llvm::Value *codegen(); // = 0;
 };
 
 } // namespace lydianlang

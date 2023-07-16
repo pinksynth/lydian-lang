@@ -15,6 +15,7 @@
       "**/templates/**/*.html": "django-html",
       "**/templates/**/*": "django-txt",
       "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+      "*.lydian": "sammy",
       "vector": "cpp",
       "__bit_reference": "cpp",
       "__bits": "cpp",
@@ -108,7 +109,9 @@
       "hash_map": "cpp",
       "condition_variable": "cpp",
       "numbers": "cpp",
-      "semaphore": "cpp"
+      "semaphore": "cpp",
+      "*.def": "cpp",
+      "__memory": "cpp"
     }
   },
   "extensions": {

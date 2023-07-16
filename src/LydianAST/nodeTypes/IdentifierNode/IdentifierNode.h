@@ -7,14 +7,17 @@ namespace lydianlang {
 
 class IdentifierNode : public Node {
 public:
-  std::string inspectString(int pad = 0);
-  json toJson();
+  std::string inspectString(int pad = 0) override;
+  json toJson() override;
   std::string value;
 
   IdentifierNode(Token token) {
     nodeType = nt_identifier;
     value = token.value;
   }
+
+  // LLVM
+  llvm::Value *codegen() override;
 };
 
 } // namespace lydianlang

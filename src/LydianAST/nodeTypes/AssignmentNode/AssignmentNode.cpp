@@ -13,6 +13,10 @@ std::vector<Node *> AssignmentNode::getCurrentExpressionList(ScopeType _scope) {
   return *vec;
 };
 
+llvm::Value *AssignmentNode::codegen() {
+  throw std::logic_error("The method for LLVM codegen is not yet implemented for AssignmentNode.");
+};
+
 std::string AssignmentNode::inspectString(int pad) {
   std::string padString = getPadString(pad);
   std::string output = padString + "Assignment node: \"" + variable + "\" -> (\n";

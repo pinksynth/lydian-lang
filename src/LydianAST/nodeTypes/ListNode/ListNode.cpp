@@ -10,6 +10,10 @@ std::vector<Node *> ListNode::getCurrentExpressionList(ScopeType scope) { return
 void ListNode::pushToExpressionList(ScopeType scope, Node *node) { children.push_back(node); };
 void ListNode::popCurrentExpressionList() { children.pop_back(); };
 
+llvm::Value *ListNode::codegen() {
+  throw std::logic_error("The method for LLVM codegen is not yet implemented for ListNode.");
+};
+
 std::string ListNode::inspectString(int pad) {
   std::string output = "List Node: [\n";
   std::string padString = getPadString(pad);
