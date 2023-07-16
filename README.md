@@ -4,7 +4,12 @@ An attempt to implement the lydian-lang language in C++ using LLVM.
 
 ## Building
 
-This project uses CMake. To build, first make sure that `cmake` is installed. Then run `scripts/initial-build.sh`.
+This project uses CMake. To build, first make sure that `cmake` and `llvm` are installed:
+
+- [Install `cmake`](https://cmake.org/install/)
+- [Install `llvm`](https://llvm.org/docs/GettingStarted.html#getting-the-source-code-and-building-llvm)
+
+Then run `scripts/initial-build.sh`.
 
 Alternatively, you can follow the steps below:
 
@@ -25,6 +30,7 @@ Alternatively, you can follow the steps below:
 
    ```sh
    bin/lydian-lang
+   bin/repl
    bin/tests
 
    # With debug output
