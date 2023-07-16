@@ -120,80 +120,80 @@
     "value": "\n\n"
   },
   {
-    "columnNumberEnd": 9,
+    "columnNumberEnd": 3,
     "columnNumberStart": 1,
     "lineNumberEnd": 3,
     "lineNumberStart": 3,
     "type": 18,
-    "value": "function"
+    "value": "fn"
   },
   {
-    "columnNumberEnd": 10,
-    "columnNumberStart": 9,
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
     "lineNumberEnd": 3,
     "lineNumberStart": 3,
     "type": 37,
     "value": " "
   },
   {
-    "columnNumberEnd": 23,
-    "columnNumberStart": 10,
+    "columnNumberEnd": 17,
+    "columnNumberStart": 4,
     "lineNumberEnd": 3,
     "lineNumberStart": 3,
     "type": 35,
     "value": "print_receipt"
   },
   {
-    "columnNumberEnd": 24,
-    "columnNumberStart": 23,
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
     "lineNumberEnd": 3,
     "lineNumberStart": 3,
     "type": 28,
     "value": "("
   },
   {
-    "columnNumberEnd": 32,
-    "columnNumberStart": 24,
+    "columnNumberEnd": 26,
+    "columnNumberStart": 18,
     "lineNumberEnd": 3,
     "lineNumberStart": 3,
     "type": 35,
     "value": "subtotal"
   },
   {
-    "columnNumberEnd": 33,
-    "columnNumberStart": 32,
+    "columnNumberEnd": 27,
+    "columnNumberStart": 26,
     "lineNumberEnd": 3,
     "lineNumberStart": 3,
     "type": 37,
     "value": " "
   },
   {
-    "columnNumberEnd": 46,
-    "columnNumberStart": 33,
+    "columnNumberEnd": 40,
+    "columnNumberStart": 27,
     "lineNumberEnd": 3,
     "lineNumberStart": 3,
     "type": 35,
     "value": "customer_name"
   },
   {
-    "columnNumberEnd": 47,
-    "columnNumberStart": 46,
+    "columnNumberEnd": 41,
+    "columnNumberStart": 40,
     "lineNumberEnd": 3,
     "lineNumberStart": 3,
     "type": 27,
     "value": ")"
   },
   {
-    "columnNumberEnd": 48,
-    "columnNumberStart": 47,
+    "columnNumberEnd": 42,
+    "columnNumberStart": 41,
     "lineNumberEnd": 3,
     "lineNumberStart": 3,
     "type": 37,
     "value": " "
   },
   {
-    "columnNumberEnd": 49,
-    "columnNumberStart": 48,
+    "columnNumberEnd": 43,
+    "columnNumberStart": 42,
     "lineNumberEnd": 3,
     "lineNumberStart": 3,
     "type": 12,
@@ -201,7 +201,7 @@
   },
   {
     "columnNumberEnd": 2,
-    "columnNumberStart": 49,
+    "columnNumberStart": 43,
     "lineNumberEnd": 4,
     "lineNumberStart": 3,
     "type": 37,
@@ -832,136 +832,136 @@
     "value": "\n\n"
   },
   {
-    "columnNumberEnd": 9,
+    "columnNumberEnd": 3,
     "columnNumberStart": 1,
     "lineNumberEnd": 21,
     "lineNumberStart": 21,
     "type": 18,
-    "value": "function"
+    "value": "fn"
   },
   {
-    "columnNumberEnd": 10,
-    "columnNumberStart": 9,
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
     "lineNumberEnd": 21,
     "lineNumberStart": 21,
     "type": 37,
     "value": " "
   },
   {
-    "columnNumberEnd": 23,
-    "columnNumberStart": 10,
+    "columnNumberEnd": 17,
+    "columnNumberStart": 4,
     "lineNumberEnd": 21,
     "lineNumberStart": 21,
     "type": 35,
     "value": "print_receipt"
   },
   {
-    "columnNumberEnd": 24,
-    "columnNumberStart": 23,
+    "columnNumberEnd": 18,
+    "columnNumberStart": 17,
     "lineNumberEnd": 21,
     "lineNumberStart": 21,
     "type": 28,
     "value": "("
   },
   {
-    "columnNumberEnd": 32,
-    "columnNumberStart": 24,
+    "columnNumberEnd": 26,
+    "columnNumberStart": 18,
     "lineNumberEnd": 21,
     "lineNumberStart": 21,
     "type": 35,
     "value": "subtotal"
   },
   {
-    "columnNumberEnd": 33,
-    "columnNumberStart": 32,
+    "columnNumberEnd": 27,
+    "columnNumberStart": 26,
     "lineNumberEnd": 21,
     "lineNumberStart": 21,
     "type": 27,
     "value": ")"
   },
   {
-    "columnNumberEnd": 34,
-    "columnNumberStart": 33,
+    "columnNumberEnd": 28,
+    "columnNumberStart": 27,
     "lineNumberEnd": 21,
     "lineNumberStart": 21,
     "type": 37,
     "value": " "
   },
   {
-    "columnNumberEnd": 35,
-    "columnNumberStart": 34,
+    "columnNumberEnd": 29,
+    "columnNumberStart": 28,
     "lineNumberEnd": 21,
     "lineNumberStart": 21,
     "type": 12,
     "value": "{"
   },
   {
-    "columnNumberEnd": 36,
-    "columnNumberStart": 35,
+    "columnNumberEnd": 30,
+    "columnNumberStart": 29,
     "lineNumberEnd": 21,
     "lineNumberStart": 21,
     "type": 37,
     "value": " "
   },
   {
-    "columnNumberEnd": 49,
-    "columnNumberStart": 36,
+    "columnNumberEnd": 43,
+    "columnNumberStart": 30,
     "lineNumberEnd": 21,
     "lineNumberStart": 21,
     "type": 35,
     "value": "print_receipt"
   },
   {
-    "columnNumberEnd": 50,
-    "columnNumberStart": 49,
+    "columnNumberEnd": 44,
+    "columnNumberStart": 43,
     "lineNumberEnd": 21,
     "lineNumberStart": 21,
     "type": 28,
     "value": "("
   },
   {
-    "columnNumberEnd": 58,
-    "columnNumberStart": 50,
+    "columnNumberEnd": 52,
+    "columnNumberStart": 44,
     "lineNumberEnd": 21,
     "lineNumberStart": 21,
     "type": 35,
     "value": "subtotal"
   },
   {
-    "columnNumberEnd": 59,
-    "columnNumberStart": 58,
+    "columnNumberEnd": 53,
+    "columnNumberStart": 52,
     "lineNumberEnd": 21,
     "lineNumberStart": 21,
     "type": 37,
     "value": " "
   },
   {
-    "columnNumberEnd": 64,
-    "columnNumberStart": 59,
+    "columnNumberEnd": 58,
+    "columnNumberStart": 53,
     "lineNumberEnd": 21,
     "lineNumberStart": 21,
     "type": 3,
     "value": "false"
   },
   {
-    "columnNumberEnd": 65,
-    "columnNumberStart": 64,
+    "columnNumberEnd": 59,
+    "columnNumberStart": 58,
     "lineNumberEnd": 21,
     "lineNumberStart": 21,
     "type": 27,
     "value": ")"
   },
   {
-    "columnNumberEnd": 66,
-    "columnNumberStart": 65,
+    "columnNumberEnd": 60,
+    "columnNumberStart": 59,
     "lineNumberEnd": 21,
     "lineNumberStart": 21,
     "type": 37,
     "value": " "
   },
   {
-    "columnNumberEnd": 67,
-    "columnNumberStart": 66,
+    "columnNumberEnd": 61,
+    "columnNumberStart": 60,
     "lineNumberEnd": 21,
     "lineNumberStart": 21,
     "type": 11,
@@ -969,7 +969,7 @@
   },
   {
     "columnNumberEnd": 1,
-    "columnNumberStart": 67,
+    "columnNumberStart": 61,
     "lineNumberEnd": 23,
     "lineNumberStart": 21,
     "type": 37,
@@ -1064,11 +1064,11 @@
     "value": ")"
   },
   {
-    "value": "\n",
-    "type": 37,
-    "lineNumberStart": 24,
+    "columnNumberEnd": 1,
     "columnNumberStart": 18,
     "lineNumberEnd": 25,
-    "columnNumberEnd": 1
+    "lineNumberStart": 24,
+    "type": 37,
+    "value": "\n"
   }
 ]

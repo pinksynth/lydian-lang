@@ -1,0 +1,21 @@
+{
+  "children": [
+    { "nodeType": "nt_identifier", "value": "a" },
+    {
+      "children": [
+        { "nodeType": "nt_identifier", "value": "b" },
+        {
+          "children": [
+            { "nodeType": "nt_identifier", "value": "c" },
+            { "nodeType": "nt_identifier", "value": "d" }
+          ],
+          "nodeType": "nt_list"
+        },
+        { "nodeType": "nt_identifier", "value": "e" }
+      ],
+      "nodeType": "nt_list"
+    },
+    { "nodeType": "nt_identifier", "value": "f" }
+  ],
+  "nodeType": "nt_root"
+}

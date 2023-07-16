@@ -1,0 +1,36 @@
+{
+  "children": [
+    {
+      "left": {
+        "left": {
+          "nodeType": "nt_literalNumber",
+          "value": 4.0
+        },
+        "nodeType": "nt_binaryExpression",
+        "operator": "*",
+        "right": {
+          "child": {
+            "left": {
+              "nodeType": "nt_literalNumber",
+              "value": 5.0
+            },
+            "nodeType": "nt_binaryExpression",
+            "operator": "+",
+            "right": {
+              "nodeType": "nt_literalNumber",
+              "value": 6.0
+            }
+          },
+          "nodeType": "nt_genericExpression"
+        }
+      },
+      "nodeType": "nt_binaryExpression",
+      "operator": "*",
+      "right": {
+        "nodeType": "nt_literalNumber",
+        "value": 7.0
+      }
+    }
+  ],
+  "nodeType": "nt_root"
+}

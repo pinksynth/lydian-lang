@@ -1,0 +1,50 @@
+[
+  {
+    "columnNumberEnd": 2,
+    "columnNumberStart": 1,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 25,
+    "value": "2"
+  },
+  {
+    "columnNumberEnd": 3,
+    "columnNumberStart": 2,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 4,
+    "columnNumberStart": 3,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 26,
+    "value": "*"
+  },
+  {
+    "columnNumberEnd": 5,
+    "columnNumberStart": 4,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 37,
+    "value": " "
+  },
+  {
+    "columnNumberEnd": 6,
+    "columnNumberStart": 5,
+    "lineNumberEnd": 1,
+    "lineNumberStart": 1,
+    "type": 25,
+    "value": "3"
+  },
+  {
+    "columnNumberEnd": 1,
+    "columnNumberStart": 6,
+    "lineNumberEnd": 2,
+    "lineNumberStart": 1,
+    "type": 37,
+    "value": "\n"
+  }
+]

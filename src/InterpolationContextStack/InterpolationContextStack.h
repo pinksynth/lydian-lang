@@ -1,6 +1,9 @@
 #include <stack>
 
 #pragma once
+
+namespace lydianlang {
+
 class InterpolationContextStack {
 
 public:
@@ -19,3 +22,5 @@ public:
 private:
   void updateHead(int newValue);
 };
+
+} // namespace lydianlang

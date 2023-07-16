@@ -1,6 +1,10 @@
 #include <unordered_map>
 #include <vector>
 
+#pragma once
+
+namespace lydianlang {
+
 std::vector<std::pair<CharacterType, std::vector<char>>> characterRanges = {
     {ct_ampersand, {'&'}},
     {ct_asterisk, {'*'}},
@@ -36,3 +40,5 @@ std::vector<std::pair<CharacterType, std::vector<char>>> characterRanges = {
     {ct_slash, {'/'}},
     {ct_underscore, {'_'}},
     {ct_whitespace, {'\n', '\t', ' '}}};
+
+}

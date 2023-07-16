@@ -1,3 +1,5 @@
+namespace lydianlang {
+
 void Lexer::handleCloseMultilineComment() {
   if (characterType != ct_greaterThan)
     return;
@@ -13,3 +15,5 @@ void Lexer::handleCloseMultilineComment() {
     multilineCommentMode = false;
   }
 };
+
+} // namespace lydianlang

@@ -4,6 +4,8 @@
 #include "./getStringTokenType.cpp"
 #include "./shouldContinueConsumingToken.cpp"
 
+namespace lydianlang {
+
 Token *Lexer::getToken() {
   if (charAccumulator.length() == 0)
     return nullptr;
@@ -13,8 +15,8 @@ Token *Lexer::getToken() {
 
   TokenType tokenType = tt_NONE;
 
-  if (charAccumulator == "null") {
-    tokenType = tt_null;
+  if (charAccumulator == "nil") {
+    tokenType = tt_nil;
   } else if (charAccumulator == "weak") {
     tokenType = tt_weak;
   } else if (charAccumulator == "if") {
@@ -27,7 +29,7 @@ Token *Lexer::getToken() {
     tokenType = tt_handle;
   } else if (charAccumulator == "end") {
     tokenType = tt_end;
-  } else if (charAccumulator == "function") {
+  } else if (charAccumulator == "fn") {
     tokenType = tt_function;
   } else if (charAccumulator == "struct") {
     tokenType = tt_structDefinition;
@@ -112,3 +114,5 @@ Token *Lexer::getToken() {
 
   return token;
 };
+
+} // namespace lydianlang

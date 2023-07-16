@@ -4,6 +4,10 @@
 #include "./CharacterType.cpp"
 #include "./characterRanges.cpp"
 
+#pragma once
+
+namespace lydianlang {
+
 // FIXME: This is insanely inefficient. This happens several times for every single input character.
 CharacterType charTypeFrom(char character) {
   for (auto typeIndex = 0; typeIndex < characterRanges.size(); typeIndex++) {
@@ -23,3 +27,5 @@ CharacterType charTypeFrom(char character) {
   warning += '"';
   throw std::out_of_range(warning);
 }
+
+} // namespace lydianlang

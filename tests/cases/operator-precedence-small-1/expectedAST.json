@@ -1,0 +1,17 @@
+{
+  "children": [
+    {
+      "left": {
+        "nodeType": "nt_literalNumber",
+        "value": 2.0
+      },
+      "nodeType": "nt_binaryExpression",
+      "operator": "*",
+      "right": {
+        "nodeType": "nt_literalNumber",
+        "value": 3.0
+      }
+    }
+  ],
+  "nodeType": "nt_root"
+}

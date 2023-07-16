@@ -1,5 +1,7 @@
 #include "../CharacterType.cpp"
 
+namespace lydianlang {
+
 /* NOTE: When generating tokens, we use four token types for strings which correspond to the presence of interpolations:
 STRING_PURE:            No interpolation. String starts with " and ends with ".
 STRING_INTERP_BEFORE:   Before interpolation. String starts with " and ends with {.
@@ -33,3 +35,5 @@ TokenType Lexer::getStringTokenType() {
 
   return tt_NONE;
 };
+
+} // namespace lydianlang

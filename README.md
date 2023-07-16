@@ -1,10 +1,15 @@
-# sammy-lang-cpp
+# lydian-lang
 
-An attempt to implement the sammy-lang language in C++ using LLVM.
+An attempt to implement the lydian-lang language in C++ using LLVM.
 
 ## Building
 
-This project uses CMake and Conan. To build, first make sure that `conan` and `cmake` are installed. Then run `scripts/initial-build.sh`.
+This project uses CMake. To build, first make sure that `cmake` and `llvm` are installed:
+
+- [Install `cmake`](https://cmake.org/install/)
+- [Install `llvm`](https://llvm.org/docs/GettingStarted.html#getting-the-source-code-and-building-llvm)
+
+Then run `scripts/initial-build.sh`.
 
 Alternatively, you can follow the steps below:
 
@@ -13,32 +18,74 @@ Alternatively, you can follow the steps below:
    mkdir build; cd build
    ```
    **NOTE: All steps below must be run in the `build` folder.**
-2. Install dependencies:
-   ```sh
-   conan install ..
-   ```
-3. Run `cmake`:
+2. Run `cmake`:
    ```sh
    cmake ..
    ```
-4. Run `make`:
+3. Run `make`:
    ```sh
    make
    ```
-5. You can now run the built executables `sammy-lang` and `tests`:
+4. You can now run the built executables `lydian-lang`, `repl`, and `tests`:
 
    ```sh
-   bin/sammy-lang
+   bin/lydian-lang
+   bin/repl
    bin/tests
 
    # With debug output
-   DEBUG=true bin/sammy-lang
+   DEBUG=true bin/lydian-lang
    DEBUG=true bin/tests
    ```
 
+Because the language is a work in progress, the REPL doesn't actually "evaluate" expressions, but it does produce an AST:
+
+```
+Welcome to LydianLang
+
+
+𝐋1> fn multiply(a b) { a * b }
+fn multiply(a b) { a * b }
+JSON Output from AST:
+{
+  "children": [
+    {
+      "arguments": [
+        {
+          "nodeType": "nt_identifier",
+          "value": "a"
+        },
+        {
+          "nodeType": "nt_identifier",
+          "value": "b"
+        }
+      ],
+      "children": [
+        {
+          "left": {
+            "nodeType": "nt_identifier",
+            "value": "a"
+          },
+          "nodeType": "nt_binaryExpression",
+          "operator": "*",
+          "right": {
+            "nodeType": "nt_identifier",
+            "value": "b"
+          }
+        }
+      ],
+      "nodeType": "nt_functionDeclaration"
+    }
+  ],
+  "nodeType": "nt_root"
+}
+
+𝐋2>
+```
+
 ## Testing
 
-Follow the same steps as above, but instead of running the `sammy-lang` executable, run the `tests` executable.
+Follow the same steps as above, but instead of running the `lydian-lang` executable, run the `tests` executable.
 
 ## Note about compiler settings
 

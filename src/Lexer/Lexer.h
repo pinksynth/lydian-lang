@@ -6,6 +6,9 @@
 #include <vector>
 
 #pragma once
+
+namespace lydianlang {
+
 class Lexer {
   // These values change while in the loop to consume characters.
   int index;
@@ -67,4 +70,7 @@ public:
 
   // Debugging (public)
   void inspect();
+  json jsonTokens;
 };
+
+} // namespace lydianlang

@@ -1,0 +1,55 @@
+{
+  "children": [
+    {
+      "arguments": [
+        {
+          "nodeType": "nt_identifier",
+          "value": "a"
+        }
+      ],
+      "children": [
+        {
+          "left": {
+            "nodeType": "nt_identifier",
+            "value": "a"
+          },
+          "nodeType": "nt_binaryExpression",
+          "operator": "*",
+          "right": {
+            "nodeType": "nt_identifier",
+            "value": "a"
+          }
+        }
+      ],
+      "nodeType": "nt_functionDeclaration"
+    },
+    {
+      "arguments": [
+        {
+          "nodeType": "nt_identifier",
+          "value": "a"
+        },
+        {
+          "nodeType": "nt_identifier",
+          "value": "b"
+        }
+      ],
+      "children": [
+        {
+          "left": {
+            "nodeType": "nt_identifier",
+            "value": "a"
+          },
+          "nodeType": "nt_binaryExpression",
+          "operator": "*",
+          "right": {
+            "nodeType": "nt_identifier",
+            "value": "b"
+          }
+        }
+      ],
+      "nodeType": "nt_functionDeclaration"
+    }
+  ],
+  "nodeType": "nt_root"
+}

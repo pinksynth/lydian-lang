@@ -1,3 +1,5 @@
+namespace lydianlang {
+
 void Lexer::handleOpenStringInterpolation() {
   if (!stringLiteralMode)
     return;
@@ -10,3 +12,5 @@ void Lexer::handleOpenStringInterpolation() {
   if (isInterpolation)
     stringLiteralMode = false;
 };
+
+} // namespace lydianlang

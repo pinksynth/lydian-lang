@@ -5,7 +5,15 @@
       "name": "Debug Lang",
       "type": "lldb",
       "request": "launch",
-      "program": "${workspaceRoot}/build/bin/sammy-lang",
+      "program": "${workspaceRoot}/build/lydian-lang",
+      "args": [],
+      "cwd": "${workspaceRoot}"
+    },
+    {
+      "name": "Debug REPL",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceRoot}/build/repl",
       "args": [],
       "cwd": "${workspaceRoot}"
     },
@@ -13,7 +21,7 @@
       "name": "Debug Tests",
       "type": "lldb",
       "request": "launch",
-      "program": "${workspaceRoot}/build/bin/tests",
+      "program": "${workspaceRoot}/build/tests",
       "args": [],
       "cwd": "${workspaceRoot}"
     }

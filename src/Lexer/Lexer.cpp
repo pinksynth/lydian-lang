@@ -24,8 +24,11 @@
 using json = nlohmann::json;
 
 #pragma once
+
+namespace lydianlang {
+
 std::vector<Token> Lexer::lex(std::string rawInput) {
-  debug("Lexer received input:\n" + rawInput);
+  // debug("Lexer received input:\n" + rawInput);
 
   resetState();
   input = rawInput;
@@ -66,11 +69,11 @@ std::vector<Token> Lexer::lex(std::string rawInput) {
 
     Token *token = getToken();
     if (token != NULL) {
-      debug(token->inspectString());
+      // debug(token->inspectString());
       j.push_back(token->toJson());
       pushToken(*token);
     } else {
-      debug("Token is null. Continuing...");
+      // debug("Token is null. Continuing...");
     }
     delete token;
 
@@ -108,14 +111,17 @@ std::vector<Token> Lexer::lex(std::string rawInput) {
 
   Token *token = getToken();
   if (token != NULL) {
-    debug(token->inspectString());
+    // debug(token->inspectString());
     j.push_back(token->toJson());
     pushToken(*token);
   } else {
-    debug(charAccumulator);
+    // debug(charAccumulator);
   }
 
-  debug(j.dump(2));
+  // debug("JSON from Lexer:");
+  // debug(j.dump(2));
+
+  jsonTokens = j;
 
   return tokens;
 };
@@ -154,9 +160,9 @@ void Lexer::defineLatestCharType() {
 
 // Debugging
 
-void Lexer::printCharInfo(char character) {
-  debug("======================");
-  debug("Character: " + charString(character));
+void Lexer::printCharInfo(char character){
+    // debug("======================");
+    // debug("Character: " + charString(character));
 };
 
 void Lexer::inspect() {
@@ -185,7 +191,7 @@ void Lexer::inspect() {
   // tokens
 
   output += "}\n";
-  debug(output);
+  // debug(output);
 };
 
 std::string Lexer::inspectTokensString() {
@@ -195,3 +201,5 @@ std::string Lexer::inspectTokensString() {
   };
   return output;
 };
+
+} // namespace lydianlang

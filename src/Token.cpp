@@ -1,11 +1,14 @@
-#include "./TokenType.cpp"
 #include <iostream>
 #include <nlohmann/json.hpp>
+
+#include "./TokenType.cpp"
 
 using json = nlohmann::json;
 
 // NOTE: A struct might make more sense for this.
 #pragma once
+
+namespace lydianlang {
 class Token {
 
 public:
@@ -36,23 +39,25 @@ public:
     lineNumberEnd = tokenJson.at("lineNumberEnd");
     columnNumberEnd = tokenJson.at("columnNumberEnd");
   };
+  ~Token(){};
 
   std::string inspectString(bool detailed = false) const {
-    std::string message = "Token: ";
-    message += value;
+    std::string message = "Token: " + value + "\n";
     if (detailed) {
-      message += " (";
-      message += "type: ";
+      message += " {";
+      message += "\"value\": ";
+      message += (value == "\n") ? "\"\\n\"" : "\"" + value + "\"";
+      message += ", \"type\": ";
       message += std::to_string(type);
-      message += "; lineNumberStart: ";
+      message += ", \"lineNumberStart\": ";
       message += std::to_string(lineNumberStart);
-      message += "; columnNumberStart: ";
+      message += ", \"columnNumberStart\": ";
       message += std::to_string(columnNumberStart);
-      message += "; lineNumberEnd: ";
+      message += ", \"lineNumberEnd\": ";
       message += std::to_string(lineNumberEnd);
-      message += "; columnNumberEnd: ";
+      message += ", \"columnNumberEnd\": ";
       message += std::to_string(columnNumberEnd);
-      message += ")";
+      message += "}";
     }
     return message;
   };
@@ -80,3 +85,5 @@ bool operator==(const Token &tokenA, const Token &tokenB) {
          tokenA.lineNumberEnd == tokenB.lineNumberEnd &&
          tokenA.columnNumberEnd == tokenB.columnNumberEnd;
 }
+
+} // namespace lydianlang

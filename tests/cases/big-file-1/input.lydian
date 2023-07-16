@@ -24,7 +24,7 @@ reverse_alphabet = "z".."a"
 
 # Functions are similar to JS, but with space-separated args.
 # Functions also have implicit return.
-function multiply(b c) {
+fn multiply(b c) {
   b * c
 }
 

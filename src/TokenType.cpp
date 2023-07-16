@@ -1,6 +1,11 @@
+
 #include <vector>
 
+// TODO: Definitely namespace this stuff 😅
 #pragma once
+
+namespace lydianlang {
+
 enum TokenType {
   tt_NONE,
   tt_assignment,
@@ -26,7 +31,7 @@ enum TokenType {
   tt_if,
   tt_lambdaOpen,
   tt_mapOpen,
-  tt_null,
+  tt_nil,
   tt_number,
   tt_operatorInfix,
   tt_parenClose,
@@ -42,9 +47,11 @@ enum TokenType {
   tt_whitespace
 };
 
-std::vector<int> tt_TERMINALS = {tt_boolean, tt_conciseLambdaArgument, tt_null, tt_number, tt_var};
+std::vector<int> tt_TERMINALS = {tt_boolean, tt_conciseLambdaArgument, tt_nil, tt_number, tt_var};
 
 std::vector<int> tt_BINARY_OPERATORS = {tt_assignment,  tt_compare, tt_dot,
                                         tt_forwardPipe, tt_hyphen,  tt_operatorInfix};
 
 std::vector<int> tt_UNARY_OPERATORS = {tt_hyphen, tt_bang};
+
+} // namespace lydianlang
