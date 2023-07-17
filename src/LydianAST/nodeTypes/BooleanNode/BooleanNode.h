@@ -7,8 +7,8 @@ namespace lydianlang {
 
 class BooleanNode : public Node {
 public:
-  std::string inspectString(int pad = 0);
-  json toJson();
+  std::string inspectString(int pad = 0) override;
+  json toJson() override;
   std::string value;
   bool booleanValue;
 
@@ -17,6 +17,9 @@ public:
     value = token.value;
     booleanValue = value == "true";
   }
+
+  // LLVM
+  llvm::Value *codegen() override;
 };
 
 } // namespace lydianlang

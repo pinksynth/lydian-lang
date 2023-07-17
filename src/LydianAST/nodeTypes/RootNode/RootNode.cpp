@@ -9,6 +9,11 @@ std::vector<Node *> RootNode::getCurrentExpressionList(ScopeType scope) { return
 void RootNode::pushToExpressionList(ScopeType scope, Node *node) { children.push_back(node); };
 void RootNode::popCurrentExpressionList() { children.pop_back(); };
 
+llvm::Value *RootNode::codegen() {
+  // Until I figure out how to do blocks, just codegen the last item in the children list.
+  return children.back()->codegen();
+};
+
 std::string RootNode::inspectString(int pad) {
   std::string output = "Root Node: [\n";
   std::string padString = getPadString(pad);

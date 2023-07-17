@@ -11,6 +11,31 @@ std::vector<Node *> BinaryExpressionNode::getCurrentExpressionList(ScopeType _sc
 void BinaryExpressionNode::pushToExpressionList(ScopeType scope, Node *node) { right = node; };
 void BinaryExpressionNode::popCurrentExpressionList() { right = nullptr; };
 
+llvm::Value *BinaryExpressionNode::codegen() {
+  llvm::Value *l = left->codegen();
+  llvm::Value *r = right->codegen();
+
+  if (!l || !r)
+    return nullptr;
+
+  if (op == "+")
+    return Builder->CreateFAdd(l, r, "addtmp");
+
+  if (op == "-")
+    return Builder->CreateFSub(l, r, "subtmp");
+
+  if (op == "*")
+    return Builder->CreateFMul(l, r, "multmp");
+
+  if (op == "<") {
+    l = Builder->CreateFCmpULT(l, r, "cmptmp");
+    // Convert bool 0/1 to double 0.0 or 1.0
+    return Builder->CreateUIToFP(l, llvm::Type::getDoubleTy(*TheContext), "booltmp");
+  }
+
+  throw std::logic_error("Binary operator does not yet support LLVM codegen: " + op);
+};
+
 std::string BinaryExpressionNode::inspectString(int pad) {
   std::string padString = getPadString(pad);
   std::string output = padString + "Binary Expression Node: [\n";

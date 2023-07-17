@@ -7,8 +7,8 @@ namespace lydianlang {
 
 class ConciseLambdaArgNode : public Node {
 public:
-  std::string inspectString(int pad = 0);
-  json toJson();
+  std::string inspectString(int pad = 0) override;
+  json toJson() override;
   std::string value;
   int id;
 
@@ -17,6 +17,9 @@ public:
     value = token.value;
     id = std::stoi(value.substr(1));
   }
+
+  // LLVM
+  llvm::Value *codegen() override;
 };
 
 } // namespace lydianlang

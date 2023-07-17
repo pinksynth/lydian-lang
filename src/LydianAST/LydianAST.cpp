@@ -1,6 +1,8 @@
 #include <unistd.h>
 #include <vector>
 
+#include "../llvmSetup.h"
+
 #include "../NodeType.cpp"
 #include "../ScopeType.cpp"
 #include "../Token.cpp"
@@ -202,14 +204,23 @@ void LydianAST::fromTokens(std::vector<Token> unfilteredTokens) {
     }
   }
 
-  if (node != NULL) {
-    debug("FINAL AST:");
-    debug(root->inspectString());
+  debug("FINAL AST:");
+  debug(root->inspectString());
 
-    jsonAST = root->toJson();
-    debug("FINAL AST JSON:");
-    debug(jsonAST.dump(2));
-  }
+  jsonAST = root->toJson();
+  debug("FINAL AST JSON:");
+  debug(jsonAST.dump(2));
+
+  // Open a new context and module.
+  TheContext = std::make_unique<llvm::LLVMContext>();
+  TheModule = std::make_unique<llvm::Module>("Sammy's JIT", *TheContext);
+
+  // Create a new builder for the module.
+  Builder = std::make_unique<llvm::IRBuilder<>>(*TheContext);
+
+  auto *IR = root->codegen();
+  debug("FINAL LLVM IR:");
+  IR->print(llvm::errs());
 };
 
 Node *LydianAST::getTerminalNodeFromToken(Token token) {

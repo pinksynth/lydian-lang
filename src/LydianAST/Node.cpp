@@ -25,6 +25,11 @@ std::vector<Node *> Node::getCurrentExpressionList(ScopeType scope) {
                          "which it is not implemented.");
 };
 
+llvm::Value *Node::codegen() {
+  throw std::logic_error("The method for LLVM codegen is being called on a Node type for which it "
+                         "is not implemented.");
+};
+
 std::string inspect(std::vector<Node *> nodes, int pad = 0) {
   std::string padString = getPadString(pad);
   std::string output = padString + "[\n";

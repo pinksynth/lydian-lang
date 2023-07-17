@@ -2,6 +2,11 @@
 
 namespace lydianlang {
 
+llvm::Value *ConciseLambdaArgNode::codegen() {
+  throw std::logic_error(
+      "The method for LLVM codegen is not yet implemented for ConciseLambdaArgNode.");
+};
+
 std::string ConciseLambdaArgNode::inspectString(int pad) {
   return "Concise λ Arg Node: " + std::to_string(id);
 };

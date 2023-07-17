@@ -2,6 +2,10 @@
 
 namespace lydianlang {
 
+llvm::Value *NumberNode::codegen() {
+  return llvm::ConstantFP::get(*TheContext, llvm::APFloat(doubleValue));
+};
+
 std::string NumberNode::inspectString(int pad) {
   std::string padString = getPadString(pad);
   return padString + "Number Node: " + value + " (" + std::to_string(doubleValue) + ")";

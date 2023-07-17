@@ -11,10 +11,10 @@ class FunctionCallNode : public Node {
   std::vector<Node *> children;
 
 public:
-  std::vector<Node *> getCurrentExpressionList(ScopeType scope);
-  void pushToExpressionList(ScopeType scope, Node *node);
-  std::string inspectString(int pad = 0);
-  json toJson();
+  std::vector<Node *> getCurrentExpressionList(ScopeType scope) override;
+  void pushToExpressionList(ScopeType scope, Node *node) override;
+  std::string inspectString(int pad = 0) override;
+  json toJson() override;
 
   Node *callee;
   std::vector<Node *> arguments;
@@ -23,6 +23,9 @@ public:
     nodeType = nt_functionCall;
     arguments = {};
   };
+
+  // LLVM
+  llvm::Value *codegen() override;
 };
 
 } // namespace lydianlang

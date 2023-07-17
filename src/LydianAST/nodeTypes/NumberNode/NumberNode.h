@@ -7,8 +7,8 @@ namespace lydianlang {
 
 class NumberNode : public Node {
 public:
-  std::string inspectString(int pad = 0);
-  json toJson();
+  std::string inspectString(int pad = 0) override;
+  json toJson() override;
   std::string value;
   double doubleValue;
 
@@ -19,6 +19,9 @@ public:
     replace_all(underscoresStripped, "_", "");
     doubleValue = std::stod(underscoresStripped);
   }
+
+  // LLVM
+  llvm::Value *codegen() override;
 };
 
 } // namespace lydianlang

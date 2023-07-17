@@ -27,6 +27,11 @@ void FunctionDeclarationNode::pushToExpressionList(ScopeType scope, Node *node) 
 };
 void FunctionDeclarationNode::popCurrentExpressionList() { children.pop_back(); };
 
+llvm::Value *FunctionDeclarationNode::codegen() {
+  throw std::logic_error(
+      "The method for LLVM codegen is not yet implemented for FunctionDeclarationNode.");
+};
+
 std::string FunctionDeclarationNode::inspectString(int pad) {
   std::string padString = getPadString(pad);
   std::string output = padString + "Function Declaration Node: [\n";
