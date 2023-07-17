@@ -1,5 +1,7 @@
 #include <vector>
 
+#include "../llvmSetup.h"
+
 #include "../ScopeType.cpp"
 #include "../Token.cpp"
 #include "./Node.h"
@@ -13,6 +15,7 @@ class LydianAST {
 
 public:
   json jsonAST;
+  llvm::Value *ir;
   void fromTokens(std::vector<Token> tokens);
 
 private:

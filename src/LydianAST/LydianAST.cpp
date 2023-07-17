@@ -211,16 +211,11 @@ void LydianAST::fromTokens(std::vector<Token> unfilteredTokens) {
   debug("FINAL AST JSON:");
   debug(jsonAST.dump(2));
 
-  // Open a new context and module.
-  TheContext = std::make_unique<llvm::LLVMContext>();
-  TheModule = std::make_unique<llvm::Module>("Sammy's JIT", *TheContext);
+  setupLLVM();
 
-  // Create a new builder for the module.
-  Builder = std::make_unique<llvm::IRBuilder<>>(*TheContext);
-
-  auto *IR = root->codegen();
+  auto *ir = root->codegen();
   debug("FINAL LLVM IR:");
-  IR->print(llvm::errs());
+  ir->print(llvm::errs());
 };
 
 Node *LydianAST::getTerminalNodeFromToken(Token token) {

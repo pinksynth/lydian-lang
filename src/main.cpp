@@ -11,7 +11,7 @@ int main() {
   // FIXME: Figure out why this path works correctly with the CMake tools but not with your "Debug Language" command.
   // std::string testInput =
   //     lydianlang::getFileString("../../tests/cases/operator-precedence-small-1/input.lydian");
-  std::string testInput = R"lydian(2 + 3 * 4 + 5)lydian";
+  std::string testInput = R"lydian(fn double(a) { a + a })lydian";
   lydianlang::print("Test input:");
   lydianlang::print(testInput);
 

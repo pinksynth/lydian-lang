@@ -111,7 +111,8 @@
       "numbers": "cpp",
       "semaphore": "cpp",
       "*.def": "cpp",
-      "__memory": "cpp"
+      "__memory": "cpp",
+      "cinttypes": "cpp"
     }
   },
   "extensions": {

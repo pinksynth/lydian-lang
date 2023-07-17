@@ -27,8 +27,17 @@ llvm::Value *BinaryExpressionNode::codegen() {
   if (op == "*")
     return Builder->CreateFMul(l, r, "multmp");
 
+  if (op == "/")
+    return Builder->CreateFDiv(l, r, "multmp");
+
   if (op == "<") {
     l = Builder->CreateFCmpULT(l, r, "cmptmp");
+    // Convert bool 0/1 to double 0.0 or 1.0
+    return Builder->CreateUIToFP(l, llvm::Type::getDoubleTy(*TheContext), "booltmp");
+  }
+
+  if (op == ">") {
+    l = Builder->CreateFCmpUGT(l, r, "cmptmp");
     // Convert bool 0/1 to double 0.0 or 1.0
     return Builder->CreateUIToFP(l, llvm::Type::getDoubleTy(*TheContext), "booltmp");
   }

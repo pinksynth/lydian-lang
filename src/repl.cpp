@@ -32,8 +32,10 @@ int main() {
     std::vector<lydianlang::Token> tokens = lexer.lex(input);
     lydianlang::LydianAST ast = lydianlang::LydianAST();
     ast.fromTokens(tokens);
-    std::cout << "JSON Output from AST:" << std::endl;
-    std::cout << ast.jsonAST.dump(2) << std::endl;
+    // std::cout << "JSON Output from AST:" << std::endl;
+    // std::cout << ast.jsonAST.dump(2) << std::endl;
+    // std::cout << "LLVM IR:" << std::endl;
+    // ast.ir->print(llvm::errs());
 
     lineNumber = lineNumber + 1;
   }
