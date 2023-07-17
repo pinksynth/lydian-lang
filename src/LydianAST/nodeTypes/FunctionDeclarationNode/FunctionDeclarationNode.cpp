@@ -28,8 +28,48 @@ void FunctionDeclarationNode::pushToExpressionList(ScopeType scope, Node *node) 
 void FunctionDeclarationNode::popCurrentExpressionList() { children.pop_back(); };
 
 llvm::Value *FunctionDeclarationNode::codegen() {
-  throw std::logic_error(
-      "The method for LLVM codegen is not yet implemented for FunctionDeclarationNode.");
+  std::vector<llvm::Type *> argTypes(arguments.size(), llvm::Type::getDoubleTy(*TheContext));
+
+  llvm::FunctionType *functionType =
+      llvm::FunctionType::get(llvm::Type::getDoubleTy(*TheContext), argTypes, false);
+
+  llvm::Function *llvmFunction =
+      llvm::Function::Create(functionType, llvm::Function::ExternalLinkage, name, TheModule.get());
+
+  // Set names for all arguments.
+  unsigned argIndex = 0;
+  for (auto &llvmFunctionArg : llvmFunction->args()) {
+    Node *argumentBaseNode = arguments[argIndex++];
+    IdentifierNode *argumentIdentifierNode = dynamic_cast<IdentifierNode *>(argumentBaseNode);
+
+    if (argumentIdentifierNode == nullptr)
+      throw std::logic_error("Only identifier arguments are supported at this time. Found type: " +
+                             nodeString(argumentBaseNode->nodeType));
+
+    llvmFunctionArg.setName(argumentIdentifierNode->value);
+  }
+
+  llvm::BasicBlock *basicBlock =
+      llvm::BasicBlock::Create(*TheContext, "function_body", llvmFunction);
+
+  Builder->SetInsertPoint(basicBlock);
+
+  NamedValues.clear();
+  for (auto &arg : llvmFunction->args())
+    NamedValues[std::string(arg.getName())] = &arg;
+
+  if (children.empty()) {
+    // TODO: This might not be what we want. We want something that is functionally equivalent to returning nil.
+    Builder->CreateRetVoid();
+  } else {
+    // TODO: Support actual blocks instead of one child at the end of the body.
+    Node *backChild = children.back();
+    llvm::Value *returnValue = backChild->codegen();
+    Builder->CreateRet(returnValue);
+  }
+
+  llvm::verifyFunction(*llvmFunction);
+  return llvmFunction;
 };
 
 std::string FunctionDeclarationNode::inspectString(int pad) {

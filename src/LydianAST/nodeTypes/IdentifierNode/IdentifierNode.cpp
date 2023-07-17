@@ -3,7 +3,12 @@
 namespace lydianlang {
 
 llvm::Value *IdentifierNode::codegen() {
-  throw std::logic_error("The method for LLVM codegen is not yet implemented for IdentifierNode.");
+  llvm::Value *llvmValue = NamedValues[value];
+
+  if (!llvmValue)
+    throw std::logic_error("Unknown variable name: " + value);
+
+  return llvmValue;
 };
 
 std::string IdentifierNode::inspectString(int pad) {

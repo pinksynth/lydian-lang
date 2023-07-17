@@ -20,10 +20,7 @@ std::vector<Node *> GenericExpressionNode::getCurrentExpressionList(ScopeType _s
   return *vec;
 };
 
-llvm::Value *GenericExpressionNode::codegen() {
-  throw std::logic_error(
-      "The method for LLVM codegen is not yet implemented for GenericExpressionNode.");
-};
+llvm::Value *GenericExpressionNode::codegen() { return child->codegen(); };
 
 std::string GenericExpressionNode::inspectString(int pad) {
   std::string padString = getPadString(pad);
