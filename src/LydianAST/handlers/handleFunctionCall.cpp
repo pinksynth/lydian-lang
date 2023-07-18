@@ -17,7 +17,7 @@ void LydianAST::handleFunctionCall(Node *callableLeftSibling,
 
   currentExpressionList = node->getCurrentExpressionList(prevScope);
   currentExpressionList.pop_back();
-  node->popCurrentExpressionList();
+  node->popCurrentExpressionList(prevScope);
 
   scopes.push_back(st_functionCallArgs);
 

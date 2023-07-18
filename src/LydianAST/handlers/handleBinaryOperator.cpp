@@ -13,7 +13,7 @@ void LydianAST::handleBinaryOperator() {
   // When we encounter a binary operator, it means that the previous sibling must be treated not as its own statement, but rather an operand of this operator.
   Node *leftOperand = currentExpressionList.back();
   currentExpressionList.pop_back();
-  node->popCurrentExpressionList();
+  node->popCurrentExpressionList(currentScope);
 
   // Here we do some swapping to handle operator precedence.
   // That is, we check to see if we found 2 + 3 * 4.

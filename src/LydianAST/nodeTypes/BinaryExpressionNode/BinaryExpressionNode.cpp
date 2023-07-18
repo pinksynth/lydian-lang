@@ -9,7 +9,7 @@ std::vector<Node *> BinaryExpressionNode::getCurrentExpressionList(ScopeType _sc
 }
 
 void BinaryExpressionNode::pushToExpressionList(ScopeType scope, Node *node) { right = node; };
-void BinaryExpressionNode::popCurrentExpressionList() { right = nullptr; };
+void BinaryExpressionNode::popCurrentExpressionList(ScopeType _scope) { right = nullptr; };
 
 llvm::Value *BinaryExpressionNode::codegen() {
   llvm::Value *l = left->codegen();

@@ -12,7 +12,7 @@ void GenericExpressionNode::pushToExpressionList(ScopeType _scope, Node *node) {
                            "* b) is allowed, but (a b) is not.");
   }
 };
-void GenericExpressionNode::popCurrentExpressionList() { child = nullptr; };
+void GenericExpressionNode::popCurrentExpressionList(ScopeType _scope) { child = nullptr; };
 
 std::vector<Node *> GenericExpressionNode::getCurrentExpressionList(ScopeType _scope) {
   std::vector<Node *> *vec = new std::vector<Node *>();

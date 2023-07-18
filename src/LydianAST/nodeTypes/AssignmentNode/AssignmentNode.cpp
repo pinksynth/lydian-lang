@@ -5,7 +5,7 @@
 namespace lydianlang {
 
 void AssignmentNode::pushToExpressionList(ScopeType scope, Node *node) { child = node; };
-void AssignmentNode::popCurrentExpressionList() { child = nullptr; };
+void AssignmentNode::popCurrentExpressionList(ScopeType _scope) { child = nullptr; };
 
 std::vector<Node *> AssignmentNode::getCurrentExpressionList(ScopeType _scope) {
   std::vector<Node *> *vec = new std::vector<Node *>();

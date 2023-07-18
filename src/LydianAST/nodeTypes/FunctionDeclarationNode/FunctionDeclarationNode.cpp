@@ -25,7 +25,7 @@ void FunctionDeclarationNode::pushToExpressionList(ScopeType scope, Node *node) 
   throw std::logic_error(
       "Invalid scope for `pushToExpressionList` on `FunctionDeclarationNode`. Must be ");
 };
-void FunctionDeclarationNode::popCurrentExpressionList() { children.pop_back(); };
+void FunctionDeclarationNode::popCurrentExpressionList(ScopeType _scope) { children.pop_back(); };
 
 llvm::Value *FunctionDeclarationNode::codegen() {
   std::vector<llvm::Type *> argTypes(arguments.size(), llvm::Type::getDoubleTy(*TheContext));

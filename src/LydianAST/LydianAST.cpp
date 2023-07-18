@@ -185,11 +185,6 @@ void LydianAST::fromTokens(std::vector<Token> unfilteredTokens) {
       continue;
     }
 
-    // if (tt.UNARY_OPERATORS.includes(tokenType)) {
-    //   handleUnaryOperator(context)
-    //   continue
-    // }
-
     if (isTerminal(tokenType)) {
       // Get node from token and push onto children.
       Node *child = getTerminalNodeFromToken(token);

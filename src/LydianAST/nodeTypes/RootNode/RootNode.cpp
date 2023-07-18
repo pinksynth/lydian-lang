@@ -7,7 +7,7 @@ namespace lydianlang {
 std::vector<Node *> RootNode::getCurrentExpressionList(ScopeType scope) { return children; };
 
 void RootNode::pushToExpressionList(ScopeType scope, Node *node) { children.push_back(node); };
-void RootNode::popCurrentExpressionList() { children.pop_back(); };
+void RootNode::popCurrentExpressionList(ScopeType _scope) { children.pop_back(); };
 
 llvm::Value *RootNode::codegen() {
   // Until I figure out how to do blocks, just codegen the last item in the children list.

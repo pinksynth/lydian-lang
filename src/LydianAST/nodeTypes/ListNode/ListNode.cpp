@@ -8,7 +8,7 @@ namespace lydianlang {
 std::vector<Node *> ListNode::getCurrentExpressionList(ScopeType scope) { return children; };
 
 void ListNode::pushToExpressionList(ScopeType scope, Node *node) { children.push_back(node); };
-void ListNode::popCurrentExpressionList() { children.pop_back(); };
+void ListNode::popCurrentExpressionList(ScopeType _scope) { children.pop_back(); };
 
 llvm::Value *ListNode::codegen() {
   throw std::logic_error("The method for LLVM codegen is not yet implemented for ListNode.");
