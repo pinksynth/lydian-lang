@@ -1,0 +1,88 @@
+{
+  "children": [
+    {
+      "bodyChildren": [
+        {
+          "nodeType": "nt_identifier",
+          "value": "b"
+        }
+      ],
+      "condition": [
+        {
+          "nodeType": "nt_identifier",
+          "value": "a"
+        }
+      ],
+      "elseChildren": null,
+      "nodeType": "nt_ifExpression"
+    },
+    {
+      "bodyChildren": [
+        {
+          "nodeType": "nt_identifier",
+          "value": "d"
+        }
+      ],
+      "condition": [
+        {
+          "nodeType": "nt_identifier",
+          "value": "c"
+        }
+      ],
+      "elseChildren": [
+        {
+          "nodeType": "nt_identifier",
+          "value": "e"
+        }
+      ],
+      "nodeType": "nt_ifExpression"
+    },
+    {
+      "bodyChildren": [
+        {
+          "nodeType": "nt_identifier",
+          "value": "i"
+        }
+      ],
+      "condition": [
+        {
+          "nodeType": "nt_identifier",
+          "value": "f"
+        },
+        {
+          "nodeType": "nt_identifier",
+          "value": "g"
+        },
+        {
+          "nodeType": "nt_identifier",
+          "value": "h"
+        }
+      ],
+      "elseChildren": [
+        {
+          "bodyChildren": [
+            {
+              "nodeType": "nt_identifier",
+              "value": "k"
+            }
+          ],
+          "condition": [
+            {
+              "nodeType": "nt_identifier",
+              "value": "j"
+            }
+          ],
+          "elseChildren": [
+            {
+              "nodeType": "nt_identifier",
+              "value": "l"
+            }
+          ],
+          "nodeType": "nt_ifExpression"
+        }
+      ],
+      "nodeType": "nt_ifExpression"
+    }
+  ],
+  "nodeType": "nt_root"
+}

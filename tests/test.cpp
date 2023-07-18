@@ -31,6 +31,7 @@
 #include "./cases/function-calls-1/test.cpp"
 #include "./cases/function-definitions-1/test.cpp"
 #include "./cases/generic-expressions-1/test.cpp"
+#include "./cases/if-else-1/test.cpp"
 #include "./cases/lambdas-1/test.cpp"
 #include "./cases/lists-1/test.cpp"
 #include "./cases/numbers-1/test.cpp"

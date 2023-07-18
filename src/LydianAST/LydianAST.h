@@ -48,6 +48,8 @@ private:
   void handleFunctionCall(Node *, std::vector<ScopeType>);
   void handleFunctionDefinitionName();
   void handleGenericExpressionOpen();
+  void handleKeywordElse();
+  void handleKeywordIf();
   void handleUnaryOperator();
   void handleVariableAssignment();
 };
