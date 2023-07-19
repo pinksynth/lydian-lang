@@ -11,11 +11,16 @@ int main() {
   // FIXME: Figure out why this path works correctly with the CMake tools but not with your "Debug Language" command.
   // std::string testInput =
   //     lydianlang::getFileString("../../tests/cases/operator-precedence-small-1/input.lydian");
-  std::string testInput = R"lydian(if a { b }
-if c { d } else { e }
-if f g h { i } else {
-	if j { k } else { l }
+  std::string testInput = R"lydian(
+
+fn myfun(x) {
+  if x {
+    1
+  } else {
+    2
+  }
 }
+
 )lydian";
   lydianlang::print("Test input:");
   lydianlang::print(testInput);

@@ -25,6 +25,7 @@ void FunctionDeclarationNode::pushToExpressionList(ScopeType scope, Node *node) 
   throw std::logic_error(
       "Invalid scope for `pushToExpressionList` on `FunctionDeclarationNode`. Must be ");
 };
+
 void FunctionDeclarationNode::popCurrentExpressionList(ScopeType _scope) { children.pop_back(); };
 
 llvm::Value *FunctionDeclarationNode::codegen() {
@@ -62,10 +63,12 @@ llvm::Value *FunctionDeclarationNode::codegen() {
     // TODO: This might not be what we want. We want something that is functionally equivalent to returning nil.
     Builder->CreateRetVoid();
   } else {
-    // TODO: Support actual blocks instead of one child at the end of the body.
-    Node *backChild = children.back();
-    llvm::Value *returnValue = backChild->codegen();
-    Builder->CreateRet(returnValue);
+    // NOTE: This wasn't in the tutorial but it appears to generate valid LLVM IR. Tread lightly?
+    std::vector<llvm::Value *> values = {};
+    for (Node *child : children)
+      values.push_back(child->codegen());
+
+    Builder->CreateRet(values.back());
   }
 
   llvm::verifyFunction(*llvmFunction);

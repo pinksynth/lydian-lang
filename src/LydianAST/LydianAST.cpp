@@ -227,11 +227,11 @@ void LydianAST::fromTokens(std::vector<Token> unfilteredTokens) {
   debug("FINAL AST JSON:");
   debug(jsonAST.dump(2));
 
-  // setupLLVM();
+  setupLLVM();
 
-  // auto *ir = root->codegen();
-  // debug("FINAL LLVM IR:");
-  // ir->print(llvm::errs());
+  auto *ir = root->codegen();
+  debug("FINAL LLVM IR:");
+  ir->print(llvm::errs());
 };
 
 Node *LydianAST::getTerminalNodeFromToken(Token token) {

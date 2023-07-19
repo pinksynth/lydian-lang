@@ -59,7 +59,56 @@ void IfExpressionNode::popCurrentExpressionList(ScopeType scope) {
   }
 };
 
-llvm::Value *IfExpressionNode::codegen() { throw std::logic_error("Almost there!"); }
+llvm::Value *IfExpressionNode::codegen() {
+  // FIXME: This Value should be a logical "AND" of all expressions within the condition, not just the last one.
+  llvm::Value *conditionValue = condition.back()->codegen();
+
+  conditionValue = Builder->CreateFCmpONE(
+      conditionValue, llvm::ConstantFP::get(*TheContext, llvm::APFloat(0.0)), "ifcond");
+
+  llvm::Function *valueParent = Builder->GetInsertBlock()->getParent();
+
+  llvm::BasicBlock *thenBB = llvm::BasicBlock::Create(*TheContext, "then", valueParent);
+  llvm::BasicBlock *elseBB = llvm::BasicBlock::Create(*TheContext, "else");
+  llvm::BasicBlock *mergeBB = llvm::BasicBlock::Create(*TheContext, "ifcont");
+
+  Builder->CreateCondBr(conditionValue, thenBB, elseBB);
+
+  Builder->SetInsertPoint(thenBB);
+
+  // FIXME: This should be the return of a basic block which represents the body.
+  llvm::Value *thenValue = bodyChildren.back()->codegen();
+
+  Builder->CreateBr(mergeBB);
+  // Codegen of 'Then' can change the current block, update thenBB for the PHI.
+  thenBB = Builder->GetInsertBlock();
+
+  // Emit else block.
+  valueParent->insert(valueParent->end(), elseBB);
+  Builder->SetInsertPoint(elseBB);
+
+  llvm::Value *elseValue;
+  if (elseChildren.empty()) {
+    // FIXME: This is not valid because it provides a void type when the PHI node expects a double. PHI values must be the same type. I'm not really sure what to do about that.
+    elseValue = llvm::UndefValue::get(llvm::Type::getVoidTy(*TheContext));
+  } else {
+    elseValue = elseChildren.back()->codegen();
+  }
+
+  Builder->CreateBr(mergeBB);
+  // codegen of 'Else' can change the current block, update elseBB for the PHI.
+  elseBB = Builder->GetInsertBlock();
+
+  // Emit merge block.
+  valueParent->insert(valueParent->end(), mergeBB);
+  Builder->SetInsertPoint(mergeBB);
+  llvm::PHINode *phiNode = Builder->CreatePHI(llvm::Type::getDoubleTy(*TheContext), 2, "iftmp");
+
+  phiNode->addIncoming(thenValue, thenBB);
+  phiNode->addIncoming(elseValue, elseBB);
+
+  return phiNode;
+}
 //   std::vector<llvm::Type *> argTypes(arguments.size(), llvm::Type::getDoubleTy(*TheContext));
 
 //   llvm::FunctionType *functionType =
