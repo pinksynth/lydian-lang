@@ -11,7 +11,7 @@ void UnaryExpressionNode::pushToExpressionList(ScopeType _scope, Node *node) {
     throw std::logic_error("Only one child expression is allowed in a unary expression.");
   }
 };
-void UnaryExpressionNode::popCurrentExpressionList() { child = nullptr; };
+void UnaryExpressionNode::popCurrentExpressionList(ScopeType _scope) { child = nullptr; };
 
 std::vector<Node *> UnaryExpressionNode::getCurrentExpressionList(ScopeType _scope) {
   std::vector<Node *> *vec = new std::vector<Node *>();

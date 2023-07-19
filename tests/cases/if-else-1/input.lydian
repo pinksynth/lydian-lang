@@ -1,0 +1,5 @@
+if a { b }
+if c { d } else { e }
+if f g h { i } else {
+	if j { k } else { l }
+}

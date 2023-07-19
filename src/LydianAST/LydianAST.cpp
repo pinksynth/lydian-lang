@@ -26,6 +26,8 @@
 #include "./handlers/handleFunctionCall.cpp"
 #include "./handlers/handleFunctionDefinitionName.cpp"
 #include "./handlers/handleGenericExpressionOpen.cpp"
+#include "./handlers/handleKeywordElse.cpp"
+#include "./handlers/handleKeywordIf.cpp"
 #include "./handlers/handleUnaryOperator.cpp"
 #include "./handlers/handleVariableAssignment.cpp"
 
@@ -125,6 +127,25 @@ void LydianAST::fromTokens(std::vector<Token> unfilteredTokens) {
       continue;
     }
 
+    if (tokenType == tt_if) {
+      handleKeywordIf();
+
+      continue;
+    }
+
+    // Move from if condition to if body
+    if (currentScope == st_ifCondition && tokenType == tt_curlyOpen) {
+      swapScope(st_ifBody);
+
+      continue;
+    }
+
+    if (tokenType == tt_curlyClose && nextTokenType == tt_else && thirdTokenType == tt_curlyOpen) {
+      handleKeywordElse();
+
+      continue;
+    }
+
     // Function call, if we saw an open paren and the left sibling is callable
     if (tokenType == tt_parenOpen && callableLeftSibling != nullptr) {
       handleFunctionCall(callableLeftSibling, appendedScopes);
@@ -185,11 +206,6 @@ void LydianAST::fromTokens(std::vector<Token> unfilteredTokens) {
       continue;
     }
 
-    // if (tt.UNARY_OPERATORS.includes(tokenType)) {
-    //   handleUnaryOperator(context)
-    //   continue
-    // }
-
     if (isTerminal(tokenType)) {
       // Get node from token and push onto children.
       Node *child = getTerminalNodeFromToken(token);
@@ -211,11 +227,11 @@ void LydianAST::fromTokens(std::vector<Token> unfilteredTokens) {
   debug("FINAL AST JSON:");
   debug(jsonAST.dump(2));
 
-  setupLLVM();
+  // setupLLVM();
 
-  auto *ir = root->codegen();
-  debug("FINAL LLVM IR:");
-  ir->print(llvm::errs());
+  // auto *ir = root->codegen();
+  // debug("FINAL LLVM IR:");
+  // ir->print(llvm::errs());
 };
 
 Node *LydianAST::getTerminalNodeFromToken(Token token) {

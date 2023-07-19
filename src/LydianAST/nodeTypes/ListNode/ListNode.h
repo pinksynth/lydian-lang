@@ -9,7 +9,7 @@ public:
   std::vector<Node *> children;
   std::vector<Node *> getCurrentExpressionList(ScopeType scope) override;
   void pushToExpressionList(ScopeType scope, Node *node) override;
-  void popCurrentExpressionList() override;
+  void popCurrentExpressionList(ScopeType scope) override;
   std::string inspectString(int pad = 0) override;
   json toJson() override;
 

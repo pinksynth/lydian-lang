@@ -9,7 +9,7 @@ void Node::pushToExpressionList(ScopeType scope, Node *node) {
       "Cannot push a child to this node because its `pushToExpressionList` is not implemented.");
 };
 
-void Node::popCurrentExpressionList() { return; }
+void Node::popCurrentExpressionList(ScopeType scope) { return; }
 
 std::string Node::inspectString(int pad) {
   throw std::logic_error("No implementation of 'inspectString' for the desired NodeType.");
