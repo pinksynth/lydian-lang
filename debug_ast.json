@@ -1,0 +1,37 @@
+{
+  "children": [
+    {
+      "arguments": [
+        {
+          "nodeType": "nt_identifier",
+          "value": "x"
+        }
+      ],
+      "children": [
+        {
+          "bodyChildren": [
+            {
+              "nodeType": "nt_literalNumber",
+              "value": 1.0
+            }
+          ],
+          "condition": [
+            {
+              "nodeType": "nt_identifier",
+              "value": "x"
+            }
+          ],
+          "elseChildren": [
+            {
+              "nodeType": "nt_literalNumber",
+              "value": 2.0
+            }
+          ],
+          "nodeType": "nt_ifExpression"
+        }
+      ],
+      "nodeType": "nt_functionDeclaration"
+    }
+  ],
+  "nodeType": "nt_root"
+}

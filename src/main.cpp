@@ -13,13 +13,7 @@ int main() {
   //     lydianlang::getFileString("../../tests/cases/operator-precedence-small-1/input.lydian");
   std::string testInput = R"lydian(
 
-fn myfun(x) {
-  if x {
-    1
-  } else {
-    2
-  }
-}
+fn myfun(x) { if x { 1 } else { 2 } }
 
 )lydian";
   lydianlang::print("Test input:");

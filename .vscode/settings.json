@@ -5,6 +5,7 @@
     "**/templates/**/*.html": "django-html",
     "**/templates/**/*": "django-txt",
     "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+    "*.lydian": "sammy",
     "typeinfo": "cpp",
     "iostream": "cpp",
     "sstream": "cpp",
@@ -54,6 +55,11 @@
     "array": "cpp",
     "functional": "cpp",
     "variant": "cpp",
-    "ios": "cpp"
+    "ios": "cpp",
+    "cwchar": "cpp",
+    "cwctype": "cpp",
+    "string_view": "cpp",
+    "atomic": "cpp",
+    "bit": "cpp"
   }
 }
